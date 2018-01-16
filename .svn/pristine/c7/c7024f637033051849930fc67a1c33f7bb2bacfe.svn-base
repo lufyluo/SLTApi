@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCRMMAILModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ErrLog_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailBoxId" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="UIDL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Msg" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTm" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Log_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailBoxId" Type="Int32" />
+    <Property Name="MailId" Type="Int32" />
+    <Property Name="Box" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ClientId" Type="Int32" />
+    <Property Name="ClientAddId" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTm" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Mail_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" />
+    <Property Name="MailBoxId" Type="Int32" />
+    <Property Name="ReadMode" Type="Int32" />
+    <Property Name="UIDL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Inside" Type="Int32" />
+    <Property Name="FromName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FromEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="SendDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MailType" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="itFrom" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="itTo" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="cc" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="bcc" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="TextBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HtmlBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyTo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Read" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ReadUID" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="BoxBase" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Box" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RootId" Type="Int32" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
+    <Property Name="priority" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Notification" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="notify" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="star" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="redflag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ischeck" Type="Int32" />
+    <Property Name="checkmsg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SPUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPTime" Type="DateTime" Precision="3" />
+    <Property Name="SUID" Type="Int32" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Bak" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BaseDb" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BaseId" Type="Int64" />
+    <Property Name="MailDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RevUserId" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="RevUserName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="MailSize" Type="Int32" />
+    <Property Name="AccCount" Type="Int16" />
+    <Property Name="REALFROM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReturnPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MailLabel" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ConType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="RFMailId" Type="Int32" />
+    <Property Name="LocalTrack" Type="Int32" />
+    <Property Name="RemoteTrack" Type="Int32" />
+    <Property Name="IsReceipt" Type="Int32" />
+    <Property Name="ModId" Type="Int32" />
+    <Property Name="TopTime" Type="DateTime" Precision="3" />
+    <Property Name="RemindTime" Type="DateTime" Precision="3" />
+    <Property Name="PfDate" Type="DateTime" Precision="3" />
+    <Property Name="IsDeal" Type="Int32" />
+    <Property Name="CommCount" Type="Int32" />
+    <Property Name="CommReadUID" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ChanceId" Type="Int32" />
+    <Property Name="OpenTime" Type="DateTime" Precision="3" />
+    <Property Name="OpenIp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OpenArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OpenNowTime" Type="DateTime" Precision="3" />
+    <Property Name="OpenCount" Type="Int32" />
+    <Property Name="FromUID" Type="Int32" />
+    <Property Name="FromBoxId" Type="Int32" />
+    <Property Name="FromMailId" Type="Int32" />
+    <Property Name="FromRE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="JzMailTm" Type="DateTime" Precision="3" />
+    <Property Name="JzMailBoxId" Type="Int32" />
+    <Property Name="JzBox" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="JzRootId" Type="Int32" />
+    <Property Name="FileStoreId" Type="Int32" />
+    <Property Name="FileKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GdClientId" Type="Int32" />
+    <Property Name="FileRoot" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileStore" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="FileZip" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MailAcc_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailBoxId" Type="Int32" />
+    <Property Name="MailId" Type="Int32" />
+    <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FileSize" Type="Int32" />
+    <Property Name="ContentID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DownloadID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileDb" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileId" Type="Int64" />
+    <Property Name="FileStoreId" Type="Int32" />
+    <Property Name="FileRoot" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileStore" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTm" Type="DateTime" Precision="3" />
+    <Property Name="FileZip" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MailClient_T">
+    <Key>
+      <PropertyRef Name="ClientMailId" />
+    </Key>
+    <Property Name="ClientMailId" Type="Int32" Nullable="false" />
+    <Property Name="ClientEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ClientId" Type="Int32" />
+    <Property Name="ClientAddId" Type="Int32" />
+    <Property Name="ClientInfo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ClientAddInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Es" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MailInq_T">
+    <Key>
+      <PropertyRef Name="MailId" />
+    </Key>
+    <Property Name="MailId" Type="Int32" Nullable="false" />
+    <Property Name="Inq" Type="Int32" />
+    <Property Name="InqMailIdBase" Type="Int32" />
+    <Property Name="InqReLimit" Type="Int32" />
+    <Property Name="InqBak" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InqYfp" Type="Int32" />
+    <Property Name="InqReTime" Type="DateTime" Precision="3" />
+    <Property Name="InqSaleUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqSaleUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqDevUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqDevUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqClientId" Type="Int32" />
+    <Property Name="InqClientName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="InqLinkManId" Type="Int32" />
+    <Property Name="InqLinkMan" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="InqLinkManEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InqLinkManMobile" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="InqLinkManTel" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="InqFpTime" Type="DateTime" Precision="3" />
+    <Property Name="InqFpUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqFpUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqProId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="InqProName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InqWeb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="InqSource" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqClientClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InqIsOld" Type="Int32" />
+    <Property Name="InqLinkManEmail1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InqLinkManEmail2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MAILUIDL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UIDL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RDATE" Type="DateTime" Precision="3" />
+    <Property Name="MAILBOXID" Type="Int32" />
+    <Property Name="ISERR" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="TCRMMAILEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ErrLog_T" EntityType="Self.ErrLog_T" />
+    <EntitySet Name="Log_T" EntityType="Self.Log_T" />
+    <EntitySet Name="Mail_T" EntityType="Self.Mail_T" />
+    <EntitySet Name="MailAcc_T" EntityType="Self.MailAcc_T" />
+    <EntitySet Name="MailClient_T" EntityType="Self.MailClient_T" />
+    <EntitySet Name="MailInq_T" EntityType="Self.MailInq_T" />
+    <EntitySet Name="MAILUIDL" EntityType="Self.MAILUIDL" />
+    <FunctionImport Name="saveuidl">
+      <Parameter Name="mailboxid" Mode="In" Type="Int32" />
+      <Parameter Name="uidl" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

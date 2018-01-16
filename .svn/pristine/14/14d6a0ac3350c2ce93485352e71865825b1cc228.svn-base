@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCRMFILEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DocData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocId" Type="int" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Data" Type="image" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateTm" Type="datetime" Nullable="false" />
+    <Property Name="Size" Type="bigint" Nullable="false" />
+    <Property Name="MD5" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="UpdateTm" Type="datetime" Nullable="false" />
+    <Property Name="UpdateSize" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRMFILE.dbo.DocFile_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DocFile_T">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Md5" />
+      <PropertyRef Name="Size" />
+      <PropertyRef Name="Createtime" />
+      <PropertyRef Name="Uploadtime" />
+      <PropertyRef Name="NowSize" />
+      <PropertyRef Name="Mode" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Data" Type="image" />
+    <Property Name="Md5" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="Size" Type="bigint" Nullable="false" />
+    <Property Name="Createtime" Type="datetime" Nullable="false" />
+    <Property Name="Uploadtime" Type="datetime" Nullable="false" />
+    <Property Name="NowSize" Type="bigint" Nullable="false" />
+    <Property Name="Mode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="image" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailBase_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="MailData" Type="image" />
+    <Property Name="RecDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="image" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <Function Name="GetDocFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+    <Parameter Name="len" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+    <Parameter Name="len" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateDocFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="data" Type="image" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="data" Type="image" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="TCRMFILEModelStoreContainer">
+    <EntitySet Name="DocData_T" EntityType="Self.DocData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileData_T" EntityType="Self.FileData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBase_T" EntityType="Self.MailBase_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailData_T" EntityType="Self.MailData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocFile_T" EntityType="Self.DocFile_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DocFile_T].[Id] AS [Id], 
+[DocFile_T].[Type] AS [Type], 
+[DocFile_T].[Data] AS [Data], 
+[DocFile_T].[Md5] AS [Md5], 
+[DocFile_T].[Size] AS [Size], 
+[DocFile_T].[Createtime] AS [Createtime], 
+[DocFile_T].[Uploadtime] AS [Uploadtime], 
+[DocFile_T].[NowSize] AS [NowSize], 
+[DocFile_T].[Mode] AS [Mode]
+FROM [dbo].[DocFile_T] AS [DocFile_T]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿using AppApi.App_Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Http;
+
+namespace AppApi.Controllers
+{
+    public class BaseControllers: ApiController
+    {
+        protected TCRMEntities db = new TCRMEntities();
+        protected TCRMFILEEntities dbf = new TCRMFILEEntities();
+        protected TCRMMAILEntities dbm = new TCRMMAILEntities();
+        protected Models.BackParameter BP = new Models.BackParameter();
+    }
+}

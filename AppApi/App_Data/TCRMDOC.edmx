@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TCRMDOCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="File_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileName" Type="varchar" MaxLength="100" />
+          <Property Name="FlashName" Type="varchar" MaxLength="100" />
+          <Property Name="FileRoot" Type="varchar" MaxLength="50" />
+          <Property Name="ServerId" Type="int" />
+          <Property Name="ConNo" Type="varchar" MaxLength="50" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="FileSize" Type="bigint" />
+          <Property Name="FileType" Type="varchar" MaxLength="50" />
+          <Property Name="FileMimeType" Type="varchar" MaxLength="100" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateTm" Type="datetime" />
+          <Property Name="Sort" Type="bigint" />
+          <Property Name="IdenCode" Type="varchar" MaxLength="50" />
+          <Property Name="DeptId" Type="int" />
+          <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsAud" Type="int" />
+          <Property Name="Security" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lock" Type="smallint" />
+          <Property Name="LockTime" Type="datetime" />
+          <Property Name="LockUserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="LockUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TagClass" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TagId" Type="varchar" MaxLength="300" />
+          <Property Name="PreviewPic1" Type="varchar" MaxLength="50" />
+          <Property Name="PreviewPic2" Type="varchar" MaxLength="50" />
+          <Property Name="FileStore" Type="varchar" MaxLength="4" />
+          <Property Name="FileZip" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="FileAud_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="FileId" Type="bigint" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="AudOp" Type="varchar" MaxLength="20" />
+          <Property Name="ToRootId" Type="int" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="300" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="IsAud" Type="int" />
+          <Property Name="IsDone" Type="int" />
+          <Property Name="AudTime" Type="datetime" />
+          <Property Name="AudUserId" Type="nvarchar" MaxLength="500" />
+          <Property Name="AudUserName" Type="nvarchar" MaxLength="500" />
+          <Property Name="TimeOut" Type="datetime" />
+          <Property Name="OpenCount" Type="int" />
+          <Property Name="OpenCountNow" Type="int" />
+          <Property Name="OldRootId" Type="int" />
+          <Property Name="OldRootName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="FileAudLog_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AudId" Type="bigint" />
+          <Property Name="IsAud" Type="int" />
+          <Property Name="AudUserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="AudUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeOut" Type="datetime" />
+          <Property Name="AudTime" Type="datetime" />
+          <Property Name="OpenCount" Type="int" />
+        </EntityType>
+        <EntityType Name="FileEx_T">
+          <Key>
+            <PropertyRef Name="ExCode" />
+          </Key>
+          <Property Name="ExCode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ImageUrl" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="FileLog_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordId" Type="bigint" />
+          <Property Name="LogType" Type="nvarchar" MaxLength="50" />
+          <Property Name="RootName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FilePower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileId" Type="bigint" />
+          <Property Name="Type" Type="varchar" MaxLength="20" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleId" Type="int" />
+        </EntityType>
+        <EntityType Name="FileServer_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ServerUrl" Type="varchar" MaxLength="50" />
+          <Property Name="ServerRoot" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDef" Type="bit" />
+        </EntityType>
+        <EntityType Name="FileShor_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="FileId" Type="bigint" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FileTrash_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileName" Type="varchar" MaxLength="100" />
+          <Property Name="FlashName" Type="varchar" MaxLength="100" />
+          <Property Name="FileRoot" Type="varchar" MaxLength="50" />
+          <Property Name="ServerId" Type="int" />
+          <Property Name="ConNo" Type="varchar" MaxLength="50" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="FileSize" Type="bigint" />
+          <Property Name="FileType" Type="varchar" MaxLength="50" />
+          <Property Name="FileMimeType" Type="varchar" MaxLength="100" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateTm" Type="datetime" />
+          <Property Name="Sort" Type="bigint" />
+          <Property Name="IdenCode" Type="varchar" MaxLength="50" />
+          <Property Name="DeptId" Type="int" />
+          <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsAud" Type="int" />
+          <Property Name="Security" Type="nvarchar" MaxLength="50" />
+          <Property Name="DelUserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="DelUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="TagClass" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TagId" Type="varchar" MaxLength="300" />
+          <Property Name="PreviewPic1" Type="varchar" MaxLength="50" />
+          <Property Name="PreviewPic2" Type="varchar" MaxLength="50" />
+          <Property Name="FileStore" Type="varchar" MaxLength="4" />
+          <Property Name="FileZip" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="FileType_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="SeNum" Type="int" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="RoleId" Type="varchar" MaxLength="500" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+          <Property Name="Def" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="RoleSecurity_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="Security" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Root_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="IsParentSet" Type="int" />
+          <Property Name="AudOp" Type="varchar" MaxLength="20" />
+          <Property Name="AudUserId" Type="nvarchar" MaxLength="500" />
+          <Property Name="AudType" Type="int" />
+          <Property Name="AudTimeOut" Type="int" />
+          <Property Name="AudTimeOutAction" Type="int" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateTm" Type="datetime" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="IsYh" Type="int" />
+          <Property Name="UID" Type="varchar" MaxLength="8000" />
+          <Property Name="UIDType" Type="varchar" MaxLength="8000" />
+          <Property Name="RoleId" Type="varchar" MaxLength="8000" />
+          <Property Name="RoleType" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="RootPower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="1" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleId" Type="int" />
+        </EntityType>
+        <EntityType Name="Security_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="300" />
+          <Property Name="RoleId" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="SynRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="LocalRoot" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsSub" Type="nvarchar" MaxLength="2" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SynTime_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SynTime" Type="varchar" MaxLength="10" />
+          <Property Name="NowTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tag_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="TagClass" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="UseCount" Type="int" />
+        </EntityType>
+        <EntityType Name="TagClass_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+        </EntityType>
+        <EntityType Name="TagRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="Sort" Type="int" />
+        </EntityType>
+        <EntityType Name="TempPower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TempId" Type="bigint" />
+          <Property Name="Type" Type="varchar" MaxLength="20" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleId" Type="int" />
+        </EntityType>
+        <EntityType Name="UploadTemp_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Security" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+          <Property Name="Reason" Type="nchar" MaxLength="10" />
+          <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="DeptId" Type="int" />
+          <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsAud" Type="int" />
+          <Property Name="ConNo" Type="varchar" MaxLength="50" />
+          <Property Name="TagClass" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TagId" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="UserRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RootId" Type="int" />
+          <Property Name="Createtm" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="TCRMDOCModelStoreContainer">
+          <EntitySet Name="File_T" EntityType="Self.File_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileAud_T" EntityType="Self.FileAud_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileAudLog_T" EntityType="Self.FileAudLog_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileEx_T" EntityType="Self.FileEx_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileLog_T" EntityType="Self.FileLog_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FilePower_T" EntityType="Self.FilePower_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileServer_T" EntityType="Self.FileServer_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileShor_T" EntityType="Self.FileShor_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileTrash_T" EntityType="Self.FileTrash_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileType_T" EntityType="Self.FileType_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleSecurity_T" EntityType="Self.RoleSecurity_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Root_T" EntityType="Self.Root_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RootPower_T" EntityType="Self.RootPower_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Security_T" EntityType="Self.Security_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SynRoot_T" EntityType="Self.SynRoot_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SynTime_T" EntityType="Self.SynTime_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tag_T" EntityType="Self.Tag_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TagClass_T" EntityType="Self.TagClass_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TagRoot_T" EntityType="Self.TagRoot_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TempPower_T" EntityType="Self.TempPower_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UploadTemp_T" EntityType="Self.UploadTemp_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoot_T" EntityType="Self.UserRoot_T" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TCRMDOCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="File_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FlashName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FileRoot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServerId" Type="Int32" />
+          <Property Name="ConNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FileSize" Type="Int64" />
+          <Property Name="FileType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileMimeType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+          <Property Name="Updater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTm" Type="DateTime" Precision="3" />
+          <Property Name="Sort" Type="Int64" />
+          <Property Name="IdenCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeptId" Type="Int32" />
+          <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAud" Type="Int32" />
+          <Property Name="Security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lock" Type="Int16" />
+          <Property Name="LockTime" Type="DateTime" Precision="3" />
+          <Property Name="LockUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LockUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TagClass" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Tag" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TagId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="PreviewPic1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PreviewPic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileStore" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="FileZip" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FileAud_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="FileId" Type="Int64" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AudOp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ToRootId" Type="Int32" />
+          <Property Name="Reason" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+          <Property Name="IsAud" Type="Int32" />
+          <Property Name="IsDone" Type="Int32" />
+          <Property Name="AudTime" Type="DateTime" Precision="3" />
+          <Property Name="AudUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AudUserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TimeOut" Type="DateTime" Precision="3" />
+          <Property Name="OpenCount" Type="Int32" />
+          <Property Name="OpenCountNow" Type="Int32" />
+          <Property Name="OldRootId" Type="Int32" />
+          <Property Name="OldRootName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FileAudLog_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AudId" Type="Int64" />
+          <Property Name="IsAud" Type="Int32" />
+          <Property Name="AudUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AudUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeOut" Type="DateTime" Precision="3" />
+          <Property Name="AudTime" Type="DateTime" Precision="3" />
+          <Property Name="OpenCount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FileEx_T">
+          <Key>
+            <PropertyRef Name="ExCode" />
+          </Key>
+          <Property Name="ExCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImageUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FileLog_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordId" Type="Int64" />
+          <Property Name="LogType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RootName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="FilePower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileId" Type="Int64" />
+          <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FileServer_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ServerUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServerRoot" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDef" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="FileShor_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="FileId" Type="Int64" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="FileTrash_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FlashName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FileRoot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServerId" Type="Int32" />
+          <Property Name="ConNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FileSize" Type="Int64" />
+          <Property Name="FileType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileMimeType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+          <Property Name="Updater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTm" Type="DateTime" Precision="3" />
+          <Property Name="Sort" Type="Int64" />
+          <Property Name="IdenCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeptId" Type="Int32" />
+          <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAud" Type="Int32" />
+          <Property Name="Security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DelUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DelUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="TagClass" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Tag" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TagId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="PreviewPic1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PreviewPic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileStore" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="FileZip" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FileType_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SeNum" Type="Int32" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="RoleId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RoleName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Bak" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Def" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RoleSecurity_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="Security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Root_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IsParentSet" Type="Int32" />
+          <Property Name="AudOp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AudUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AudType" Type="Int32" />
+          <Property Name="AudTimeOut" Type="Int32" />
+          <Property Name="AudTimeOutAction" Type="Int32" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+          <Property Name="Updater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTm" Type="DateTime" Precision="3" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="IsYh" Type="Int32" />
+          <Property Name="UID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="UIDType" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="RoleId" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="RoleType" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="RootPower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Security_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="RoleName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SynRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="LocalRoot" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsSub" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SynTime_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SynTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NowTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Tag_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="Int32" />
+          <Property Name="TagClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="UseCount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TagClass_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TagRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TempPower_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TempId" Type="Int64" />
+          <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UploadTemp_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bak" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Reason" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+          <Property Name="DeptId" Type="Int32" />
+          <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAud" Type="Int32" />
+          <Property Name="ConNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TagClass" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Tag" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TagId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserRoot_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RootId" Type="Int32" />
+          <Property Name="Createtm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="TCRMDOCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="File_T" EntityType="Self.File_T" />
+          <EntitySet Name="FileAud_T" EntityType="Self.FileAud_T" />
+          <EntitySet Name="FileAudLog_T" EntityType="Self.FileAudLog_T" />
+          <EntitySet Name="FileEx_T" EntityType="Self.FileEx_T" />
+          <EntitySet Name="FileLog_T" EntityType="Self.FileLog_T" />
+          <EntitySet Name="FilePower_T" EntityType="Self.FilePower_T" />
+          <EntitySet Name="FileServer_T" EntityType="Self.FileServer_T" />
+          <EntitySet Name="FileShor_T" EntityType="Self.FileShor_T" />
+          <EntitySet Name="FileTrash_T" EntityType="Self.FileTrash_T" />
+          <EntitySet Name="FileType_T" EntityType="Self.FileType_T" />
+          <EntitySet Name="RoleSecurity_T" EntityType="Self.RoleSecurity_T" />
+          <EntitySet Name="Root_T" EntityType="Self.Root_T" />
+          <EntitySet Name="RootPower_T" EntityType="Self.RootPower_T" />
+          <EntitySet Name="Security_T" EntityType="Self.Security_T" />
+          <EntitySet Name="SynRoot_T" EntityType="Self.SynRoot_T" />
+          <EntitySet Name="SynTime_T" EntityType="Self.SynTime_T" />
+          <EntitySet Name="Tag_T" EntityType="Self.Tag_T" />
+          <EntitySet Name="TagClass_T" EntityType="Self.TagClass_T" />
+          <EntitySet Name="TagRoot_T" EntityType="Self.TagRoot_T" />
+          <EntitySet Name="TempPower_T" EntityType="Self.TempPower_T" />
+          <EntitySet Name="UploadTemp_T" EntityType="Self.UploadTemp_T" />
+          <EntitySet Name="UserRoot_T" EntityType="Self.UserRoot_T" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TCRMDOCModelStoreContainer" CdmEntityContainer="TCRMDOCEntities">
+          <EntitySetMapping Name="File_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.File_T">
+              <MappingFragment StoreEntitySet="File_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FlashName" ColumnName="FlashName" />
+                <ScalarProperty Name="FileRoot" ColumnName="FileRoot" />
+                <ScalarProperty Name="ServerId" ColumnName="ServerId" />
+                <ScalarProperty Name="ConNo" ColumnName="ConNo" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="FileMimeType" ColumnName="FileMimeType" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Updater" ColumnName="Updater" />
+                <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="IdenCode" ColumnName="IdenCode" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="IsAud" ColumnName="IsAud" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+                <ScalarProperty Name="Lock" ColumnName="Lock" />
+                <ScalarProperty Name="LockTime" ColumnName="LockTime" />
+                <ScalarProperty Name="LockUserId" ColumnName="LockUserId" />
+                <ScalarProperty Name="LockUserName" ColumnName="LockUserName" />
+                <ScalarProperty Name="TagClass" ColumnName="TagClass" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="TagId" ColumnName="TagId" />
+                <ScalarProperty Name="PreviewPic1" ColumnName="PreviewPic1" />
+                <ScalarProperty Name="PreviewPic2" ColumnName="PreviewPic2" />
+                <ScalarProperty Name="FileStore" ColumnName="FileStore" />
+                <ScalarProperty Name="FileZip" ColumnName="FileZip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileAud_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileAud_T">
+              <MappingFragment StoreEntitySet="FileAud_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="FileId" ColumnName="FileId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AudOp" ColumnName="AudOp" />
+                <ScalarProperty Name="ToRootId" ColumnName="ToRootId" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="IsAud" ColumnName="IsAud" />
+                <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+                <ScalarProperty Name="AudTime" ColumnName="AudTime" />
+                <ScalarProperty Name="AudUserId" ColumnName="AudUserId" />
+                <ScalarProperty Name="AudUserName" ColumnName="AudUserName" />
+                <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+                <ScalarProperty Name="OpenCount" ColumnName="OpenCount" />
+                <ScalarProperty Name="OpenCountNow" ColumnName="OpenCountNow" />
+                <ScalarProperty Name="OldRootId" ColumnName="OldRootId" />
+                <ScalarProperty Name="OldRootName" ColumnName="OldRootName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileAudLog_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileAudLog_T">
+              <MappingFragment StoreEntitySet="FileAudLog_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AudId" ColumnName="AudId" />
+                <ScalarProperty Name="IsAud" ColumnName="IsAud" />
+                <ScalarProperty Name="AudUserId" ColumnName="AudUserId" />
+                <ScalarProperty Name="AudUserName" ColumnName="AudUserName" />
+                <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+                <ScalarProperty Name="AudTime" ColumnName="AudTime" />
+                <ScalarProperty Name="OpenCount" ColumnName="OpenCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileEx_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileEx_T">
+              <MappingFragment StoreEntitySet="FileEx_T">
+                <ScalarProperty Name="ExCode" ColumnName="ExCode" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileLog_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileLog_T">
+              <MappingFragment StoreEntitySet="FileLog_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+                <ScalarProperty Name="LogType" ColumnName="LogType" />
+                <ScalarProperty Name="RootName" ColumnName="RootName" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilePower_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FilePower_T">
+              <MappingFragment StoreEntitySet="FilePower_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileId" ColumnName="FileId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileServer_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileServer_T">
+              <MappingFragment StoreEntitySet="FileServer_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ServerUrl" ColumnName="ServerUrl" />
+                <ScalarProperty Name="ServerRoot" ColumnName="ServerRoot" />
+                <ScalarProperty Name="IsDef" ColumnName="IsDef" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileShor_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileShor_T">
+              <MappingFragment StoreEntitySet="FileShor_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="FileId" ColumnName="FileId" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileTrash_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileTrash_T">
+              <MappingFragment StoreEntitySet="FileTrash_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FlashName" ColumnName="FlashName" />
+                <ScalarProperty Name="FileRoot" ColumnName="FileRoot" />
+                <ScalarProperty Name="ServerId" ColumnName="ServerId" />
+                <ScalarProperty Name="ConNo" ColumnName="ConNo" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="FileMimeType" ColumnName="FileMimeType" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Updater" ColumnName="Updater" />
+                <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="IdenCode" ColumnName="IdenCode" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="IsAud" ColumnName="IsAud" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+                <ScalarProperty Name="DelUserId" ColumnName="DelUserId" />
+                <ScalarProperty Name="DelUserName" ColumnName="DelUserName" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="TagClass" ColumnName="TagClass" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="TagId" ColumnName="TagId" />
+                <ScalarProperty Name="PreviewPic1" ColumnName="PreviewPic1" />
+                <ScalarProperty Name="PreviewPic2" ColumnName="PreviewPic2" />
+                <ScalarProperty Name="FileStore" ColumnName="FileStore" />
+                <ScalarProperty Name="FileZip" ColumnName="FileZip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileType_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.FileType_T">
+              <MappingFragment StoreEntitySet="FileType_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SeNum" ColumnName="SeNum" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="Def" ColumnName="Def" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleSecurity_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.RoleSecurity_T">
+              <MappingFragment StoreEntitySet="RoleSecurity_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Root_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.Root_T">
+              <MappingFragment StoreEntitySet="Root_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="IsParentSet" ColumnName="IsParentSet" />
+                <ScalarProperty Name="AudOp" ColumnName="AudOp" />
+                <ScalarProperty Name="AudUserId" ColumnName="AudUserId" />
+                <ScalarProperty Name="AudType" ColumnName="AudType" />
+                <ScalarProperty Name="AudTimeOut" ColumnName="AudTimeOut" />
+                <ScalarProperty Name="AudTimeOutAction" ColumnName="AudTimeOutAction" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Updater" ColumnName="Updater" />
+                <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="IsYh" ColumnName="IsYh" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="UIDType" ColumnName="UIDType" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RootPower_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.RootPower_T">
+              <MappingFragment StoreEntitySet="RootPower_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Security_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.Security_T">
+              <MappingFragment StoreEntitySet="Security_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SynRoot_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.SynRoot_T">
+              <MappingFragment StoreEntitySet="SynRoot_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="LocalRoot" ColumnName="LocalRoot" />
+                <ScalarProperty Name="IsSub" ColumnName="IsSub" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SynTime_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.SynTime_T">
+              <MappingFragment StoreEntitySet="SynTime_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SynTime" ColumnName="SynTime" />
+                <ScalarProperty Name="NowTime" ColumnName="NowTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tag_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.Tag_T">
+              <MappingFragment StoreEntitySet="Tag_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="TagClass" ColumnName="TagClass" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="UseCount" ColumnName="UseCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TagClass_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.TagClass_T">
+              <MappingFragment StoreEntitySet="TagClass_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TagRoot_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.TagRoot_T">
+              <MappingFragment StoreEntitySet="TagRoot_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TempPower_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.TempPower_T">
+              <MappingFragment StoreEntitySet="TempPower_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TempId" ColumnName="TempId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UploadTemp_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.UploadTemp_T">
+              <MappingFragment StoreEntitySet="UploadTemp_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+                <ScalarProperty Name="Bak" ColumnName="Bak" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="Creater" ColumnName="Creater" />
+                <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="IsAud" ColumnName="IsAud" />
+                <ScalarProperty Name="ConNo" ColumnName="ConNo" />
+                <ScalarProperty Name="TagClass" ColumnName="TagClass" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="TagId" ColumnName="TagId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoot_T">
+            <EntityTypeMapping TypeName="TCRMDOCModel.UserRoot_T">
+              <MappingFragment StoreEntitySet="UserRoot_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Createtm" ColumnName="Createtm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

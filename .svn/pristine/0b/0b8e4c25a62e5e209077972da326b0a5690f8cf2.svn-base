@@ -1,0 +1,374 @@
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\csc.exe
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\System.Collections.Immutable.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\vbc.exe
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\VBCSCompiler.exe
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\roslyn\VBCSCompiler.exe.config
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\AppApi.dll.config
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\AppApi.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\AppApi.pdb
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Antlr3.Runtime.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\EntityFramework.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Microsoft.Web.Infrastructure.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Newtonsoft.Json.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Net.Http.Formatting.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Helpers.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Http.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Http.WebHost.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Mvc.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Optimization.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Razor.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.Deployment.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.Razor.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\WebGrease.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\EntityFramework.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Newtonsoft.Json.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Net.Http.Formatting.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Helpers.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Http.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Http.WebHost.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Mvc.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Optimization.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.Razor.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.Deployment.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\System.Web.WebPages.Razor.xml
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\Antlr3.Runtime.pdb
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\obj\Debug\AppApi.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\obj\Debug\AppApi.pdb
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\TCRMCLASS.dll
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\bin\TCRMCLASS.pdb
+D:\ainiwork\csharp.net\AppApi\AppApi\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\csc.exe
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\vbc.exe
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\chl\Desktop\AppApi\AppApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\chl\Desktop\AppApi\AppApi\bin\AppApi.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\AppApi.pdb
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Antlr3.Runtime.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\EntityFramework.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Newtonsoft.Json.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Net.Http.Formatting.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Helpers.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Http.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Http.WebHost.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Mvc.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Optimization.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Razor.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\WebGrease.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\EntityFramework.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Newtonsoft.Json.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Net.Http.Formatting.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Helpers.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Http.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Http.WebHost.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Mvc.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Optimization.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.Razor.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\chl\Desktop\AppApi\AppApi\bin\TCRMCLASS.pdb
+C:\Users\chl\Desktop\AppApi\AppApi\bin\Antlr3.Runtime.pdb
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\chl\Desktop\AppApi\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache
+C:\Users\chl\Desktop\AppApi\AppApi\obj\Debug\AppApi.dll
+C:\Users\chl\Desktop\AppApi\AppApi\obj\Debug\AppApi.pdb
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\csc.exe
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\System.Collections.Immutable.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\vbc.exe
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\VBCSCompiler.exe
+F:\亿迈webapi\Project1\AppApi\bin\roslyn\VBCSCompiler.exe.config
+F:\亿迈webapi\Project1\AppApi\bin\AppApi.dll
+F:\亿迈webapi\Project1\AppApi\bin\AppApi.pdb
+F:\亿迈webapi\Project1\AppApi\bin\Antlr3.Runtime.dll
+F:\亿迈webapi\Project1\AppApi\bin\EntityFramework.dll
+F:\亿迈webapi\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\亿迈webapi\Project1\AppApi\bin\Microsoft.Web.Infrastructure.dll
+F:\亿迈webapi\Project1\AppApi\bin\Newtonsoft.Json.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Net.Http.Formatting.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Helpers.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Http.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Http.WebHost.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Mvc.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Optimization.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Razor.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.Deployment.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.dll
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.Razor.dll
+F:\亿迈webapi\Project1\AppApi\bin\WebGrease.dll
+F:\亿迈webapi\Project1\AppApi\bin\EntityFramework.xml
+F:\亿迈webapi\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\亿迈webapi\Project1\AppApi\bin\Newtonsoft.Json.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Net.Http.Formatting.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Helpers.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Http.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Http.WebHost.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Mvc.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Optimization.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.Razor.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.Deployment.xml
+F:\亿迈webapi\Project1\AppApi\bin\System.Web.WebPages.Razor.xml
+F:\亿迈webapi\Project1\AppApi\bin\TCRMCLASS.pdb
+F:\亿迈webapi\Project1\AppApi\bin\Antlr3.Runtime.pdb
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\亿迈webapi\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\亿迈webapi\Project1\AppApi\obj\Debug\AppApi.dll
+F:\亿迈webapi\Project1\AppApi\obj\Debug\AppApi.pdb
+F:\亿迈webapi\Project1\AppApi\bin\ICSharpCode.SharpZipLib.dll
+F:\亿迈webapi\Project1\AppApi\bin\Org.Mentalis.Security.dll
+F:\亿迈webapi\Project1\AppApi\bin\TCRMCLASS.dll
+F:\亿迈webapi\Project1\AppApi\bin\TCRMCLASS.xml
+F:\亿迈webapi\Project1\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache
+E:\Project1\Project1\AppApi\bin\roslyn\csc.exe
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project1\Project1\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project1\Project1\AppApi\bin\roslyn\System.Collections.Immutable.dll
+E:\Project1\Project1\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project1\Project1\AppApi\bin\roslyn\vbc.exe
+E:\Project1\Project1\AppApi\bin\roslyn\VBCSCompiler.exe
+E:\Project1\Project1\AppApi\bin\roslyn\VBCSCompiler.exe.config
+E:\Project1\Project1\AppApi\bin\AppApi.dll.config
+E:\Project1\Project1\AppApi\bin\AppApi.dll
+E:\Project1\Project1\AppApi\bin\AppApi.pdb
+E:\Project1\Project1\AppApi\bin\Antlr3.Runtime.dll
+E:\Project1\Project1\AppApi\bin\EntityFramework.dll
+E:\Project1\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project1\Project1\AppApi\bin\Microsoft.Web.Infrastructure.dll
+E:\Project1\Project1\AppApi\bin\Newtonsoft.Json.dll
+E:\Project1\Project1\AppApi\bin\System.Net.Http.Formatting.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Helpers.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Http.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Http.WebHost.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Mvc.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Optimization.dll
+E:\Project1\Project1\AppApi\bin\System.Web.Razor.dll
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.Deployment.dll
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.dll
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.Razor.dll
+E:\Project1\Project1\AppApi\bin\WebGrease.dll
+E:\Project1\Project1\AppApi\bin\EntityFramework.xml
+E:\Project1\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project1\Project1\AppApi\bin\Newtonsoft.Json.xml
+E:\Project1\Project1\AppApi\bin\System.Net.Http.Formatting.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Helpers.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Http.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Http.WebHost.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Mvc.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Optimization.xml
+E:\Project1\Project1\AppApi\bin\System.Web.Razor.xml
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.xml
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.Deployment.xml
+E:\Project1\Project1\AppApi\bin\System.Web.WebPages.Razor.xml
+E:\Project1\Project1\AppApi\bin\Antlr3.Runtime.pdb
+E:\Project1\Project1\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\Project1\Project1\AppApi\obj\Debug\AppApi.dll
+E:\Project1\Project1\AppApi\obj\Debug\AppApi.pdb
+E:\Project1\Project1\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\csc.exe
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\vbc.exe
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\AppApi.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\AppApi.pdb
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Antlr3.Runtime.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\EntityFramework.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Newtonsoft.Json.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Net.Http.Formatting.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Helpers.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Http.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Http.WebHost.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Mvc.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Optimization.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Razor.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\WebGrease.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\EntityFramework.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Newtonsoft.Json.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Net.Http.Formatting.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Helpers.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Http.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Http.WebHost.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Mvc.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Optimization.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.Razor.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Antlr3.Runtime.pdb
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\obj\Debug\AppApi.dll
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\obj\Debug\AppApi.pdb
+C:\Users\chl\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\csc.exe
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\System.Collections.Immutable.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\System.Reflection.Metadata.dll
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\vbc.exe
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\VBCSCompiler.exe
+F:\融合通讯web开发\Project34\AppApi\bin\roslyn\VBCSCompiler.exe.config
+F:\融合通讯web开发\Project34\AppApi\bin\AppApi.dll.config
+F:\融合通讯web开发\Project34\AppApi\bin\AppApi.dll
+F:\融合通讯web开发\Project34\AppApi\bin\AppApi.pdb
+F:\融合通讯web开发\Project34\AppApi\bin\Antlr3.Runtime.dll
+F:\融合通讯web开发\Project34\AppApi\bin\EntityFramework.dll
+F:\融合通讯web开发\Project34\AppApi\bin\GetuiServerApiSDK.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Google.ProtocolBuffers.dll
+F:\融合通讯web开发\Project34\AppApi\bin\ICSharpCode.SharpZipLib.dll
+F:\融合通讯web开发\Project34\AppApi\bin\log4net.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Microsoft.Web.Infrastructure.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Newtonsoft.Json.dll
+F:\融合通讯web开发\Project34\AppApi\bin\NPOI.dll
+F:\融合通讯web开发\Project34\AppApi\bin\NPOI.OOXML.dll
+F:\融合通讯web开发\Project34\AppApi\bin\NPOI.OpenXml4Net.dll
+F:\融合通讯web开发\Project34\AppApi\bin\NPOI.OpenXmlFormats.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Org.Mentalis.Security.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Net.Http.Formatting.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Helpers.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Http.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Http.WebHost.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Mvc.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Optimization.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Razor.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.Deployment.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.dll
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.Razor.dll
+F:\融合通讯web开发\Project34\AppApi\bin\WebGrease.dll
+F:\融合通讯web开发\Project34\AppApi\bin\EntityFramework.xml
+F:\融合通讯web开发\Project34\AppApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\融合通讯web开发\Project34\AppApi\bin\NPOI.xml
+F:\融合通讯web开发\Project34\AppApi\bin\Newtonsoft.Json.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Net.Http.Formatting.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Helpers.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Http.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Http.WebHost.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Mvc.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Optimization.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.Razor.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.Deployment.xml
+F:\融合通讯web开发\Project34\AppApi\bin\System.Web.WebPages.Razor.xml
+F:\融合通讯web开发\Project34\AppApi\bin\TCRMCLASS.pdb
+F:\融合通讯web开发\Project34\AppApi\bin\TCRMCLASS.xml
+F:\融合通讯web开发\Project34\AppApi\bin\Antlr3.Runtime.pdb
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\EntityFramework.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Http.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\融合通讯web开发\Project34\AppApi\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\融合通讯web开发\Project34\AppApi\obj\Debug\AppApi.dll
+F:\融合通讯web开发\Project34\AppApi\obj\Debug\AppApi.pdb
+F:\融合通讯web开发\Project34\AppApi\bin\Aliyun.OSS.dll
+F:\融合通讯web开发\Project34\AppApi\bin\Aliyun.OSS.pdb
+F:\融合通讯web开发\Project34\AppApi\bin\Aliyun.OSS.xml
+F:\融合通讯web开发\Project34\AppApi\obj\Debug\AppApi.csprojResolveAssemblyReference.cache

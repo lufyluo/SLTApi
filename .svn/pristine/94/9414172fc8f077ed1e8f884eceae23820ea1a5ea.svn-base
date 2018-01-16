@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
+
+namespace AppApi.Controllers
+{
+    public class huanxin
+    {
+        private static string HXAppKey = System.Web.Configuration.WebConfigurationManager.AppSettings["HXAppKey"].Split('#')[0];
+        private static string HXAppKey1 = System.Web.Configuration.WebConfigurationManager.AppSettings["HXAppKey"].Split('#')[1];
+        private static string HXClientID = System.Web.Configuration.WebConfigurationManager.AppSettings["HXClientID"];
+        private static string HXClientSecret = System.Web.Configuration.WebConfigurationManager.AppSettings["HXClientSecret"];
+        #region 获取环信授权Token
+        /// <summary>  
+        /// 获取环信授权Token  
+        /// </summary>  
+        /// <returns></returns>  
+        public static string GetHXToken()
+        {
+            string url = "https://a1.easemob.com/" + HXAppKey + "/" + HXAppKey1 + "/token";
+            var postData = "{ \"grant_type\": \"client_credentials\", \"client_id\": \"" + HXClientID + "\", \"client_secret\": \"" + HXClientSecret + "\"}";
+            HttpContent httpContent = new StringContent(postData);
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            HttpClient client = new HttpClient();
+            HttpResponseMessage hrm = client.PostAsync(url, httpContent).Result;
+            if (hrm.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                JObject JO = (JObject)JsonConvert.DeserializeObject(hrm.Content.ReadAsStringAsync().Result);
+                return JO["access_token"].ToString();
+            }
+            hrm.Dispose();
+            client.Dispose();
+            // string Token = client.PostAsync(url, httpContent).Result.Content.ReadAsStringAsync().Result;  
+            return "";
+        }
+        #endregion
+        #region 检测用户是否存在环信
+        public static bool CheckUser(string ID)
+        {
+            string url = "http://a1.easemob.com/" + HXAppKey + "/" + HXAppKey1 + "/users/" + ID;
+            var postData = "Bearer " + GetHXToken();
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Authorization", postData);
+            HttpResponseMessage hrm = client.GetAsync(url).Result;
+            if (hrm.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
+
+        #region 注册环信用户
+        /// <summary>  
+        /// 注册新的环信用户  
+        /// </summary>  
+        /// <param name="ID">手机号</param>  
+        /// <returns></returns>  
+        public static bool RegeditUser(string ID)
+        {
+            string url = "http://a1.easemob.com/" + HXAppKey + "/" + HXAppKey1 + "/users";
+            string postData = "{ \"username\": \"" + ID + "\", \"password\": \"" + ID + "\"}";
+            string Token = GetHXToken();
+            HttpContent httpContent = new StringContent(postData);
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Token);
+            HttpResponseMessage hrm = client.PostAsync(url, httpContent).Result;//reg  
+            if (hrm.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return true;
+            }
+            hrm.Dispose();
+            client.Dispose();
+            // string Token = client.PostAsync(url, httpContent).Result.Content.ReadAsStringAsync().Result;  
+            return false;
+        }
+        #endregion
+        #region 给群组发信息
+        /// <summary>  
+        /// 给用户群发信息  
+        /// </summary>  
+        /// <param name="Msg">信息</param>  
+        /// <returns></returns>  
+        public static bool SendMsgToGroups(string Msg, string users)
+        {
+            string url = "http://a1.easemob.com/" + HXAppKey + "/" + HXAppKey1 + "/users";
+            string postData = "{\"target_type\": \"users\", \"target\": [" + users + "],\"msg\": {\"type\": \"txt\",\"msg\": \"" + Msg + "\"}}";
+            string Token = GetHXToken();
+            HttpContent httpContent = new StringContent(postData);
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + Token);
+            HttpResponseMessage hrm = client.PostAsync(url, httpContent).Result;//reg  
+            if (hrm.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion  
+      
+    }
+}

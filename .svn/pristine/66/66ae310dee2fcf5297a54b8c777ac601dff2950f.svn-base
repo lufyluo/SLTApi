@@ -1,0 +1,109 @@
+﻿using AppApi.App_Data;
+using AppApi.Filter;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace AppApi.Controllers
+{
+    public class FileController : BaseControllers
+    {
+        public int buflen = 102400;
+        [Check]
+        [File]
+        [HttpPost]
+        public Models.BackParameter Download([FromBody]Models.File.Gain.Download D)//下载文件
+        {
+            byte[] filedata = db.Database.SqlQuery<byte[]>(String.Format("GetMailFile {0},{1},{2}", D.FileId, D.Position, buflen), "").FirstOrDefault();
+            string data = Convert.ToBase64String(filedata);
+            Models.File.Back.Download BD = new Models.File.Back.Download()
+            {
+                fileid = D.FileId,
+                data = data,
+                position = D.Position
+            };
+            BP.back = BD;
+            return BP;
+        }
+        [Check]
+        [HttpPost]
+        public Models.BackParameter Submit([FromBody]Models.File.Gain.Submit U)//提交文件
+        {
+            MailData_T md = new MailData_T();
+            md.FileName = U.Name;
+            md.FileType = "application/octet-stream";
+            dbf.MailData_T.Add(md);
+            dbf.SaveChanges();
+            MailAcc_T ma = new MailAcc_T();
+            ma.DownloadID = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(DateTime.Now.ToString("yyyyMMddHHmmssfff"), "MD5").ToUpper();
+            ma.FileName = md.FileName;
+            ma.FileDb = ConfigurationManager.AppSettings["dbname"].ToString() + "FILE";
+            ma.Creater = U.UserId;
+            ma.CreaterName = Tools.Base.GetUserName(U.UserId);
+            ma.FileSize = U.Size;
+            ma.FileId = md.Id;
+            dbm.MailAcc_T.Add(ma);
+            dbm.SaveChanges();
+            Models.File.Back.Upload BU = new Models.File.Back.Upload()
+            {
+                fileid = md.Id,
+                length = md.Data == null ? 0 : md.Data.Length,
+                msg = "上传成功"
+            };
+            BP.back = BU;
+            return BP;
+        }
+
+        [Check]
+        [FileCreater]
+        [HttpPost]
+        public Models.BackParameter Upload([FromBody]Models.File.Gain.Upload C)//续传文件
+        {
+            Models.File.Back.Upload BU = new Models.File.Back.Upload();
+            int datasize = dbf.Database.SqlQuery<int>("select datasize=DATALENGTH(isnull([Data],'')) from maildata_T where id=" + C.FileId).FirstOrDefault();
+            int filesize = dbm.Database.SqlQuery<int>("select FileSize from MailAcc_T where Fileid=" + C.FileId).FirstOrDefault();
+            if (filesize > 0)
+            {
+                C.Data = C.Data.Replace(" ", "+");
+                if (filesize > datasize)
+                {
+                    byte[] data = Convert.FromBase64String(C.Data);
+                    dbf.UpdateMailFile(C.FileId, data, C.Position);
+                    int nowsize = C.Position + data.Length;
+                    if (filesize <= nowsize)
+                    {
+                        BP.code = Tools.BackCode.FileIsFinish;
+                        BP.back = Tools.BackCode.CodeStr[BP.code];
+                        return BP;
+                    }
+                    else
+                    {
+                        BU.fileid = C.FileId;
+                        BU.length = nowsize;
+                        BU.msg = "上传成功";
+                        BP.back = BU;
+                        return BP;
+                    }
+                }
+                else
+                {
+                    BP.code = Tools.BackCode.FileIsFinish;
+                    BP.back = Tools.BackCode.CodeStr[BP.code];
+                    return BP;
+                }
+
+            }
+            else
+            {
+                BP.code = Tools.BackCode.Err;
+                BP.back = "获取文件大小失败";
+                return BP;
+            }
+
+        }
+    }
+}

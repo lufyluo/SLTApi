@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  有关如何配置 ASP.NET 应用程序的详细信息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <appSettings>
+    <add key="ApiPath" value="" />
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    <add key="AndroidSign" value="123" />
+    <add key="IosSign" value="1234" />
+    <add key="serverip" value="116.62.232.164" />
+    <add key="dbname" value="TCRM" />
+    <add key="username" value="sa" />
+    <add key="password" value="MTcrm2016@2017!" />
+    <add key="SN" value="4B396F6153557378436552333559584E6C7A6B57365670487436594F30614F774F2F437847446973462B385572644C4D49626F52512B4E6C50415665476A6634365770646F6D324B414F673D" />
+    <!--发送邮件缓冲区大小(必须是57的倍数)-->
+    <add key="SendBuffer" value="570000"/>
+    <!--接收邮件缓冲区大小(必须是76的倍数)-->
+    <add key="RecvBuffer" value="760000"/>
+    <!--上传附件缓冲区大小(必须是8040的倍数)-->
+    <add key="UpFileBuffer" value="804000"/>
+    <!--下载附件缓冲区大小(必须是8040的倍数)-->
+    <add key="DownLoadBuffer" value="804000"/>
+    <!--SMTP发邮件时超时时间(-1表示不设置超时时间)-->
+    <add key="SmtpReadTimeout" value="300000"/>
+    <!--POP收邮件时超时时间(-1表示不设置超时时间)-->
+    <add key="PopReadTimeout" value="30000"/>
+    <!--发邮件时空闲时间(毫秒)-->
+    <add key="SendSleep" value="0"/>
+    <!--收邮件时空闲时间(毫秒)-->
+    <add key="ResvSleep" value="0"/>
+    <!--上传附件时空闲时间(毫秒)-->
+    <add key="UpFileSleep" value="0"/>
+    <!--下载附件时空闲时间(毫秒)-->
+    <add key="DownLoadSleep" value="0"/>
+    <!--删除过期附件的间隔时间(小时)-->
+    <add key="DelDownTime" value="2"/>
+    <!--查询超时时间(秒)-->
+    <add key="CommandTimeout" value="600"/>
+    <!--接收邮件的传输流缓冲区大小-->
+    <add key="NetStrmBuffer" value="256"/>
+    <!--接收邮件的传输流的间隔时间(毫秒)-->
+    <add key="NetStrmSleep" value="0"/>
+    <!--当邮件接收结束后的等待时间(毫秒,默认1000)-->
+    <add key="NetStrmSleepEnd" value="1000"/>
+    <!--发邮件内容报文前的空闲时间(毫秒,默认0(新网一般用1000))-->
+    <add key="MailDataSleep" value="0"/>
+    <!--服务器是不是64位(1表示64位,0表示32位)-->
+    <add key="ServerBit" value="0"/>
+    <!--环信应用-->
+    <add key="HXAppKey" value="dandan9609#salet"/>
+    <!--环信clientid-->
+    <add key="HXClientID" value="YXA6LOpMEFilEeeil8-UjQX2MA"/>
+    <!--环信secret-->
+    <add key="HXClientSecret" value="YXA642OiQCcvuqdaA6gTqyyeVKK_NA8"/>
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5" />
+    <httpRuntime targetFramework="4.5" />
+  </system.web>
+  <system.webServer>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+    <modules runAllManagedModulesForAllRequests="true" />
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="1.1.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701" />
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:14 /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+    </compilers>
+  </system.codedom>
+  <connectionStrings>
+    <add name="TCRMEntities" connectionString="metadata=res://*/App_Data.TCRM.csdl|res://*/App_Data.TCRM.ssdl|res://*/App_Data.TCRM.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=116.62.232.164;initial catalog=TCRM;user id=sa;password=MTcrm2016@2017!;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="TCRMFILEEntities" connectionString="metadata=res://*/App_Data.TCRMFILE.csdl|res://*/App_Data.TCRMFILE.ssdl|res://*/App_Data.TCRMFILE.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=116.62.232.164;initial catalog=TCRMFILE;user id=sa;password=MTcrm2016@2017!;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="TCRMMAILEntities" connectionString="metadata=res://*/App_Data.TCRMMAIL.csdl|res://*/App_Data.TCRMMAIL.ssdl|res://*/App_Data.TCRMMAIL.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=116.62.232.164;initial catalog=TCRMMAIL;user id=sa;password=MTcrm2016@2017!;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v13.0" />
+      </parameters>
+    </defaultConnectionFactory>
+  </entityFramework>
+</configuration>

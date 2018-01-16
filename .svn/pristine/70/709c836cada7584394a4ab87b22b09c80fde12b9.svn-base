@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace AppApi.Models.File.Gain
+{
+    public class Submit:GainParameter
+    {
+        public String Name { get; set; }
+        public int Size { get; set; }
+    }
+}

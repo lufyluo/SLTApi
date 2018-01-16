@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TCRMFILEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DocData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+          <Property Name="FileType" Type="varchar" MaxLength="100" />
+          <Property Name="Data" Type="image" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FileData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+          <Property Name="FileType" Type="varchar" MaxLength="100" />
+          <Property Name="Data" Type="image" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MailBase_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MailBoxId" Type="int" />
+          <Property Name="MailData" Type="image" />
+          <Property Name="RecDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MailData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+          <Property Name="FileType" Type="varchar" MaxLength="100" />
+          <Property Name="Data" Type="image" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <Function Name="GetMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="position" Type="int" Mode="In" />
+          <Parameter Name="len" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="data" Type="image" Mode="In" />
+          <Parameter Name="position" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="TCRMFILEModelStoreContainer">
+          <EntitySet Name="DocData_T" EntityType="Self.DocData_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileData_T" EntityType="Self.FileData_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MailBase_T" EntityType="Self.MailBase_T" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MailData_T" EntityType="Self.MailData_T" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TCRMFILEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DocData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="FileData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MailBase_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MailBoxId" Type="Int32" />
+          <Property Name="MailData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="RecDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MailData_T">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreateTm" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="TCRMFILEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DocData_T" EntityType="Self.DocData_T" />
+          <EntitySet Name="FileData_T" EntityType="Self.FileData_T" />
+          <EntitySet Name="MailBase_T" EntityType="Self.MailBase_T" />
+          <EntitySet Name="MailData_T" EntityType="Self.MailData_T" />
+          <FunctionImport Name="GetMailFile" ReturnType="Collection(Binary)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="position" Mode="In" Type="Int32" />
+            <Parameter Name="len" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateMailFile">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="data" Mode="In" Type="Binary" />
+            <Parameter Name="position" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TCRMFILEModelStoreContainer" CdmEntityContainer="TCRMFILEEntities">
+          <EntitySetMapping Name="DocData_T">
+            <EntityTypeMapping TypeName="TCRMFILEModel.DocData_T">
+              <MappingFragment StoreEntitySet="DocData_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileData_T">
+            <EntityTypeMapping TypeName="TCRMFILEModel.FileData_T">
+              <MappingFragment StoreEntitySet="FileData_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MailBase_T">
+            <EntityTypeMapping TypeName="TCRMFILEModel.MailBase_T">
+              <MappingFragment StoreEntitySet="MailBase_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+                <ScalarProperty Name="MailData" ColumnName="MailData" />
+                <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MailData_T">
+            <EntityTypeMapping TypeName="TCRMFILEModel.MailData_T">
+              <MappingFragment StoreEntitySet="MailData_T">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetMailFile" FunctionName="TCRMFILEModel.Store.GetMailFile" />
+          <FunctionImportMapping FunctionImportName="UpdateMailFile" FunctionName="TCRMFILEModel.Store.UpdateMailFile" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

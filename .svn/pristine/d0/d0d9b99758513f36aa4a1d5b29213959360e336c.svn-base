@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCRMFILEModelStoreContainer" CdmEntityContainer="TCRMFILEEntities">
+    <EntitySetMapping Name="DocData_T">
+      <EntityTypeMapping TypeName="TCRMFILEModel.DocData_T">
+        <MappingFragment StoreEntitySet="DocData_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileData_T">
+      <EntityTypeMapping TypeName="TCRMFILEModel.FileData_T">
+        <MappingFragment StoreEntitySet="FileData_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBase_T">
+      <EntityTypeMapping TypeName="TCRMFILEModel.MailBase_T">
+        <MappingFragment StoreEntitySet="MailBase_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="MailData" ColumnName="MailData" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailData_T">
+      <EntityTypeMapping TypeName="TCRMFILEModel.MailData_T">
+        <MappingFragment StoreEntitySet="MailData_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetMailFile" FunctionName="TCRMFILEModel.Store.GetMailFile" />
+    <FunctionImportMapping FunctionImportName="UpdateMailFile" FunctionName="TCRMFILEModel.Store.UpdateMailFile" />
+  </EntityContainerMapping>
+</Mapping>

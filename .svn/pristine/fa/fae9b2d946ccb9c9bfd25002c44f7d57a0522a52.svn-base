@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E0D7BA5-4FF2-44CC-8482-E9B0F206B226}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppApi</RootNamespace>
+    <AssemblyName>AppApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>..\..\..\vs引用集\bin\Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GetuiServerApiSDK, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\GetuiServerApiSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers, Version=2.4.1.473, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\vs引用集\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\vs引用集\Release\Net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Mentalis.Security">
+      <HintPath>..\..\..\vs引用集\Org.Mentalis.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="TCRMCLASS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\51613\Desktop\TCRMCLASS.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Error\" />
+    <Folder Include="picimage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\AnalysisDef_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\AnalysisGroup_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\AnalysisRoot_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Answer_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Data\BankInfo_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Branch_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Calendar_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Calendar_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ChancePro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ChanceSource_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ChanceSumup_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Chance_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Chance_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CheckResult_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CircleGroup_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Circle_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientAddCopy_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientAdd_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientBackLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientCare_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientComment_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientComplain_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientCopy_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientFollow_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientFollow_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientJoinLogMain_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientJoinLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientLabel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientLimit_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientMerger_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\clientpro_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientPubLimit_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientPubRuleIf1_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientPubRuleIf2_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientPubRule_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientSalePub_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ClientSale_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Client_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CodeRule_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Collect_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ColumnSetMy_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ColumnSet_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Comm_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CompanyInfo_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BaseControllers.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\FolderController.cs" />
+    <Compile Include="Controllers\huanxin.cs" />
+    <Compile Include="Controllers\MailBoxController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
+    <Compile Include="Controllers\PushController.cs" />
+    <Compile Include="Controllers\SystemController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\Filter\Check.cs" />
+    <Compile Include="Controllers\Filter\Client.cs" />
+    <Compile Include="Controllers\Filter\Contact.cs" />
+    <Compile Include="Controllers\Filter\File.cs" />
+    <Compile Include="Controllers\Filter\FileCreater.cs" />
+    <Compile Include="Controllers\Filter\Folder.cs" />
+    <Compile Include="Controllers\Filter\GetList.cs" />
+    <Compile Include="Controllers\Filter\Mail.cs" />
+    <Compile Include="Controllers\Filter\MailBox.cs" />
+    <Compile Include="Controllers\Filter\Permissions.cs" />
+    <Compile Include="Controllers\Filter\Power.cs" />
+    <Compile Include="Controllers\Filter\PubLimit.cs" />
+    <Compile Include="Controllers\WorkDtController.cs" />
+    <Compile Include="App_Data\CustomFind_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsClient_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsData_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsHsPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsRelation_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsZcTj_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CustomsZc_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DataCompetitorClient_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DataCompetitorPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DataCompetitor_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DataLiarEmail_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DateNum_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Delta_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Dept_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DesktopClient_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DesktopOne_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DesktopThree_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Dictionary_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DiskTopMy_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocFile_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocFolderShared_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocFolder_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocLable_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocShared_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocumentManagement_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Doc_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DynamicLink_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DynamicRecovery_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Dynamic_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmAddress_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmGroup_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmTaskAddress_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmTask_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ErrLog_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ExcelModelConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ExcelModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileAudLog_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileAud_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileEx_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileLog_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FilePower_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileServer_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileShor_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileStore_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileTrash_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileType_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\File_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Folder_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FwIntMailSet_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FwIntMail_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FwRuleMail_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\GetBoss_F_Result.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\GetUnderling_F_Result.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\GroupAdmin_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\GroupUser_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Group_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ImportLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\InqOneAllInfo_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\InquiryPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Inquiry_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Inquiry_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowFAQ_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowLabel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowTestFAQResult_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowTestFAQ_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowTestResult_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowTest_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Know_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Log_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailAcc_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBase_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBlack_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxRootComm_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxRoot_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxSet_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxShare_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxType_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxZn_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBox_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailClient_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailInq_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailKey_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailLabel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailLiar_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailMod_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailMov_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailRuleIf_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailRuleLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailRule_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailText_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MAILUIDL.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Mail_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Menu_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MessageClientNew_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MessageClient_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MessageNew_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Message_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddHxuser.cs" />
+    <Compile Include="Models\BackParameter.cs" />
+    <Compile Include="Models\Client\Back\Add.cs" />
+    <Compile Include="Models\Client\Back\Backdetail.cs" />
+    <Compile Include="Models\Client\Back\Get.cs" />
+    <Compile Include="Models\Client\Back\Getdetail.cs" />
+    <Compile Include="Models\Client\Back\GetList.cs" />
+    <Compile Include="Models\Client\Gain\Add.cs" />
+    <Compile Include="Models\Client\Gain\AllPub.cs" />
+    <Compile Include="Models\Client\Gain\Delete.cs" />
+    <Compile Include="Models\Client\Gain\Deleteed.cs" />
+    <Compile Include="Models\Client\Gain\Deleteing.cs" />
+    <Compile Include="Models\Client\Gain\Get.cs" />
+    <Compile Include="Models\Client\Gain\Getdetail.cs" />
+    <Compile Include="Models\Client\Gain\GetList.cs" />
+    <Compile Include="Models\Client\Gain\Pub.cs" />
+    <Compile Include="Models\Client\Gain\PubClass.cs" />
+    <Compile Include="Models\Contact\Back\GetList.cs" />
+    <Compile Include="Models\Contact\Gain\GetList.cs" />
+    <Compile Include="Models\File\Back\Download.cs" />
+    <Compile Include="Models\File\Back\Upload.cs" />
+    <Compile Include="Models\File\Gain\new_file.cs" />
+    <Compile Include="Models\File\Gain\Upload.cs" />
+    <Compile Include="Models\File\Gain\Download.cs" />
+    <Compile Include="Models\File\Gain\Submit.cs" />
+    <Compile Include="Models\Folder\Back\Get.cs" />
+    <Compile Include="Models\Folder\Gain\Get.cs" />
+    <Compile Include="Models\Folder\Gain\Move.cs" />
+    <Compile Include="Models\GainList.cs" />
+    <Compile Include="Models\GainParameter.cs" />
+    <Compile Include="Models\BackList.cs" />
+    <Compile Include="Models\MailBox\Back\Get.cs" />
+    <Compile Include="Models\MailBox\Back\GetMenu.cs" />
+    <Compile Include="Models\MailBox\Gain\Get.cs" />
+    <Compile Include="Models\MailBox\Gain\GetMenu.cs" />
+    <Compile Include="Models\Mail\Back\Add.cs" />
+    <Compile Include="Models\Mail\Back\Get.cs" />
+    <Compile Include="Models\Mail\Back\GetList.cs" />
+    <Compile Include="Models\Mail\Back\GetListAll.cs" />
+    <Compile Include="Models\Mail\Back\GetMb.cs" />
+    <Compile Include="Models\Mail\Back\item\File.cs" />
+    <Compile Include="Models\Mail\Back\item\Fileall.cs" />
+    <Compile Include="Models\Mail\Back\getlabel.cs" />
+    <Compile Include="Models\Mail\Gain\floder.cs" />
+    <Compile Include="Models\Mail\Back\item\Mail.cs" />
+    <Compile Include="Models\Mail\Back\item\MailAll.cs" />
+    <Compile Include="Models\Mail\Back\Recv.cs" />
+    <Compile Include="Models\Mail\Back\Send.cs" />
+    <Compile Include="Models\Mail\Back\State.cs" />
+    <Compile Include="Models\Mail\Gain\Add.cs" />
+    <Compile Include="Models\Mail\Gain\Client.cs" />
+    <Compile Include="Models\Mail\Gain\Contact.cs" />
+    <Compile Include="Models\Mail\Gain\Delete.cs" />
+    <Compile Include="Models\Mail\Gain\Get.cs" />
+    <Compile Include="Models\Mail\Gain\GetList.cs" />
+    <Compile Include="Models\Mail\Gain\Move.cs" />
+    <Compile Include="Models\Mail\Gain\Read.cs" />
+    <Compile Include="Models\Mail\Gain\Recv.cs" />
+    <Compile Include="Models\Mail\Gain\RedFlag.cs" />
+    <Compile Include="Models\Mail\Gain\setnoet.cs" />
+    <Compile Include="Models\Mail\Gain\Update.cs" />
+    <Compile Include="Models\Mail\Gain\Send.cs" />
+    <Compile Include="Models\Mail\Gain\Star.cs" />
+    <Compile Include="Models\Mail\Gain\State.cs" />
+    <Compile Include="Models\Mail\Gain\StopRecv.cs" />
+    <Compile Include="Models\Mail\Gain\Tag.cs" />
+    <Compile Include="Models\Mail\Gain\Top.cs" />
+    <Compile Include="Models\push\Back\GetApp.cs" />
+    <Compile Include="Models\push\Gain\PushEmail.cs" />
+    <Compile Include="Models\Result\GetMenu_Result.cs" />
+    <Compile Include="Models\Sys\Back\mb.cs" />
+    <Compile Include="Models\Sys\Gain\Dictionary.cs" />
+    <Compile Include="Models\User\Back\GetList.cs" />
+    <Compile Include="Models\User\Back\GetMenu.cs" />
+    <Compile Include="Models\User\Back\GetPower.cs" />
+    <Compile Include="Models\User\Back\Get.cs" />
+    <Compile Include="Models\User\Back\item\MailLabel.cs" />
+    <Compile Include="Models\User\Back\userall.cs" />
+    <Compile Include="Models\User\Gain\AllPower.cs" />
+    <Compile Include="Models\User\Gain\Get.cs" />
+    <Compile Include="Models\User\Gain\GetMenu.cs" />
+    <Compile Include="Models\User\Gain\GetPower.cs" />
+    <Compile Include="Models\User\Gain\Pic.cs" />
+    <Compile Include="Models\User\Gain\picuserid.cs" />
+    <Compile Include="Models\User\Gain\updatepassword.cs" />
+    <Compile Include="Models\User\Gain\userallmenu.cs" />
+    <Compile Include="Models\WorkDt\Back\Chance.cs" />
+    <Compile Include="Models\WorkDt\Back\Comm.cs" />
+    <Compile Include="Models\WorkDt\Back\Dt.cs" />
+    <Compile Include="Models\WorkDt\Back\GetAll.cs" />
+    <Compile Include="Models\WorkDt\Back\GetChance.cs" />
+    <Compile Include="Models\WorkDt\Back\Getcomm.cs" />
+    <Compile Include="Models\WorkDt\Back\GetDayReport.cs" />
+    <Compile Include="Models\WorkDt\Back\Getmsg.cs" />
+    <Compile Include="Models\WorkDt\Back\GetWeekRport.cs" />
+    <Compile Include="Models\WorkDt\Back\GetworkDt.cs" />
+    <Compile Include="Models\WorkDt\Back\InquiryBack.cs" />
+    <Compile Include="Models\WorkDt\Back\msg.cs" />
+    <Compile Include="Models\WorkDt\Back\MsgLb.cs" />
+    <Compile Include="Models\WorkDt\Back\Product.cs" />
+    <Compile Include="Models\WorkDt\Back\workdt.cs" />
+    <Compile Include="Models\WorkDt\Back\WorkPort.cs" />
+    <Compile Include="Models\WorkDt\Back\WorkWeekPort.cs" />
+    <Compile Include="Models\WorkDt\Gain\Add.cs" />
+    <Compile Include="Models\WorkDt\Gain\coom.cs" />
+    <Compile Include="Models\WorkDt\Gain\Inquiry.cs" />
+    <Compile Include="Models\WorkDt\Gain\Msgup.cs" />
+    <Compile Include="Models\WorkDt\Gain\update.cs" />
+    <Compile Include="Models\WorkDt\Gain\workdt.cs" />
+    <Compile Include="App_Data\MsgUser_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Msg_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\PendingClerk_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Pending_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\PowerList_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProductBatchPrice_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProductPriceLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProductPrice_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProductRootPower_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProductRoot_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Product_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\product_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Data\ProviderAdd_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProviderPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Provider_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\QuoteModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\QuoteProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Quote_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RolePower_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RoleSecurity_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RoleUser_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Role_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RootPower_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Root_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SamplesModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SamplesProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Samples_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Security_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SellProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Sell_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Sell_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SendMailLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SendSample_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ServerConfigType_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ServerConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ShareFolder_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SplitString_F_Result.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\StockProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Stock_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\StringToTableEx_F_Result.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\StringToTable_F_Result.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SynRoot_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SynTime_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\sysdiagrams.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SysDictionaryClass_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SysDictionary_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TagClass_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TagRoot_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Tag_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMDOC.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMDOC.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMDOC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMDOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMDOC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMFILE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMFILE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMFILE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMFILE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMFILE.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMMAIL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMMAIL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMMAIL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRMMAIL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRMMAIL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TempImg_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TempPower_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TestPaper_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TestQuestions_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Thumb_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TimeZhou_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TimeZhou_V.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Back.cs" />
+    <Compile Include="Tools\BackCode.cs" />
+    <Compile Include="Tools\Base.cs" />
+    <Compile Include="Tools\Config.cs" />
+    <Compile Include="Tools\Czexcel.cs" />
+    <Compile Include="Tools\file.cs" />
+    <Compile Include="Tools\Log.cs" />
+    <Compile Include="Tools\newpic.cs" />
+    <Compile Include="Tools\OperationList.cs" />
+    <Compile Include="Tools\OrderBy.cs" />
+    <Compile Include="Tools\Select.cs" />
+    <Compile Include="Tools\Sign.cs" />
+    <Compile Include="Tools\SqlClass.cs" />
+    <Compile Include="Tools\Where.cs" />
+    <Compile Include="App_Data\UploadTemp_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserConfigType_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserIp_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserPower_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserRoot_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\UserTime_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\User_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WarningClerk_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WarningCondition_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WarningConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WarningSqlConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Warning_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WorkDynamic_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WorkReportModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\WorkReport_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="newapp\android.txt" />
+    <Content Include="newapp\ios.txt" />
+    <Content Include="App_Data\TCRM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+      <LastGenOutput>TCRM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+      <LastGenOutput>TCRM.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMDOC.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMDOC.edmx</DependentUpon>
+      <LastGenOutput>TCRMDOC.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMDOC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMDOC.edmx</DependentUpon>
+      <LastGenOutput>TCRMDOC.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMFILE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMFILE.edmx</DependentUpon>
+      <LastGenOutput>TCRMFILE.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMFILE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMFILE.edmx</DependentUpon>
+      <LastGenOutput>TCRMFILE.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMMAIL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMMAIL.edmx</DependentUpon>
+      <LastGenOutput>TCRMMAIL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRMMAIL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRMMAIL.edmx</DependentUpon>
+      <LastGenOutput>TCRMMAIL.cs</LastGenOutput>
+    </Content>
+    <Content Include="Tools\logo-tui.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\iis.pubxml" />
+    <EntityDeploy Include="App_Data\TCRM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCRM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Data\TCRM.edmx.diagram">
+      <DependentUpon>TCRM.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="App_Data\TCRMFILE.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCRMFILE.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Data\TCRMFILE.edmx.diagram">
+      <DependentUpon>TCRMFILE.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="App_Data\TCRMDOC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCRMDOC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Data\TCRMDOC.edmx.diagram">
+      <DependentUpon>TCRMDOC.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="App_Data\TCRMMAIL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCRMMAIL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Data\TCRMMAIL.edmx.diagram">
+      <DependentUpon>TCRMMAIL.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1299</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1299/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://120.26.63.189:9898/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCRMFILEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DocData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="image" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FileData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="image" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailBase_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="MailData" Type="image" />
+    <Property Name="RecDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="Data" Type="image" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <Function Name="GetMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+    <Parameter Name="len" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateMailFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="data" Type="image" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="TCRMFILEModelStoreContainer">
+    <EntitySet Name="DocData_T" EntityType="Self.DocData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileData_T" EntityType="Self.FileData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBase_T" EntityType="Self.MailBase_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailData_T" EntityType="Self.MailData_T" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

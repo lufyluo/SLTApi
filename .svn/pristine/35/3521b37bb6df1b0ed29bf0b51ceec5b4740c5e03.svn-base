@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCRMMAILModelStoreContainer" CdmEntityContainer="TCRMMAILEntities">
+    <EntitySetMapping Name="ErrLog_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.ErrLog_T">
+        <MappingFragment StoreEntitySet="ErrLog_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="UIDL" ColumnName="UIDL" />
+          <ScalarProperty Name="Msg" ColumnName="Msg" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.Log_T">
+        <MappingFragment StoreEntitySet="Log_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="Box" ColumnName="Box" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientAddId" ColumnName="ClientAddId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mail_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.Mail_T">
+        <MappingFragment StoreEntitySet="Mail_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="ReadMode" ColumnName="ReadMode" />
+          <ScalarProperty Name="UIDL" ColumnName="UIDL" />
+          <ScalarProperty Name="Inside" ColumnName="Inside" />
+          <ScalarProperty Name="FromName" ColumnName="FromName" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="MailType" ColumnName="MailType" />
+          <ScalarProperty Name="itFrom" ColumnName="itFrom" />
+          <ScalarProperty Name="itTo" ColumnName="itTo" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="bcc" ColumnName="bcc" />
+          <ScalarProperty Name="TextBody" ColumnName="TextBody" />
+          <ScalarProperty Name="HtmlBody" ColumnName="HtmlBody" />
+          <ScalarProperty Name="ReplyTo" ColumnName="ReplyTo" />
+          <ScalarProperty Name="Read" ColumnName="Read" />
+          <ScalarProperty Name="ReadUID" ColumnName="ReadUID" />
+          <ScalarProperty Name="BoxBase" ColumnName="BoxBase" />
+          <ScalarProperty Name="Box" ColumnName="Box" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="RE" ColumnName="RE" />
+          <ScalarProperty Name="Notification" ColumnName="Notification" />
+          <ScalarProperty Name="notify" ColumnName="notify" />
+          <ScalarProperty Name="star" ColumnName="star" />
+          <ScalarProperty Name="redflag" ColumnName="redflag" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ischeck" ColumnName="ischeck" />
+          <ScalarProperty Name="checkmsg" ColumnName="checkmsg" />
+          <ScalarProperty Name="SPUserId" ColumnName="SPUserId" />
+          <ScalarProperty Name="SPUserName" ColumnName="SPUserName" />
+          <ScalarProperty Name="SPTime" ColumnName="SPTime" />
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="BaseDb" ColumnName="BaseDb" />
+          <ScalarProperty Name="BaseId" ColumnName="BaseId" />
+          <ScalarProperty Name="MailDate" ColumnName="MailDate" />
+          <ScalarProperty Name="RevUserId" ColumnName="RevUserId" />
+          <ScalarProperty Name="RevUserName" ColumnName="RevUserName" />
+          <ScalarProperty Name="MailSize" ColumnName="MailSize" />
+          <ScalarProperty Name="AccCount" ColumnName="AccCount" />
+          <ScalarProperty Name="REALFROM" ColumnName="REALFROM" />
+          <ScalarProperty Name="ReturnPath" ColumnName="ReturnPath" />
+          <ScalarProperty Name="MailLabel" ColumnName="MailLabel" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ConType" ColumnName="ConType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="RFMailId" ColumnName="RFMailId" />
+          <ScalarProperty Name="LocalTrack" ColumnName="LocalTrack" />
+          <ScalarProperty Name="RemoteTrack" ColumnName="RemoteTrack" />
+          <ScalarProperty Name="IsReceipt" ColumnName="IsReceipt" />
+          <ScalarProperty Name="ModId" ColumnName="ModId" />
+          <ScalarProperty Name="TopTime" ColumnName="TopTime" />
+          <ScalarProperty Name="RemindTime" ColumnName="RemindTime" />
+          <ScalarProperty Name="PfDate" ColumnName="PfDate" />
+          <ScalarProperty Name="IsDeal" ColumnName="IsDeal" />
+          <ScalarProperty Name="CommCount" ColumnName="CommCount" />
+          <ScalarProperty Name="CommReadUID" ColumnName="CommReadUID" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="OpenTime" ColumnName="OpenTime" />
+          <ScalarProperty Name="OpenIp" ColumnName="OpenIp" />
+          <ScalarProperty Name="OpenArea" ColumnName="OpenArea" />
+          <ScalarProperty Name="OpenNowTime" ColumnName="OpenNowTime" />
+          <ScalarProperty Name="OpenCount" ColumnName="OpenCount" />
+          <ScalarProperty Name="FromUID" ColumnName="FromUID" />
+          <ScalarProperty Name="FromBoxId" ColumnName="FromBoxId" />
+          <ScalarProperty Name="FromMailId" ColumnName="FromMailId" />
+          <ScalarProperty Name="FromRE" ColumnName="FromRE" />
+          <ScalarProperty Name="JzMailTm" ColumnName="JzMailTm" />
+          <ScalarProperty Name="JzMailBoxId" ColumnName="JzMailBoxId" />
+          <ScalarProperty Name="JzBox" ColumnName="JzBox" />
+          <ScalarProperty Name="JzRootId" ColumnName="JzRootId" />
+          <ScalarProperty Name="FileStoreId" ColumnName="FileStoreId" />
+          <ScalarProperty Name="FileKey" ColumnName="FileKey" />
+          <ScalarProperty Name="GdClientId" ColumnName="GdClientId" />
+          <ScalarProperty Name="FileRoot" ColumnName="FileRoot" />
+          <ScalarProperty Name="FileStore" ColumnName="FileStore" />
+          <ScalarProperty Name="FileZip" ColumnName="FileZip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailAcc_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.MailAcc_T">
+        <MappingFragment StoreEntitySet="MailAcc_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="DownloadID" ColumnName="DownloadID" />
+          <ScalarProperty Name="FileDb" ColumnName="FileDb" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="FileStoreId" ColumnName="FileStoreId" />
+          <ScalarProperty Name="FileRoot" ColumnName="FileRoot" />
+          <ScalarProperty Name="FileKey" ColumnName="FileKey" />
+          <ScalarProperty Name="FileStore" ColumnName="FileStore" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="FileZip" ColumnName="FileZip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailClient_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.MailClient_T">
+        <MappingFragment StoreEntitySet="MailClient_T">
+          <ScalarProperty Name="ClientMailId" ColumnName="ClientMailId" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientAddId" ColumnName="ClientAddId" />
+          <ScalarProperty Name="ClientInfo" ColumnName="ClientInfo" />
+          <ScalarProperty Name="ClientAddInfo" ColumnName="ClientAddInfo" />
+          <ScalarProperty Name="Es" ColumnName="Es" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailInq_T">
+      <EntityTypeMapping TypeName="TCRMMAILModel.MailInq_T">
+        <MappingFragment StoreEntitySet="MailInq_T">
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="Inq" ColumnName="Inq" />
+          <ScalarProperty Name="InqMailIdBase" ColumnName="InqMailIdBase" />
+          <ScalarProperty Name="InqReLimit" ColumnName="InqReLimit" />
+          <ScalarProperty Name="InqBak" ColumnName="InqBak" />
+          <ScalarProperty Name="InqYfp" ColumnName="InqYfp" />
+          <ScalarProperty Name="InqReTime" ColumnName="InqReTime" />
+          <ScalarProperty Name="InqSaleUserId" ColumnName="InqSaleUserId" />
+          <ScalarProperty Name="InqSaleUserName" ColumnName="InqSaleUserName" />
+          <ScalarProperty Name="InqDevUserId" ColumnName="InqDevUserId" />
+          <ScalarProperty Name="InqDevUserName" ColumnName="InqDevUserName" />
+          <ScalarProperty Name="InqClientId" ColumnName="InqClientId" />
+          <ScalarProperty Name="InqClientName" ColumnName="InqClientName" />
+          <ScalarProperty Name="InqLinkManId" ColumnName="InqLinkManId" />
+          <ScalarProperty Name="InqLinkMan" ColumnName="InqLinkMan" />
+          <ScalarProperty Name="InqLinkManEmail" ColumnName="InqLinkManEmail" />
+          <ScalarProperty Name="InqLinkManMobile" ColumnName="InqLinkManMobile" />
+          <ScalarProperty Name="InqLinkManTel" ColumnName="InqLinkManTel" />
+          <ScalarProperty Name="InqFpTime" ColumnName="InqFpTime" />
+          <ScalarProperty Name="InqFpUserId" ColumnName="InqFpUserId" />
+          <ScalarProperty Name="InqFpUserName" ColumnName="InqFpUserName" />
+          <ScalarProperty Name="InqProId" ColumnName="InqProId" />
+          <ScalarProperty Name="InqProName" ColumnName="InqProName" />
+          <ScalarProperty Name="InqWeb" ColumnName="InqWeb" />
+          <ScalarProperty Name="InqSource" ColumnName="InqSource" />
+          <ScalarProperty Name="InqClientClass" ColumnName="InqClientClass" />
+          <ScalarProperty Name="InqCountry" ColumnName="InqCountry" />
+          <ScalarProperty Name="InqIsOld" ColumnName="InqIsOld" />
+          <ScalarProperty Name="InqLinkManEmail1" ColumnName="InqLinkManEmail1" />
+          <ScalarProperty Name="InqLinkManEmail2" ColumnName="InqLinkManEmail2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAILUIDL">
+      <EntityTypeMapping TypeName="TCRMMAILModel.MAILUIDL">
+        <MappingFragment StoreEntitySet="MAILUIDL">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UIDL" ColumnName="UIDL" />
+          <ScalarProperty Name="RDATE" ColumnName="RDATE" />
+          <ScalarProperty Name="MAILBOXID" ColumnName="MAILBOXID" />
+          <ScalarProperty Name="ISERR" ColumnName="ISERR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="saveuidl" FunctionName="TCRMMAILModel.Store.saveuidl" />
+  </EntityContainerMapping>
+</Mapping>

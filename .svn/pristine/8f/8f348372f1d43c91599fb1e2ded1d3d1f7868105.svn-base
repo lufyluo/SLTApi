@@ -1,0 +1,2068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCRMModelStoreContainer" CdmEntityContainer="TCRMEntities1">
+    <EntitySetMapping Name="Branch_T">
+      <EntityTypeMapping TypeName="TCRMModel.Branch_T">
+        <MappingFragment StoreEntitySet="Branch_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calendar_T">
+      <EntityTypeMapping TypeName="TCRMModel.Calendar_T">
+        <MappingFragment StoreEntitySet="Calendar_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chance_T">
+      <EntityTypeMapping TypeName="TCRMModel.Chance_T">
+        <MappingFragment StoreEntitySet="Chance_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="ChanceType" ColumnName="ChanceType" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="Import" ColumnName="Import" />
+          <ScalarProperty Name="PfDate" ColumnName="PfDate" />
+          <ScalarProperty Name="PfProfit" ColumnName="PfProfit" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Inq" ColumnName="Inq" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="MailCount" ColumnName="MailCount" />
+          <ScalarProperty Name="MailStart" ColumnName="MailStart" />
+          <ScalarProperty Name="MailNow" ColumnName="MailNow" />
+          <ScalarProperty Name="MailSendNow" ColumnName="MailSendNow" />
+          <ScalarProperty Name="MailRecNow" ColumnName="MailRecNow" />
+          <ScalarProperty Name="StockQuoteStart" ColumnName="StockQuoteStart" />
+          <ScalarProperty Name="StockQuoteEnd" ColumnName="StockQuoteEnd" />
+          <ScalarProperty Name="QuoteStart" ColumnName="QuoteStart" />
+          <ScalarProperty Name="QuoteEnd" ColumnName="QuoteEnd" />
+          <ScalarProperty Name="SampleStart" ColumnName="SampleStart" />
+          <ScalarProperty Name="SampleEnd" ColumnName="SampleEnd" />
+          <ScalarProperty Name="SaleStart" ColumnName="SaleStart" />
+          <ScalarProperty Name="SaleEnd" ColumnName="SaleEnd" />
+          <ScalarProperty Name="SellNo" ColumnName="SellNo" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="ChancePro" ColumnName="ChancePro" />
+          <ScalarProperty Name="bak" ColumnName="bak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChancePro_T">
+      <EntityTypeMapping TypeName="TCRMModel.ChancePro_T">
+        <MappingFragment StoreEntitySet="ChancePro_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Packing" ColumnName="Packing" />
+          <ScalarProperty Name="Inq" ColumnName="Inq" />
+          <ScalarProperty Name="InqId" ColumnName="InqId" />
+          <ScalarProperty Name="InqLimit" ColumnName="InqLimit" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="InqBak" ColumnName="InqBak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChanceSumup_T">
+      <EntityTypeMapping TypeName="TCRMModel.ChanceSumup_T">
+        <MappingFragment StoreEntitySet="ChanceSumup_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ConText" ColumnName="ConText" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client_T">
+      <EntityTypeMapping TypeName="TCRMModel.Client_T">
+        <MappingFragment StoreEntitySet="Client_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="custom1" ColumnName="custom1" />
+          <ScalarProperty Name="custom2" ColumnName="custom2" />
+          <ScalarProperty Name="custom3" ColumnName="custom3" />
+          <ScalarProperty Name="custom4" ColumnName="custom4" />
+          <ScalarProperty Name="custom5" ColumnName="custom5" />
+          <ScalarProperty Name="custom6" ColumnName="custom6" />
+          <ScalarProperty Name="custom7" ColumnName="custom7" />
+          <ScalarProperty Name="custom8" ColumnName="custom8" />
+          <ScalarProperty Name="custom9" ColumnName="custom9" />
+          <ScalarProperty Name="custom10" ColumnName="custom10" />
+          <ScalarProperty Name="Forwarder" ColumnName="Forwarder" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="ClientClass" ColumnName="ClientClass" />
+          <ScalarProperty Name="ClientLevel" ColumnName="ClientLevel" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientSource" ColumnName="ClientSource" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="ClientAttr" ColumnName="ClientAttr" />
+          <ScalarProperty Name="ClientLock" ColumnName="ClientLock" />
+          <ScalarProperty Name="Aud" ColumnName="Aud" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+          <ScalarProperty Name="SDate" ColumnName="SDate" />
+          <ScalarProperty Name="RDate" ColumnName="RDate" />
+          <ScalarProperty Name="KfTime" ColumnName="KfTime" />
+          <ScalarProperty Name="DevUserId" ColumnName="DevUserId" />
+          <ScalarProperty Name="DevUserName" ColumnName="DevUserName" />
+          <ScalarProperty Name="JoinTime" ColumnName="JoinTime" />
+          <ScalarProperty Name="TopTime" ColumnName="TopTime" />
+          <ScalarProperty Name="Pub" ColumnName="Pub" />
+          <ScalarProperty Name="PubTime" ColumnName="PubTime" />
+          <ScalarProperty Name="PubMsg" ColumnName="PubMsg" />
+          <ScalarProperty Name="PubClass" ColumnName="PubClass" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+          <ScalarProperty Name="DelUserId" ColumnName="DelUserId" />
+          <ScalarProperty Name="DelUserName" ColumnName="DelUserName" />
+          <ScalarProperty Name="DelReason" ColumnName="DelReason" />
+          <ScalarProperty Name="CommCount" ColumnName="CommCount" />
+          <ScalarProperty Name="CommTime" ColumnName="CommTime" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="LastFollowTm" ColumnName="LastFollowTm" />
+          <ScalarProperty Name="Yj" ColumnName="Yj" />
+          <ScalarProperty Name="Pf" ColumnName="Pf" />
+          <ScalarProperty Name="EDM" ColumnName="EDM" />
+          <ScalarProperty Name="SelTime" ColumnName="SelTime" />
+          <ScalarProperty Name="LinkManNameStr" ColumnName="LinkManNameStr" />
+          <ScalarProperty Name="LinkManEmailStr" ColumnName="LinkManEmailStr" />
+          <ScalarProperty Name="LinkManTelStr" ColumnName="LinkManTelStr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientAdd_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientAdd_T">
+        <MappingFragment StoreEntitySet="ClientAdd_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="HomeTel" ColumnName="HomeTel" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="Msn" ColumnName="Msn" />
+          <ScalarProperty Name="WeChat" ColumnName="WeChat" />
+          <ScalarProperty Name="SKYPE" ColumnName="SKYPE" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="MainAdd" ColumnName="MainAdd" />
+          <ScalarProperty Name="Share" ColumnName="Share" />
+          <ScalarProperty Name="ShareUID" ColumnName="ShareUID" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Manner" ColumnName="Manner" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientAddCopy_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientAddCopy_T">
+        <MappingFragment StoreEntitySet="ClientAddCopy_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddId" ColumnName="AddId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="HomeTel" ColumnName="HomeTel" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="Msn" ColumnName="Msn" />
+          <ScalarProperty Name="WeChat" ColumnName="WeChat" />
+          <ScalarProperty Name="SKYPE" ColumnName="SKYPE" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="MainAdd" ColumnName="MainAdd" />
+          <ScalarProperty Name="Share" ColumnName="Share" />
+          <ScalarProperty Name="ShareUID" ColumnName="ShareUID" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Manner" ColumnName="Manner" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientBackLog_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientBackLog_T">
+        <MappingFragment StoreEntitySet="ClientBackLog_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientCare_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientCare_T">
+        <MappingFragment StoreEntitySet="ClientCare_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CareDate" ColumnName="CareDate" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="CalendarId" ColumnName="CalendarId" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientComment_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientComment_T">
+        <MappingFragment StoreEntitySet="ClientComment_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="RemindUID" ColumnName="RemindUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientComplain_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientComplain_T">
+        <MappingFragment StoreEntitySet="ClientComplain_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConNo" ColumnName="ConNo" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ComDate" ColumnName="ComDate" />
+          <ScalarProperty Name="ComText" ColumnName="ComText" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="SolveText" ColumnName="SolveText" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="RemindUserId" ColumnName="RemindUserId" />
+          <ScalarProperty Name="RemindUserName" ColumnName="RemindUserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientCopy_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientCopy_T">
+        <MappingFragment StoreEntitySet="ClientCopy_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="custom1" ColumnName="custom1" />
+          <ScalarProperty Name="custom2" ColumnName="custom2" />
+          <ScalarProperty Name="custom3" ColumnName="custom3" />
+          <ScalarProperty Name="custom4" ColumnName="custom4" />
+          <ScalarProperty Name="custom5" ColumnName="custom5" />
+          <ScalarProperty Name="custom6" ColumnName="custom6" />
+          <ScalarProperty Name="custom7" ColumnName="custom7" />
+          <ScalarProperty Name="custom8" ColumnName="custom8" />
+          <ScalarProperty Name="custom9" ColumnName="custom9" />
+          <ScalarProperty Name="custom10" ColumnName="custom10" />
+          <ScalarProperty Name="Forwarder" ColumnName="Forwarder" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="ClientClass" ColumnName="ClientClass" />
+          <ScalarProperty Name="ClientLevel" ColumnName="ClientLevel" />
+          <ScalarProperty Name="ClientState" ColumnName="ClientState" />
+          <ScalarProperty Name="ClientSource" ColumnName="ClientSource" />
+          <ScalarProperty Name="AutoToMail" ColumnName="AutoToMail" />
+          <ScalarProperty Name="ClientLock" ColumnName="ClientLock" />
+          <ScalarProperty Name="Aud" ColumnName="Aud" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+          <ScalarProperty Name="SDate" ColumnName="SDate" />
+          <ScalarProperty Name="RDate" ColumnName="RDate" />
+          <ScalarProperty Name="KfUserId" ColumnName="KfUserId" />
+          <ScalarProperty Name="KfUserName" ColumnName="KfUserName" />
+          <ScalarProperty Name="KfTime" ColumnName="KfTime" />
+          <ScalarProperty Name="JoinTime" ColumnName="JoinTime" />
+          <ScalarProperty Name="TopTime" ColumnName="TopTime" />
+          <ScalarProperty Name="Pub" ColumnName="Pub" />
+          <ScalarProperty Name="PubTime" ColumnName="PubTime" />
+          <ScalarProperty Name="PubMsg" ColumnName="PubMsg" />
+          <ScalarProperty Name="PubClass" ColumnName="PubClass" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+          <ScalarProperty Name="DelUserId" ColumnName="DelUserId" />
+          <ScalarProperty Name="DelUserName" ColumnName="DelUserName" />
+          <ScalarProperty Name="DelReason" ColumnName="DelReason" />
+          <ScalarProperty Name="CommCount" ColumnName="CommCount" />
+          <ScalarProperty Name="CommTime" ColumnName="CommTime" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="LastFollowTm" ColumnName="LastFollowTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientFollow_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientFollow_T">
+        <MappingFragment StoreEntitySet="ClientFollow_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="FollwTime" ColumnName="FollwTime" />
+          <ScalarProperty Name="AddName" ColumnName="AddName" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientJoinLog_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientJoinLog_T">
+        <MappingFragment StoreEntitySet="ClientJoinLog_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MainId" ColumnName="MainId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="FromUserId" ColumnName="FromUserId" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="ToUserId" ColumnName="ToUserId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="IsMail" ColumnName="IsMail" />
+          <ScalarProperty Name="ToMailBoxId" ColumnName="ToMailBoxId" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="LinkDate" ColumnName="LinkDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientJoinLogMain_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientJoinLogMain_T">
+        <MappingFragment StoreEntitySet="ClientJoinLogMain_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="ClientIdStr" ColumnName="ClientIdStr" />
+          <ScalarProperty Name="ToUserId" ColumnName="ToUserId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="IsMail" ColumnName="IsMail" />
+          <ScalarProperty Name="ToMailBoxId" ColumnName="ToMailBoxId" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ClientNameStr" ColumnName="ClientNameStr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientLimit_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientLimit_T">
+        <MappingFragment StoreEntitySet="ClientLimit_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ClientCount" ColumnName="ClientCount" />
+          <ScalarProperty Name="ClientTotalCount" ColumnName="ClientTotalCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientPro_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientPro_T">
+        <MappingFragment StoreEntitySet="ClientPro_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientPubLimit_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientPubLimit_T">
+        <MappingFragment StoreEntitySet="ClientPubLimit_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientPubRule_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientPubRule_T">
+        <MappingFragment StoreEntitySet="ClientPubRule_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NotUserId" ColumnName="NotUserId" />
+          <ScalarProperty Name="NotClientId" ColumnName="NotClientId" />
+          <ScalarProperty Name="AndOr1" ColumnName="AndOr1" />
+          <ScalarProperty Name="AndOr2" ColumnName="AndOr2" />
+          <ScalarProperty Name="PubClass" ColumnName="PubClass" />
+          <ScalarProperty Name="RemindDay" ColumnName="RemindDay" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientPubRuleIf1_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientPubRuleIf1_T">
+        <MappingFragment StoreEntitySet="ClientPubRuleIf1_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RuleId" ColumnName="RuleId" />
+          <ScalarProperty Name="ParaName" ColumnName="ParaName" />
+          <ScalarProperty Name="Oper" ColumnName="Oper" />
+          <ScalarProperty Name="OperValue" ColumnName="OperValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientPubRuleIf2_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientPubRuleIf2_T">
+        <MappingFragment StoreEntitySet="ClientPubRuleIf2_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RuleId" ColumnName="RuleId" />
+          <ScalarProperty Name="ParaName" ColumnName="ParaName" />
+          <ScalarProperty Name="Oper" ColumnName="Oper" />
+          <ScalarProperty Name="OperValue" ColumnName="OperValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientSale_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientSale_T">
+        <MappingFragment StoreEntitySet="ClientSale_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientSalePub_T">
+      <EntityTypeMapping TypeName="TCRMModel.ClientSalePub_T">
+        <MappingFragment StoreEntitySet="ClientSalePub_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodeRule_T">
+      <EntityTypeMapping TypeName="TCRMModel.CodeRule_T">
+        <MappingFragment StoreEntitySet="CodeRule_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="IsUseAuto" ColumnName="IsUseAuto" />
+          <ScalarProperty Name="NoLen" ColumnName="NoLen" />
+          <ScalarProperty Name="NoStart" ColumnName="NoStart" />
+          <ScalarProperty Name="CodeFormula" ColumnName="CodeFormula" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColumnSet_T">
+      <EntityTypeMapping TypeName="TCRMModel.ColumnSet_T">
+        <MappingFragment StoreEntitySet="ColumnSet_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="data_field" ColumnName="data-field" />
+          <ScalarProperty Name="data_title" ColumnName="data-title" />
+          <ScalarProperty Name="data_title_en" ColumnName="data-title-en" />
+          <ScalarProperty Name="data_sortName" ColumnName="data-sortName" />
+          <ScalarProperty Name="data_width" ColumnName="data-width" />
+          <ScalarProperty Name="data_sortable" ColumnName="data-sortable" />
+          <ScalarProperty Name="data_checkbox" ColumnName="data-checkbox" />
+          <ScalarProperty Name="data_radio" ColumnName="data-radio" />
+          <ScalarProperty Name="data_visible" ColumnName="data-visible" />
+          <ScalarProperty Name="data_class" ColumnName="data-class" />
+          <ScalarProperty Name="data_rowspan" ColumnName="data-rowspan" />
+          <ScalarProperty Name="data_colspan" ColumnName="data-colspan" />
+          <ScalarProperty Name="data_align" ColumnName="data-align" />
+          <ScalarProperty Name="data_halign" ColumnName="data-halign" />
+          <ScalarProperty Name="data_falign" ColumnName="data-falign" />
+          <ScalarProperty Name="data_valign" ColumnName="data-valign" />
+          <ScalarProperty Name="data_cardVisible" ColumnName="data-cardVisible" />
+          <ScalarProperty Name="data_clickToSelect" ColumnName="data-clickToSelect" />
+          <ScalarProperty Name="data_order" ColumnName="data-order" />
+          <ScalarProperty Name="data_titleTooltip" ColumnName="data-titleTooltip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColumnSetMy_T">
+      <EntityTypeMapping TypeName="TCRMModel.ColumnSetMy_T">
+        <MappingFragment StoreEntitySet="ColumnSetMy_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="data_field" ColumnName="data-field" />
+          <ScalarProperty Name="data_title" ColumnName="data-title" />
+          <ScalarProperty Name="data_title_en" ColumnName="data-title-en" />
+          <ScalarProperty Name="data_sortName" ColumnName="data-sortName" />
+          <ScalarProperty Name="data_width" ColumnName="data-width" />
+          <ScalarProperty Name="data_sortable" ColumnName="data-sortable" />
+          <ScalarProperty Name="data_checkbox" ColumnName="data-checkbox" />
+          <ScalarProperty Name="data_radio" ColumnName="data-radio" />
+          <ScalarProperty Name="data_visible" ColumnName="data-visible" />
+          <ScalarProperty Name="data_class" ColumnName="data-class" />
+          <ScalarProperty Name="data_rowspan" ColumnName="data-rowspan" />
+          <ScalarProperty Name="data_colspan" ColumnName="data-colspan" />
+          <ScalarProperty Name="data_align" ColumnName="data-align" />
+          <ScalarProperty Name="data_halign" ColumnName="data-halign" />
+          <ScalarProperty Name="data_falign" ColumnName="data-falign" />
+          <ScalarProperty Name="data_valign" ColumnName="data-valign" />
+          <ScalarProperty Name="data_cardVisible" ColumnName="data-cardVisible" />
+          <ScalarProperty Name="data_clickToSelect" ColumnName="data-clickToSelect" />
+          <ScalarProperty Name="data_order" ColumnName="data-order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomFind_T">
+      <EntityTypeMapping TypeName="TCRMModel.CustomFind_T">
+        <MappingFragment StoreEntitySet="CustomFind_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Sql" ColumnName="Sql" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomsData_T">
+      <EntityTypeMapping TypeName="TCRMModel.CustomsData_T">
+        <MappingFragment StoreEntitySet="CustomsData_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataCompetitor_T">
+      <EntityTypeMapping TypeName="TCRMModel.DataCompetitor_T">
+        <MappingFragment StoreEntitySet="DataCompetitor_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pro" ColumnName="Pro" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataCompetitorClient_T">
+      <EntityTypeMapping TypeName="TCRMModel.DataCompetitorClient_T">
+        <MappingFragment StoreEntitySet="DataCompetitorClient_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataCompetitorId" ColumnName="DataCompetitorId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataCompetitorPro_T">
+      <EntityTypeMapping TypeName="TCRMModel.DataCompetitorPro_T">
+        <MappingFragment StoreEntitySet="DataCompetitorPro_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataCompetitorId" ColumnName="DataCompetitorId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataLiarEmail_T">
+      <EntityTypeMapping TypeName="TCRMModel.DataLiarEmail_T">
+        <MappingFragment StoreEntitySet="DataLiarEmail_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DateNum_T">
+      <EntityTypeMapping TypeName="TCRMModel.DateNum_T">
+        <MappingFragment StoreEntitySet="DateNum_T">
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="DateStr" ColumnName="DateStr" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Delta_T">
+      <EntityTypeMapping TypeName="TCRMModel.Delta_T">
+        <MappingFragment StoreEntitySet="Delta_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dept_T">
+      <EntityTypeMapping TypeName="TCRMModel.Dept_T">
+        <MappingFragment StoreEntitySet="Dept_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AdminUserId" ColumnName="AdminUserId" />
+          <ScalarProperty Name="AdminUserName" ColumnName="AdminUserName" />
+          <ScalarProperty Name="MailAudUserId" ColumnName="MailAudUserId" />
+          <ScalarProperty Name="MailAudUserName" ColumnName="MailAudUserName" />
+          <ScalarProperty Name="QuoteAudUserId" ColumnName="QuoteAudUserId" />
+          <ScalarProperty Name="QuoteAudUserName" ColumnName="QuoteAudUserName" />
+          <ScalarProperty Name="SellAudUserId" ColumnName="SellAudUserId" />
+          <ScalarProperty Name="SellAudUserName" ColumnName="SellAudUserName" />
+          <ScalarProperty Name="SendAudUserId" ColumnName="SendAudUserId" />
+          <ScalarProperty Name="SendAudUserName" ColumnName="SendAudUserName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Createtm" ColumnName="Createtm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dictionary_T">
+      <EntityTypeMapping TypeName="TCRMModel.Dictionary_T">
+        <MappingFragment StoreEntitySet="Dictionary_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="DataText" ColumnName="DataText" />
+          <ScalarProperty Name="DataValue" ColumnName="DataValue" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="File_T">
+      <EntityTypeMapping TypeName="TCRMModel.File_T">
+        <MappingFragment StoreEntitySet="File_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="KeyId" ColumnName="KeyId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="FileDb" ColumnName="FileDb" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="DownloadID" ColumnName="DownloadID" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FwIntMail_T">
+      <EntityTypeMapping TypeName="TCRMModel.FwIntMail_T">
+        <MappingFragment StoreEntitySet="FwIntMail_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BoxId" ColumnName="BoxId" />
+          <ScalarProperty Name="MailId" ColumnName="MailId" />
+          <ScalarProperty Name="ToUserId" ColumnName="ToUserId" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FwIntMailSet_T">
+      <EntityTypeMapping TypeName="TCRMModel.FwIntMailSet_T">
+        <MappingFragment StoreEntitySet="FwIntMailSet_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group_T">
+      <EntityTypeMapping TypeName="TCRMModel.Group_T">
+        <MappingFragment StoreEntitySet="Group_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupAdmin_T">
+      <EntityTypeMapping TypeName="TCRMModel.GroupAdmin_T">
+        <MappingFragment StoreEntitySet="GroupAdmin_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupUser_T">
+      <EntityTypeMapping TypeName="TCRMModel.GroupUser_T">
+        <MappingFragment StoreEntitySet="GroupUser_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InquiryPro_T">
+      <EntityTypeMapping TypeName="TCRMModel.InquiryPro_T">
+        <MappingFragment StoreEntitySet="InquiryPro_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="PriId" ColumnName="PriId" />
+          <ScalarProperty Name="PriName" ColumnName="PriName" />
+          <ScalarProperty Name="PriLinkMan" ColumnName="PriLinkMan" />
+          <ScalarProperty Name="PriLinkPhone" ColumnName="PriLinkPhone" />
+          <ScalarProperty Name="PriProNo" ColumnName="PriProNo" />
+          <ScalarProperty Name="PriProName" ColumnName="PriProName" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+          <ScalarProperty Name="ProNo" ColumnName="ProNo" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsUpdate" ColumnName="IsUpdate" />
+          <ScalarProperty Name="IsTax" ColumnName="IsTax" />
+          <ScalarProperty Name="MOQPrice" ColumnName="MOQPrice" />
+          <ScalarProperty Name="MOQ" ColumnName="MOQ" />
+          <ScalarProperty Name="InqDate" ColumnName="InqDate" />
+          <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
+          <ScalarProperty Name="SupplyDay" ColumnName="SupplyDay" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="InqBak" ColumnName="InqBak" />
+          <ScalarProperty Name="InqUserId" ColumnName="InqUserId" />
+          <ScalarProperty Name="InqUserName" ColumnName="InqUserName" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="SpResult" ColumnName="SpResult" />
+          <ScalarProperty Name="SpMsg" ColumnName="SpMsg" />
+          <ScalarProperty Name="SpUserId" ColumnName="SpUserId" />
+          <ScalarProperty Name="SpUserName" ColumnName="SpUserName" />
+          <ScalarProperty Name="SpTime" ColumnName="SpTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_T">
+      <EntityTypeMapping TypeName="TCRMModel.Log_T">
+        <MappingFragment StoreEntitySet="Log_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Err" ColumnName="Err" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBlack_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBlack_T">
+        <MappingFragment StoreEntitySet="MailBlack_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="BlackName" ColumnName="BlackName" />
+          <ScalarProperty Name="BlackEmail" ColumnName="BlackEmail" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBox_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBox_T">
+        <MappingFragment StoreEntitySet="MailBox_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sign" ColumnName="Sign" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Smtp" ColumnName="Smtp" />
+          <ScalarProperty Name="SmtpVerify" ColumnName="SmtpVerify" />
+          <ScalarProperty Name="SmtpPort" ColumnName="SmtpPort" />
+          <ScalarProperty Name="IsVerify" ColumnName="IsVerify" />
+          <ScalarProperty Name="Pop" ColumnName="Pop" />
+          <ScalarProperty Name="PopVerify" ColumnName="PopVerify" />
+          <ScalarProperty Name="PopPort" ColumnName="PopPort" />
+          <ScalarProperty Name="IsAli" ColumnName="IsAli" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="SmtpCustom" ColumnName="SmtpCustom" />
+          <ScalarProperty Name="SmtpUser" ColumnName="SmtpUser" />
+          <ScalarProperty Name="SmtpPass" ColumnName="SmtpPass" />
+          <ScalarProperty Name="IsBak" ColumnName="IsBak" />
+          <ScalarProperty Name="BakDay" ColumnName="BakDay" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="AutoRec" ColumnName="AutoRec" />
+          <ScalarProperty Name="Random" ColumnName="Random" />
+          <ScalarProperty Name="AddSaleName" ColumnName="AddSaleName" />
+          <ScalarProperty Name="Inside" ColumnName="Inside" />
+          <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+          <ScalarProperty Name="ReadMode" ColumnName="ReadMode" />
+          <ScalarProperty Name="SaveBase" ColumnName="SaveBase" />
+          <ScalarProperty Name="SaveBaseDay" ColumnName="SaveBaseDay" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxRoot_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxRoot_T">
+        <MappingFragment StoreEntitySet="MailBoxRoot_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxRootComm_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxRootComm_T">
+        <MappingFragment StoreEntitySet="MailBoxRootComm_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxSet_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxSet_T">
+        <MappingFragment StoreEntitySet="MailBoxSet_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxShare_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxShare_T">
+        <MappingFragment StoreEntitySet="MailBoxShare_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MailBoxId" ColumnName="MailBoxId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxType_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxType_T">
+        <MappingFragment StoreEntitySet="MailBoxType_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailBoxZn_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailBoxZn_T">
+        <MappingFragment StoreEntitySet="MailBoxZn_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailKey_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailKey_T">
+        <MappingFragment StoreEntitySet="MailKey_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BoxId" ColumnName="BoxId" />
+          <ScalarProperty Name="DtKey" ColumnName="DtKey" />
+          <ScalarProperty Name="StrUID" ColumnName="StrUID" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailLabel_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailLabel_T">
+        <MappingFragment StoreEntitySet="MailLabel_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailMod_T">
+      <EntityTypeMapping TypeName="TCRMModel.MailMod_T">
+        <MappingFragment StoreEntitySet="MailMod_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Html" ColumnName="Html" />
+          <ScalarProperty Name="Def" ColumnName="Def" />
+          <ScalarProperty Name="UseBox" ColumnName="UseBox" />
+          <ScalarProperty Name="Sys" ColumnName="Sys" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu_T">
+      <EntityTypeMapping TypeName="TCRMModel.Menu_T">
+        <MappingFragment StoreEntitySet="Menu_T">
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuNameEn" ColumnName="MenuNameEn" />
+          <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+          <ScalarProperty Name="MenuSub" ColumnName="MenuSub" />
+          <ScalarProperty Name="MenuUrl" ColumnName="MenuUrl" />
+          <ScalarProperty Name="ParentNo" ColumnName="ParentNo" />
+          <ScalarProperty Name="OpenWin" ColumnName="OpenWin" />
+          <ScalarProperty Name="WinWidth" ColumnName="WinWidth" />
+          <ScalarProperty Name="WinHeight" ColumnName="WinHeight" />
+          <ScalarProperty Name="UseFlag" ColumnName="UseFlag" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+          <ScalarProperty Name="MenuShow" ColumnName="MenuShow" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
+          <ScalarProperty Name="IsLinkPower" ColumnName="IsLinkPower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pending_T">
+      <EntityTypeMapping TypeName="TCRMModel.Pending_T">
+        <MappingFragment StoreEntitySet="Pending_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Start_date" ColumnName="Start_date" />
+          <ScalarProperty Name="End_date" ColumnName="End_date" />
+          <ScalarProperty Name="Is_repeat" ColumnName="Is_repeat" />
+          <ScalarProperty Name="Is_allday" ColumnName="Is_allday" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Urgency_level" ColumnName="Urgency_level" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Reminder_type" ColumnName="Reminder_type" />
+          <ScalarProperty Name="Reminder_time" ColumnName="Reminder_time" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="IsEnd" ColumnName="IsEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerList_T">
+      <EntityTypeMapping TypeName="TCRMModel.PowerList_T">
+        <MappingFragment StoreEntitySet="PowerList_T">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="PowerId" ColumnName="PowerId" />
+          <ScalarProperty Name="PowerName" ColumnName="PowerName" />
+          <ScalarProperty Name="PowerBak" ColumnName="PowerBak" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_T">
+      <EntityTypeMapping TypeName="TCRMModel.Product_T">
+        <MappingFragment StoreEntitySet="Product_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="PRootId" ColumnName="PRootId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CnName" ColumnName="CnName" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="CiqCode" ColumnName="CiqCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="BeUserId" ColumnName="BeUserId" />
+          <ScalarProperty Name="BeUserName" ColumnName="BeUserName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="MOQ" ColumnName="MOQ" />
+          <ScalarProperty Name="MOQPrice" ColumnName="MOQPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="CnBak" ColumnName="CnBak" />
+          <ScalarProperty Name="EnBak" ColumnName="EnBak" />
+          <ScalarProperty Name="custom1" ColumnName="custom1" />
+          <ScalarProperty Name="custom2" ColumnName="custom2" />
+          <ScalarProperty Name="custom3" ColumnName="custom3" />
+          <ScalarProperty Name="custom4" ColumnName="custom4" />
+          <ScalarProperty Name="custom5" ColumnName="custom5" />
+          <ScalarProperty Name="custom6" ColumnName="custom6" />
+          <ScalarProperty Name="custom7" ColumnName="custom7" />
+          <ScalarProperty Name="custom8" ColumnName="custom8" />
+          <ScalarProperty Name="custom9" ColumnName="custom9" />
+          <ScalarProperty Name="custom10" ColumnName="custom10" />
+          <ScalarProperty Name="PicName" ColumnName="PicName" />
+          <ScalarProperty Name="PicSize" ColumnName="PicSize" />
+          <ScalarProperty Name="PicType" ColumnName="PicType" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="ExtentUnit" ColumnName="ExtentUnit" />
+          <ScalarProperty Name="Extent" ColumnName="Extent" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="WeightUnit" ColumnName="WeightUnit" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="PackUnit" ColumnName="PackUnit" />
+          <ScalarProperty Name="Packing" ColumnName="Packing" />
+          <ScalarProperty Name="BoxCount" ColumnName="BoxCount" />
+          <ScalarProperty Name="ComIns" ColumnName="ComIns" />
+          <ScalarProperty Name="AddValueTax" ColumnName="AddValueTax" />
+          <ScalarProperty Name="DrawBack" ColumnName="DrawBack" />
+          <ScalarProperty Name="Count20" ColumnName="Count20" />
+          <ScalarProperty Name="Count40" ColumnName="Count40" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductBatchPrice_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProductBatchPrice_T">
+        <MappingFragment StoreEntitySet="ProductBatchPrice_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="RootName" ColumnName="RootName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPriceLog_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProductPriceLog_T">
+        <MappingFragment StoreEntitySet="ProductPriceLog_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProNo" ColumnName="ProNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRoot_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProductRoot_T">
+        <MappingFragment StoreEntitySet="ProductRoot_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRootPower_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProductRootPower_T">
+        <MappingFragment StoreEntitySet="ProductRootPower_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provider_T">
+      <EntityTypeMapping TypeName="TCRMModel.Provider_T">
+        <MappingFragment StoreEntitySet="Provider_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankUser" ColumnName="BankUser" />
+          <ScalarProperty Name="BankAccounts" ColumnName="BankAccounts" />
+          <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="SendLinkMan" ColumnName="SendLinkMan" />
+          <ScalarProperty Name="SendLinkManTel" ColumnName="SendLinkManTel" />
+          <ScalarProperty Name="SendLinkManMobile" ColumnName="SendLinkManMobile" />
+          <ScalarProperty Name="BeUserId" ColumnName="BeUserId" />
+          <ScalarProperty Name="BeUserName" ColumnName="BeUserName" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="Name_EN" ColumnName="Name_EN" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="Email_LogisticsContact" ColumnName="Email_LogisticsContact" />
+          <ScalarProperty Name="PortBilling_InvoiceTitle" ColumnName="PortBilling_InvoiceTitle" />
+          <ScalarProperty Name="PortBilling_Address" ColumnName="PortBilling_Address" />
+          <ScalarProperty Name="PortBilling_DutyParagraph" ColumnName="PortBilling_DutyParagraph" />
+          <ScalarProperty Name="PortBilling_DepositBank" ColumnName="PortBilling_DepositBank" />
+          <ScalarProperty Name="PortBilling_BankAccount" ColumnName="PortBilling_BankAccount" />
+          <ScalarProperty Name="SendLinkManQQ" ColumnName="SendLinkManQQ" />
+          <ScalarProperty Name="SendLinkManSex" ColumnName="SendLinkManSex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProviderAdd_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProviderAdd_T">
+        <MappingFragment StoreEntitySet="ProviderAdd_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PriId" ColumnName="PriId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="Wx" ColumnName="Wx" />
+          <ScalarProperty Name="Msn" ColumnName="Msn" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdateName" ColumnName="UpdateName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProviderPro_T">
+      <EntityTypeMapping TypeName="TCRMModel.ProviderPro_T">
+        <MappingFragment StoreEntitySet="ProviderPro_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PriId" ColumnName="PriId" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quote_T">
+      <EntityTypeMapping TypeName="TCRMModel.Quote_T">
+        <MappingFragment StoreEntitySet="Quote_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ChanceTitle" ColumnName="ChanceTitle" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CientName" ColumnName="CientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientLinkMan" ColumnName="ClientLinkMan" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="ClinetFax" ColumnName="ClinetFax" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TotMoney" ColumnName="TotMoney" />
+          <ScalarProperty Name="UVR" ColumnName="UVR" />
+          <ScalarProperty Name="TotMoneyRMB" ColumnName="TotMoneyRMB" />
+          <ScalarProperty Name="LoadPort" ColumnName="LoadPort" />
+          <ScalarProperty Name="AimPort" ColumnName="AimPort" />
+          <ScalarProperty Name="PriceClause" ColumnName="PriceClause" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="ModelHtml" ColumnName="ModelHtml" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="SpResult" ColumnName="SpResult" />
+          <ScalarProperty Name="SpMsg" ColumnName="SpMsg" />
+          <ScalarProperty Name="SpUserId" ColumnName="SpUserId" />
+          <ScalarProperty Name="SpUserName" ColumnName="SpUserName" />
+          <ScalarProperty Name="SpTime" ColumnName="SpTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="StateTime" ColumnName="StateTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+          <ScalarProperty Name="picName" ColumnName="picName" />
+          <ScalarProperty Name="picSize" ColumnName="picSize" />
+          <ScalarProperty Name="picType" ColumnName="picType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuoteModel_T">
+      <EntityTypeMapping TypeName="TCRMModel.QuoteModel_T">
+        <MappingFragment StoreEntitySet="QuoteModel_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModelHtml" ColumnName="ModelHtml" />
+          <ScalarProperty Name="Def" ColumnName="Def" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuoteProduct_T">
+      <EntityTypeMapping TypeName="TCRMModel.QuoteProduct_T">
+        <MappingFragment StoreEntitySet="QuoteProduct_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="QuoteId" ColumnName="QuoteId" />
+          <ScalarProperty Name="QuoteNo" ColumnName="QuoteNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="CnName" ColumnName="CnName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="QuoteSum" ColumnName="QuoteSum" />
+          <ScalarProperty Name="PicName" ColumnName="PicName" />
+          <ScalarProperty Name="PicSize" ColumnName="PicSize" />
+          <ScalarProperty Name="PicType" ColumnName="PicType" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role_T">
+      <EntityTypeMapping TypeName="TCRMModel.Role_T">
+        <MappingFragment StoreEntitySet="Role_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolePower_T">
+      <EntityTypeMapping TypeName="TCRMModel.RolePower_T">
+        <MappingFragment StoreEntitySet="RolePower_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleUser_T">
+      <EntityTypeMapping TypeName="TCRMModel.RoleUser_T">
+        <MappingFragment StoreEntitySet="RoleUser_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Samples_T">
+      <EntityTypeMapping TypeName="TCRMModel.Samples_T">
+        <MappingFragment StoreEntitySet="Samples_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ChanceTitle" ColumnName="ChanceTitle" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CientName" ColumnName="CientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientPostCode" ColumnName="ClientPostCode" />
+          <ScalarProperty Name="ClientLinkMan" ColumnName="ClientLinkMan" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="ClinetFax" ColumnName="ClinetFax" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientCountry" ColumnName="ClientCountry" />
+          <ScalarProperty Name="ClientLevel" ColumnName="ClientLevel" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="IsSf" ColumnName="IsSf" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TotMoney" ColumnName="TotMoney" />
+          <ScalarProperty Name="UVR" ColumnName="UVR" />
+          <ScalarProperty Name="TotMoneyRMB" ColumnName="TotMoneyRMB" />
+          <ScalarProperty Name="Express" ColumnName="Express" />
+          <ScalarProperty Name="ExpressMoney" ColumnName="ExpressMoney" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="ConNo" ColumnName="ConNo" />
+          <ScalarProperty Name="IsQuote" ColumnName="IsQuote" />
+          <ScalarProperty Name="StockPlan" ColumnName="StockPlan" />
+          <ScalarProperty Name="FeedbackDate" ColumnName="FeedbackDate" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="SpResult" ColumnName="SpResult" />
+          <ScalarProperty Name="SpMsg" ColumnName="SpMsg" />
+          <ScalarProperty Name="SpUserId" ColumnName="SpUserId" />
+          <ScalarProperty Name="SpUserName" ColumnName="SpUserName" />
+          <ScalarProperty Name="SpTime" ColumnName="SpTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="StateTime" ColumnName="StateTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SamplesProduct_T">
+      <EntityTypeMapping TypeName="TCRMModel.SamplesProduct_T">
+        <MappingFragment StoreEntitySet="SamplesProduct_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SamplesNo" ColumnName="SamplesNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="CnName" ColumnName="CnName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="QuoteSum" ColumnName="QuoteSum" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sell_T">
+      <EntityTypeMapping TypeName="TCRMModel.Sell_T">
+        <MappingFragment StoreEntitySet="Sell_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ComDate" ColumnName="ComDate" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TotMoney" ColumnName="TotMoney" />
+          <ScalarProperty Name="UVR" ColumnName="UVR" />
+          <ScalarProperty Name="TotMoneyRMB" ColumnName="TotMoneyRMB" />
+          <ScalarProperty Name="ConText" ColumnName="ConText" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SellProduct_T">
+      <EntityTypeMapping TypeName="TCRMModel.SellProduct_T">
+        <MappingFragment StoreEntitySet="SellProduct_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SellNo" ColumnName="SellNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="CnName" ColumnName="CnName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="QuoteSum" ColumnName="QuoteSum" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SendMailLog_T">
+      <EntityTypeMapping TypeName="TCRMModel.SendMailLog_T">
+        <MappingFragment StoreEntitySet="SendMailLog_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDate" ColumnName="SDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SendSample_T">
+      <EntityTypeMapping TypeName="TCRMModel.SendSample_T">
+        <MappingFragment StoreEntitySet="SendSample_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="ChanceId" ColumnName="ChanceId" />
+          <ScalarProperty Name="ChanceTitle" ColumnName="ChanceTitle" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CientName" ColumnName="CientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientLinkMan" ColumnName="ClientLinkMan" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+          <ScalarProperty Name="ClinetFax" ColumnName="ClinetFax" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerConfig_T">
+      <EntityTypeMapping TypeName="TCRMModel.ServerConfig_T">
+        <MappingFragment StoreEntitySet="ServerConfig_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="Descript" ColumnName="Descript" />
+          <ScalarProperty Name="Setting" ColumnName="Setting" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerConfigType_T">
+      <EntityTypeMapping TypeName="TCRMModel.ServerConfigType_T">
+        <MappingFragment StoreEntitySet="ServerConfigType_T">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TypeBak" ColumnName="TypeBak" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TCRMModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysDictionary_T">
+      <EntityTypeMapping TypeName="TCRMModel.SysDictionary_T">
+        <MappingFragment StoreEntitySet="SysDictionary_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataClass" ColumnName="DataClass" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="DataText" ColumnName="DataText" />
+          <ScalarProperty Name="DataValue1" ColumnName="DataValue1" />
+          <ScalarProperty Name="DataValue2" ColumnName="DataValue2" />
+          <ScalarProperty Name="DataValue3" ColumnName="DataValue3" />
+          <ScalarProperty Name="DataValue4" ColumnName="DataValue4" />
+          <ScalarProperty Name="DataValue5" ColumnName="DataValue5" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysDictionaryClass_T">
+      <EntityTypeMapping TypeName="TCRMModel.SysDictionaryClass_T">
+        <MappingFragment StoreEntitySet="SysDictionaryClass_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataClass" ColumnName="DataClass" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="UseValue1" ColumnName="UseValue1" />
+          <ScalarProperty Name="UseValue2" ColumnName="UseValue2" />
+          <ScalarProperty Name="UseValue3" ColumnName="UseValue3" />
+          <ScalarProperty Name="UseValue4" ColumnName="UseValue4" />
+          <ScalarProperty Name="UseValue5" ColumnName="UseValue5" />
+          <ScalarProperty Name="BigSort" ColumnName="BigSort" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ShowFlag" ColumnName="ShowFlag" />
+          <ScalarProperty Name="Bak" ColumnName="Bak" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempImg_T">
+      <EntityTypeMapping TypeName="TCRMModel.TempImg_T">
+        <MappingFragment StoreEntitySet="TempImg_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="imgdata" ColumnName="imgdata" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeZhou_T">
+      <EntityTypeMapping TypeName="TCRMModel.TimeZhou_T">
+        <MappingFragment StoreEntitySet="TimeZhou_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenoNo" ColumnName="MenoNo" />
+          <ScalarProperty Name="KeyId" ColumnName="KeyId" />
+          <ScalarProperty Name="ActionMenoNo" ColumnName="ActionMenoNo" />
+          <ScalarProperty Name="ActionKeyId" ColumnName="ActionKeyId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Html" ColumnName="Html" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_T">
+      <EntityTypeMapping TypeName="TCRMModel.User_T">
+        <MappingFragment StoreEntitySet="User_T">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CodeHead" ColumnName="CodeHead" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Duty" ColumnName="Duty" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LogErr" ColumnName="LogErr" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="OnlineTime" ColumnName="OnlineTime" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="LoginIp" ColumnName="LoginIp" />
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="Createtm" ColumnName="Createtm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="PicName" ColumnName="PicName" />
+          <ScalarProperty Name="PicType" ColumnName="PicType" />
+          <ScalarProperty Name="PicSize" ColumnName="PicSize" />
+          <ScalarProperty Name="PicData" ColumnName="PicData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserConfig_T">
+      <EntityTypeMapping TypeName="TCRMModel.UserConfig_T">
+        <MappingFragment StoreEntitySet="UserConfig_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="Setting" ColumnName="Setting" />
+          <ScalarProperty Name="Descript" ColumnName="Descript" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserConfigType_T">
+      <EntityTypeMapping TypeName="TCRMModel.UserConfigType_T">
+        <MappingFragment StoreEntitySet="UserConfigType_T">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TypeBak" ColumnName="TypeBak" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserIp_T">
+      <EntityTypeMapping TypeName="TCRMModel.UserIp_T">
+        <MappingFragment StoreEntitySet="UserIp_T">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="StartIpStr" ColumnName="StartIpStr" />
+          <ScalarProperty Name="startip" ColumnName="startip" />
+          <ScalarProperty Name="EndIpStr" ColumnName="EndIpStr" />
+          <ScalarProperty Name="endip" ColumnName="endip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPower_T">
+      <EntityTypeMapping TypeName="TCRMModel.UserPower_T">
+        <MappingFragment StoreEntitySet="UserPower_T">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTime_T">
+      <EntityTypeMapping TypeName="TCRMModel.UserTime_T">
+        <MappingFragment StoreEntitySet="UserTime_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Answer_T">
+      <EntityTypeMapping TypeName="TCRMModel.Answer_T">
+        <MappingFragment StoreEntitySet="Answer_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TestQuestionId" ColumnName="TestQuestionId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesktopClient_T">
+      <EntityTypeMapping TypeName="TCRMModel.DesktopClient_T">
+        <MappingFragment StoreEntitySet="DesktopClient_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesktopOne_T">
+      <EntityTypeMapping TypeName="TCRMModel.DesktopOne_T">
+        <MappingFragment StoreEntitySet="DesktopOne_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="NumberName" ColumnName="NumberName" />
+          <ScalarProperty Name="PercentageName" ColumnName="PercentageName" />
+          <ScalarProperty Name="Sql" ColumnName="Sql" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesktopThree_T">
+      <EntityTypeMapping TypeName="TCRMModel.DesktopThree_T">
+        <MappingFragment StoreEntitySet="DesktopThree_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsList" ColumnName="IsList" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Sql" ColumnName="Sql" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentManagement_T">
+      <EntityTypeMapping TypeName="TCRMModel.DocumentManagement_T">
+        <MappingFragment StoreEntitySet="DocumentManagement_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Folder_id" ColumnName="Folder_id" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Updater" ColumnName="Updater" />
+          <ScalarProperty Name="UpdaterName" ColumnName="UpdaterName" />
+          <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dynamic_T">
+      <EntityTypeMapping TypeName="TCRMModel.Dynamic_T">
+        <MappingFragment StoreEntitySet="Dynamic_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DynamicLink_T">
+      <EntityTypeMapping TypeName="TCRMModel.DynamicLink_T">
+        <MappingFragment StoreEntitySet="DynamicLink_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DynamicId" ColumnName="DynamicId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="IsClickLike" ColumnName="IsClickLike" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DynamicRecovery_T">
+      <EntityTypeMapping TypeName="TCRMModel.DynamicRecovery_T">
+        <MappingFragment StoreEntitySet="DynamicRecovery_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DynamicId" ColumnName="DynamicId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ReplyId" ColumnName="ReplyId" />
+          <ScalarProperty Name="ReplyClient" ColumnName="ReplyClient" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ClickCount" ColumnName="ClickCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folder_T">
+      <EntityTypeMapping TypeName="TCRMModel.Folder_T">
+        <MappingFragment StoreEntitySet="Folder_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KnowledgeBase_T">
+      <EntityTypeMapping TypeName="TCRMModel.KnowledgeBase_T">
+        <MappingFragment StoreEntitySet="KnowledgeBase_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Lable" ColumnName="Lable" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message_T">
+      <EntityTypeMapping TypeName="TCRMModel.Message_T">
+        <MappingFragment StoreEntitySet="Message_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsMove" ColumnName="IsMove" />
+          <ScalarProperty Name="RemenberTime" ColumnName="RemenberTime" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageClient_T">
+      <EntityTypeMapping TypeName="TCRMModel.MessageClient_T">
+        <MappingFragment StoreEntitySet="MessageClient_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageClientNew_T">
+      <EntityTypeMapping TypeName="TCRMModel.MessageClientNew_T">
+        <MappingFragment StoreEntitySet="MessageClientNew_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageNew_T">
+      <EntityTypeMapping TypeName="TCRMModel.MessageNew_T">
+        <MappingFragment StoreEntitySet="MessageNew_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsMove" ColumnName="IsMove" />
+          <ScalarProperty Name="RemenberTime" ColumnName="RemenberTime" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PendingClerk_T">
+      <EntityTypeMapping TypeName="TCRMModel.PendingClerk_T">
+        <MappingFragment StoreEntitySet="PendingClerk_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Clerk_id" ColumnName="Clerk_id" />
+          <ScalarProperty Name="PendingId" ColumnName="PendingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShareFolder_T">
+      <EntityTypeMapping TypeName="TCRMModel.ShareFolder_T">
+        <MappingFragment StoreEntitySet="ShareFolder_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="IsUpload" ColumnName="IsUpload" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsModify" ColumnName="IsModify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestPaper_T">
+      <EntityTypeMapping TypeName="TCRMModel.TestPaper_T">
+        <MappingFragment StoreEntitySet="TestPaper_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="PassingGrade" ColumnName="PassingGrade" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestQuestions_T">
+      <EntityTypeMapping TypeName="TCRMModel.TestQuestions_T">
+        <MappingFragment StoreEntitySet="TestQuestions_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KnowledgeId" ColumnName="KnowledgeId" />
+          <ScalarProperty Name="KnowledgeTitle" ColumnName="KnowledgeTitle" />
+          <ScalarProperty Name="TestPaperId" ColumnName="TestPaperId" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warning_T">
+      <EntityTypeMapping TypeName="TCRMModel.Warning_T">
+        <MappingFragment StoreEntitySet="Warning_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WarningNo" ColumnName="WarningNo" />
+          <ScalarProperty Name="Descript" ColumnName="Descript" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Clerk_id" ColumnName="Clerk_id" />
+          <ScalarProperty Name="Is_Email" ColumnName="Is_Email" />
+          <ScalarProperty Name="Is_SMS" ColumnName="Is_SMS" />
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Is_Sql" ColumnName="Is_Sql" />
+          <ScalarProperty Name="Is_repeat" ColumnName="Is_repeat" />
+          <ScalarProperty Name="Time_frame" ColumnName="Time_frame" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WarningClerk_T">
+      <EntityTypeMapping TypeName="TCRMModel.WarningClerk_T">
+        <MappingFragment StoreEntitySet="WarningClerk_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WarningId" ColumnName="WarningId" />
+          <ScalarProperty Name="Clerk_id" ColumnName="Clerk_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WarningCondition_T">
+      <EntityTypeMapping TypeName="TCRMModel.WarningCondition_T">
+        <MappingFragment StoreEntitySet="WarningCondition_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WarningId" ColumnName="WarningId" />
+          <ScalarProperty Name="ConditionNo" ColumnName="ConditionNo" />
+          <ScalarProperty Name="Sql" ColumnName="Sql" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CreaterName" ColumnName="CreaterName" />
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WarningConfig_T">
+      <EntityTypeMapping TypeName="TCRMModel.WarningConfig_T">
+        <MappingFragment StoreEntitySet="WarningConfig_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="Warning_type" ColumnName="Warning_type" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Text_en" ColumnName="Text_en" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Para" ColumnName="Para" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WarningSqlConfig_T">
+      <EntityTypeMapping TypeName="TCRMModel.WarningSqlConfig_T">
+        <MappingFragment StoreEntitySet="WarningSqlConfig_T">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Warning_type" ColumnName="Warning_type" />
+          <ScalarProperty Name="Sql_name" ColumnName="Sql_name" />
+          <ScalarProperty Name="Sql" ColumnName="Sql" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

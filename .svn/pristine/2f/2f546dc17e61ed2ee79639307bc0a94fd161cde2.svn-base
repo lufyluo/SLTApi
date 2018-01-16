@@ -1,0 +1,2382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.Answer_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Answer_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestQuestionId" Type="int" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Branch_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Calendar_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="MailId" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="text" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Chance_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="LinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Port" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChanceType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Stage" Type="nvarchar" MaxLength="50" />
+    <Property Name="Import" Type="nvarchar" MaxLength="50" />
+    <Property Name="PfDate" Type="datetime" />
+    <Property Name="PfProfit" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Inq" Type="nvarchar" MaxLength="2" />
+    <Property Name="MailId" Type="int" />
+    <Property Name="MailCount" Type="int" />
+    <Property Name="MailStart" Type="datetime" />
+    <Property Name="MailNow" Type="datetime" />
+    <Property Name="MailSendNow" Type="datetime" />
+    <Property Name="MailRecNow" Type="datetime" />
+    <Property Name="StockQuoteStart" Type="datetime" />
+    <Property Name="StockQuoteEnd" Type="datetime" />
+    <Property Name="QuoteStart" Type="datetime" />
+    <Property Name="QuoteEnd" Type="datetime" />
+    <Property Name="SampleStart" Type="datetime" />
+    <Property Name="SampleEnd" Type="datetime" />
+    <Property Name="SaleStart" Type="datetime" />
+    <Property Name="SaleEnd" Type="datetime" />
+    <Property Name="SellNo" Type="varchar" MaxLength="30" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="ChancePro" Type="nvarchar" MaxLength="300" />
+    <Property Name="bak" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ChancePro_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ProId" Type="int" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="Currency" Type="varchar" MaxLength="20" />
+    <Property Name="CostPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="SellPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Num" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Packing" Type="nvarchar" MaxLength="50" />
+    <Property Name="Inq" Type="nvarchar" MaxLength="2" />
+    <Property Name="InqId" Type="int" />
+    <Property Name="InqLimit" Type="datetime" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="200" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="InqBak" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ChanceSumup_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ConText" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Client_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="SName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostCode" Type="varchar" MaxLength="30" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="varchar" MaxLength="100" />
+    <Property Name="Fax" Type="varchar" MaxLength="100" />
+    <Property Name="Web" Type="varchar" MaxLength="100" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="4000" />
+    <Property Name="custom1" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom2" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom3" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom4" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom5" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom6" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom7" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom8" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom9" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom10" Type="nvarchar" MaxLength="300" />
+    <Property Name="Forwarder" Type="nvarchar" MaxLength="100" />
+    <Property Name="Credit" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientState" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientSource" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientAttr" Type="nvarchar" MaxLength="10" />
+    <Property Name="ClientLock" Type="int" />
+    <Property Name="Aud" Type="int" />
+    <Property Name="Sale" Type="nvarchar" MaxLength="250" />
+    <Property Name="SDate" Type="datetime" />
+    <Property Name="RDate" Type="datetime" />
+    <Property Name="KfTime" Type="datetime" />
+    <Property Name="DevUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="DevUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="JoinTime" Type="datetime" />
+    <Property Name="TopTime" Type="datetime" />
+    <Property Name="Pub" Type="int" />
+    <Property Name="PubTime" Type="datetime" />
+    <Property Name="PubMsg" Type="nvarchar" MaxLength="50" />
+    <Property Name="PubClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDel" Type="int" />
+    <Property Name="DelTime" Type="datetime" />
+    <Property Name="DelUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelReason" Type="nvarchar" MaxLength="100" />
+    <Property Name="CommCount" Type="int" />
+    <Property Name="CommTime" Type="datetime" />
+    <Property Name="Star" Type="varchar" MaxLength="1" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="LastFollowTm" Type="datetime" />
+    <Property Name="Yj" Type="int" />
+    <Property Name="Pf" Type="int" />
+    <Property Name="EDM" Type="int" />
+    <Property Name="SelTime" Type="datetime" />
+    <Property Name="LinkManNameStr" Type="nvarchar" MaxLength="4000" />
+    <Property Name="LinkManEmailStr" Type="varchar" MaxLength="8000" />
+    <Property Name="LinkManTelStr" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="ClientAdd_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Email1" Type="varchar" MaxLength="100" />
+    <Property Name="Email2" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Dept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Job" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="HomeAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="HomeTel" Type="varchar" MaxLength="50" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="QQ" Type="varchar" MaxLength="30" />
+    <Property Name="Msn" Type="varchar" MaxLength="50" />
+    <Property Name="WeChat" Type="nvarchar" MaxLength="50" />
+    <Property Name="SKYPE" Type="varchar" MaxLength="50" />
+    <Property Name="Facebook" Type="varchar" MaxLength="50" />
+    <Property Name="Twitter" Type="varchar" MaxLength="50" />
+    <Property Name="Interest" Type="nvarchar" MaxLength="300" />
+    <Property Name="MainAdd" Type="int" />
+    <Property Name="Share" Type="nvarchar" MaxLength="2" />
+    <Property Name="ShareUID" Type="varchar" MaxLength="2000" />
+    <Property Name="Role" Type="nvarchar" MaxLength="20" />
+    <Property Name="Manner" Type="nvarchar" MaxLength="20" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientAddCopy_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Email1" Type="varchar" MaxLength="100" />
+    <Property Name="Email2" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Dept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Job" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="HomeAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="HomeTel" Type="varchar" MaxLength="50" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="QQ" Type="varchar" MaxLength="30" />
+    <Property Name="Msn" Type="varchar" MaxLength="50" />
+    <Property Name="WeChat" Type="nvarchar" MaxLength="50" />
+    <Property Name="SKYPE" Type="varchar" MaxLength="50" />
+    <Property Name="Interest" Type="nvarchar" MaxLength="300" />
+    <Property Name="MainAdd" Type="int" />
+    <Property Name="Share" Type="nvarchar" MaxLength="2" />
+    <Property Name="ShareUID" Type="varchar" MaxLength="2000" />
+    <Property Name="Role" Type="nvarchar" MaxLength="20" />
+    <Property Name="Manner" Type="nvarchar" MaxLength="20" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientBackLog_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="bigint" />
+    <Property Name="UID" Type="varchar" MaxLength="8000" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientCare_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="CareDate" Type="datetime" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="300" />
+    <Property Name="CalendarId" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientComment_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Memo" Type="nvarchar" MaxLength="500" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="RemindUID" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ClientComplain_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConNo" Type="varchar" MaxLength="50" />
+    <Property Name="ClientId" Type="bigint" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ComDate" Type="datetime" />
+    <Property Name="ComText" Type="nvarchar" MaxLength="500" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="500" />
+    <Property Name="SolveText" Type="nvarchar" MaxLength="500" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="RemindUserId" Type="nvarchar" MaxLength="300" />
+    <Property Name="RemindUserName" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ClientCopy_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="SName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostCode" Type="varchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Province" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tel" Type="varchar" MaxLength="100" />
+    <Property Name="Fax" Type="varchar" MaxLength="100" />
+    <Property Name="Web" Type="varchar" MaxLength="100" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="1000" />
+    <Property Name="custom1" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom2" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom3" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom4" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom5" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom6" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom7" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom8" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom9" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom10" Type="nvarchar" MaxLength="300" />
+    <Property Name="Forwarder" Type="nvarchar" MaxLength="100" />
+    <Property Name="Credit" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientState" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientSource" Type="nvarchar" MaxLength="50" />
+    <Property Name="AutoToMail" Type="int" />
+    <Property Name="ClientLock" Type="int" />
+    <Property Name="Aud" Type="int" />
+    <Property Name="Sale" Type="nvarchar" MaxLength="250" />
+    <Property Name="SDate" Type="datetime" />
+    <Property Name="RDate" Type="datetime" />
+    <Property Name="KfUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="KfUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="KfTime" Type="datetime" />
+    <Property Name="JoinTime" Type="datetime" />
+    <Property Name="TopTime" Type="datetime" />
+    <Property Name="Pub" Type="int" />
+    <Property Name="PubTime" Type="datetime" />
+    <Property Name="PubMsg" Type="nvarchar" MaxLength="50" />
+    <Property Name="PubClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDel" Type="int" />
+    <Property Name="DelTime" Type="datetime" />
+    <Property Name="DelUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelReason" Type="nvarchar" MaxLength="100" />
+    <Property Name="CommCount" Type="int" />
+    <Property Name="CommTime" Type="datetime" />
+    <Property Name="Star" Type="nvarchar" MaxLength="50" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="LastFollowTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientFollow_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="FollwTime" Type="datetime" />
+    <Property Name="AddName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Info" Type="nvarchar" MaxLength="4000" />
+    <Property Name="MailId" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientJoinLog_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FromUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="FromUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToUserId" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ToUserName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="IsMail" Type="nvarchar" MaxLength="1" />
+    <Property Name="ToMailBoxId" Type="int" />
+    <Property Name="ToEmail" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="LinkDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientJoinLogMain_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="ClientIdStr" Type="varchar" MaxLength="8000" />
+    <Property Name="ToUserId" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ToUserName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="IsMail" Type="nvarchar" MaxLength="1" />
+    <Property Name="ToMailBoxId" Type="int" />
+    <Property Name="ToEmail" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="300" />
+    <Property Name="ClientNameStr" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ClientLimit_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientCount" Type="int" />
+    <Property Name="ClientTotalCount" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientPro_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ProId" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientPubLimit_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Class" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ClientPubRule_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="UserId" Type="varchar" MaxLength="4000" />
+    <Property Name="NotUserId" Type="nvarchar" MaxLength="4000" />
+    <Property Name="NotClientId" Type="varchar" MaxLength="8000" />
+    <Property Name="AndOr1" Type="varchar" MaxLength="5" />
+    <Property Name="AndOr2" Type="varchar" MaxLength="5" />
+    <Property Name="PubClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemindDay" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="State" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientPubRuleIf1_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RuleId" Type="int" />
+    <Property Name="ParaName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Oper" Type="varchar" MaxLength="10" />
+    <Property Name="OperValue" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ClientPubRuleIf2_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RuleId" Type="int" />
+    <Property Name="ParaName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Oper" Type="varchar" MaxLength="10" />
+    <Property Name="OperValue" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ClientSale_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientSalePub_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <EntityType Name="CodeRule_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsUseAuto" Type="bit" />
+    <Property Name="NoLen" Type="int" />
+    <Property Name="NoStart" Type="int" />
+    <Property Name="CodeFormula" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ColumnSet_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="data-field" Type="varchar" MaxLength="30" />
+    <Property Name="data-title" Type="nvarchar" MaxLength="100" />
+    <Property Name="data-title-en" Type="nvarchar" MaxLength="100" />
+    <Property Name="data-sortName" Type="varchar" MaxLength="50" />
+    <Property Name="data-width" Type="varchar" MaxLength="10" />
+    <Property Name="data-sortable" Type="bit" />
+    <Property Name="data-checkbox" Type="bit" />
+    <Property Name="data-radio" Type="bit" />
+    <Property Name="data-visible" Type="bit" />
+    <Property Name="data-class" Type="varchar" MaxLength="30" />
+    <Property Name="data-rowspan" Type="int" />
+    <Property Name="data-colspan" Type="int" />
+    <Property Name="data-align" Type="varchar" MaxLength="10" />
+    <Property Name="data-halign" Type="varchar" MaxLength="10" />
+    <Property Name="data-falign" Type="varchar" MaxLength="10" />
+    <Property Name="data-valign" Type="varchar" MaxLength="10" />
+    <Property Name="data-cardVisible" Type="bit" />
+    <Property Name="data-clickToSelect" Type="bit" />
+    <Property Name="data-order" Type="varchar" MaxLength="10" />
+    <Property Name="data-titleTooltip" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ColumnSetMy_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="data-field" Type="varchar" MaxLength="30" />
+    <Property Name="data-title" Type="nvarchar" MaxLength="100" />
+    <Property Name="data-title-en" Type="nvarchar" MaxLength="100" />
+    <Property Name="data-sortName" Type="varchar" MaxLength="50" />
+    <Property Name="data-width" Type="varchar" MaxLength="10" />
+    <Property Name="data-sortable" Type="bit" />
+    <Property Name="data-checkbox" Type="bit" />
+    <Property Name="data-radio" Type="bit" />
+    <Property Name="data-visible" Type="bit" />
+    <Property Name="data-class" Type="varchar" MaxLength="30" />
+    <Property Name="data-rowspan" Type="int" />
+    <Property Name="data-colspan" Type="int" />
+    <Property Name="data-align" Type="varchar" MaxLength="10" />
+    <Property Name="data-halign" Type="varchar" MaxLength="10" />
+    <Property Name="data-falign" Type="varchar" MaxLength="10" />
+    <Property Name="data-valign" Type="varchar" MaxLength="10" />
+    <Property Name="data-cardVisible" Type="bit" />
+    <Property Name="data-clickToSelect" Type="bit" />
+    <Property Name="data-order" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CustomFind_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sql" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CustomsData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+  </EntityType>
+  <EntityType Name="DataCompetitor_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pro" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Report" Type="nvarchar" MaxLength="300" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DataCompetitorClient_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataCompetitorId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+  </EntityType>
+  <EntityType Name="DataCompetitorPro_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataCompetitorId" Type="int" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="DataLiarEmail_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DateNum_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateStr" Type="varchar" MaxLength="50" />
+    <Property Name="Num" Type="int" />
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Delta_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="Dept_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdminUserId" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdminUserName" Type="nvarchar" MaxLength="500" />
+    <Property Name="MailAudUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MailAudUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="QuoteAudUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="QuoteAudUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SellAudUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SellAudUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SendAudUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SendAudUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Createtm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DesktopClient_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DesktopClient_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="IsShow" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DesktopOne_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DesktopOne_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="IsShow" Type="int" />
+    <Property Name="NumberName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PercentageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sql" Type="nvarchar" MaxLength="300" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DesktopThree_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DesktopThree_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="IsList" Type="int" />
+    <Property Name="IsShow" Type="int" />
+    <Property Name="Sql" Type="nvarchar" MaxLength="300" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Dictionary_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataText" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DocumentManagement_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DocumentManagement_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Folder_id" Type="int" />
+    <Property Name="Keyword" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.Dynamic_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Dynamic_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="MenuNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Note" Type="text" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DynamicLink_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DynamicLink_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DynamicId" Type="int" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsClickLike" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.DynamicRecovery_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="DynamicRecovery_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DynamicId" Type="int" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReplyId" Type="int" />
+    <Property Name="ReplyClient" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Note" Type="text" />
+    <Property Name="ClickCount" Type="int" />
+  </EntityType>
+  <EntityType Name="File_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="30" />
+    <Property Name="KeyId" Type="int" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="FileSize" Type="int" />
+    <Property Name="FileDb" Type="varchar" MaxLength="30" />
+    <Property Name="FileId" Type="int" />
+    <Property Name="DownloadID" Type="varchar" MaxLength="50" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.Folder_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Folder_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FwIntMail_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BoxId" Type="int" />
+    <Property Name="MailId" Type="int" />
+    <Property Name="ToUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToEmail" Type="varchar" MaxLength="1000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="IsSuccess" Type="bit" />
+    <Property Name="ToTime" Type="datetime" />
+    <Property Name="ErrorMessage" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="FwIntMailSet_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToEmail" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Group_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="GroupAdmin_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GroupUser_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InquiryPro_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="nvarchar" MaxLength="30" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="PriId" Type="int" />
+    <Property Name="PriName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PriLinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="PriLinkPhone" Type="varchar" MaxLength="50" />
+    <Property Name="PriProNo" Type="varchar" MaxLength="30" />
+    <Property Name="PriProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProId" Type="int" />
+    <Property Name="ProNo" Type="varchar" MaxLength="30" />
+    <Property Name="Currency" Type="varchar" MaxLength="10" />
+    <Property Name="Price" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="IsUpdate" Type="int" />
+    <Property Name="IsTax" Type="int" />
+    <Property Name="MOQPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="MOQ" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="InqDate" Type="datetime" />
+    <Property Name="ValidDate" Type="datetime" />
+    <Property Name="SupplyDay" Type="int" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="4000" />
+    <Property Name="InqBak" Type="nvarchar" MaxLength="4000" />
+    <Property Name="InqUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="InqUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Submit" Type="int" />
+    <Property Name="SpResult" Type="int" />
+    <Property Name="SpMsg" Type="nvarchar" MaxLength="200" />
+    <Property Name="SpUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpTime" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“TCRM.dbo.ip”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="ip">
+          <Property Name="startip" Type="float" />
+          <Property Name="endip" Type="float" />
+          <Property Name="country" Type="nvarchar" MaxLength="100" />
+          <Property Name="local" Type="nvarchar" MaxLength="10" />
+        </EntityType>-->
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.KnowledgeBase_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="KnowledgeBase_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenuNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Lable" Type="nvarchar" MaxLength="200" />
+    <Property Name="Question" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Score" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Log_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ip" Type="varchar" MaxLength="50" />
+    <Property Name="ToTime" Type="datetime" />
+    <Property Name="Err" Type="int" />
+  </EntityType>
+  <EntityType Name="MailBlack_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="BlackName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BlackEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailBox_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sign" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Smtp" Type="varchar" MaxLength="100" />
+    <Property Name="SmtpVerify" Type="varchar" MaxLength="10" />
+    <Property Name="SmtpPort" Type="int" />
+    <Property Name="IsVerify" Type="varchar" MaxLength="2" />
+    <Property Name="Pop" Type="varchar" MaxLength="100" />
+    <Property Name="PopVerify" Type="varchar" MaxLength="10" />
+    <Property Name="PopPort" Type="int" />
+    <Property Name="IsAli" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Pass" Type="varchar" MaxLength="100" />
+    <Property Name="SmtpCustom" Type="int" />
+    <Property Name="SmtpUser" Type="varchar" MaxLength="100" />
+    <Property Name="SmtpPass" Type="varchar" MaxLength="100" />
+    <Property Name="IsBak" Type="nvarchar" MaxLength="2" />
+    <Property Name="BakDay" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Mode" Type="int" />
+    <Property Name="AutoRec" Type="int" />
+    <Property Name="Random" Type="int" />
+    <Property Name="AddSaleName" Type="int" />
+    <Property Name="Inside" Type="int" />
+    <Property Name="Receipt" Type="int" />
+    <Property Name="ReadMode" Type="int" />
+    <Property Name="SaveBase" Type="nvarchar" MaxLength="2" />
+    <Property Name="SaveBaseDay" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailBoxRoot_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sort" Type="numeric" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="MailBoxRootComm_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RootId" Type="int" />
+  </EntityType>
+  <EntityType Name="MailBoxSet_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MailBoxShare_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailBoxId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+  </EntityType>
+  <EntityType Name="MailBoxType_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="50" />
+    <Property Name="icon" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="MailBoxZn_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="50" />
+    <Property Name="icon" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="MailKey_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BoxId" Type="int" />
+    <Property Name="DtKey" Type="nvarchar" MaxLength="200" />
+    <Property Name="StrUID" Type="varchar" MaxLength="4000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MailLabel_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Class" Type="varchar" MaxLength="20" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="MailMod_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Html" Type="nvarchar(max)" />
+    <Property Name="Def" Type="nvarchar" MaxLength="1" />
+    <Property Name="UseBox" Type="varchar" MaxLength="300" />
+    <Property Name="Sys" Type="int" />
+  </EntityType>
+  <EntityType Name="Menu_T">
+    <Key>
+      <PropertyRef Name="MenuNo" />
+    </Key>
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MenuName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenuNameEn" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenuOrder" Type="numeric" Precision="18" Scale="1" />
+    <Property Name="MenuSub" Type="bit" />
+    <Property Name="MenuUrl" Type="varchar" MaxLength="200" />
+    <Property Name="ParentNo" Type="varchar" MaxLength="50" />
+    <Property Name="OpenWin" Type="bit" />
+    <Property Name="WinWidth" Type="int" />
+    <Property Name="WinHeight" Type="int" />
+    <Property Name="UseFlag" Type="bit" />
+    <Property Name="FuncCode" Type="varchar" MaxLength="100" />
+    <Property Name="MenuShow" Type="bit" />
+    <Property Name="Icon" Type="varchar" MaxLength="50" />
+    <Property Name="IconUrl" Type="varchar" MaxLength="50" />
+    <Property Name="IsLinkPower" Type="bit" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.Message_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Message_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="30" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Recipient" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" />
+    <Property Name="Note" Type="text" />
+    <Property Name="Type" Type="int" />
+    <Property Name="IsMove" Type="int" />
+    <Property Name="RemenberTime" Type="datetime" />
+    <Property Name="Url" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.MessageClient_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="MessageClient_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="varchar" MaxLength="30" />
+    <Property Name="MessageId" Type="int" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.MessageClientNew_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="MessageClientNew_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="varchar" MaxLength="30" />
+    <Property Name="MessageId" Type="int" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.MessageNew_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="MessageNew_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="30" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Recipient" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" />
+    <Property Name="Note" Type="text" />
+    <Property Name="Type" Type="int" />
+    <Property Name="IsMove" Type="int" />
+    <Property Name="RemenberTime" Type="datetime" />
+    <Property Name="Url" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Pending_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Start_date" Type="datetime" />
+    <Property Name="End_date" Type="datetime" />
+    <Property Name="Is_repeat" Type="int" />
+    <Property Name="Is_allday" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Urgency_level" Type="int" />
+    <Property Name="Url" Type="varchar" MaxLength="200" />
+    <Property Name="Reminder_type" Type="int" />
+    <Property Name="Reminder_time" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="IsEnd" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.PendingClerk_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="PendingClerk_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Clerk_id" Type="varchar" MaxLength="50" />
+    <Property Name="PendingId" Type="int" />
+  </EntityType>
+  <EntityType Name="PowerList_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PowerId" Type="varchar" MaxLength="50" />
+    <Property Name="PowerName" Type="varchar" MaxLength="50" />
+    <Property Name="PowerBak" Type="varchar" MaxLength="100" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="Product_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guid" Type="varchar" MaxLength="50" />
+    <Property Name="RootId" Type="int" />
+    <Property Name="PRootId" Type="varchar" MaxLength="30" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CiqCode" Type="varchar" MaxLength="50" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="BeUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="BeUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="varchar" MaxLength="10" />
+    <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="MOQ" Type="int" />
+    <Property Name="MOQPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="CostPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="CnBak" Type="nvarchar" MaxLength="1000" />
+    <Property Name="EnBak" Type="nvarchar" MaxLength="1000" />
+    <Property Name="custom1" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom2" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom3" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom4" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom5" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom6" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom7" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom8" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom9" Type="nvarchar" MaxLength="300" />
+    <Property Name="custom10" Type="nvarchar" MaxLength="300" />
+    <Property Name="PicName" Type="nvarchar" MaxLength="150" />
+    <Property Name="PicSize" Type="int" />
+    <Property Name="PicType" Type="varchar" MaxLength="100" />
+    <Property Name="Pic" Type="image" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="ExtentUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extent" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Width" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Height" Type="numeric" Precision="18" Scale="3" />
+    <Property Name="Volume" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="WeightUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="NetWeight" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="GrossWeight" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="PackUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Packing" Type="nvarchar" MaxLength="50" />
+    <Property Name="BoxCount" Type="numeric" Precision="18" Scale="1" />
+    <Property Name="ComIns" Type="nvarchar" MaxLength="2" />
+    <Property Name="AddValueTax" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="DrawBack" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Count20" Type="numeric" Precision="18" Scale="1" />
+    <Property Name="Count40" Type="numeric" Precision="18" Scale="1" />
+    <Property Name="SName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProductBatchPrice_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RootId" Type="int" />
+    <Property Name="RootName" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Value" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“TCRM.dbo.ProductPicModel_T”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="ProductPicModel_T">
+          <Property Name="ModelContent" Type="nvarchar(max)" />
+        </EntityType>-->
+  <EntityType Name="ProductPriceLog_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProNo" Type="varchar" MaxLength="30" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Price" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductRoot_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductRootPower_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RootId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+  </EntityType>
+  <EntityType Name="Provider_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Web" Type="varchar" MaxLength="300" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankAccounts" Type="nvarchar" MaxLength="50" />
+    <Property Name="TaxNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="SendLinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="SendLinkManTel" Type="varchar" MaxLength="50" />
+    <Property Name="SendLinkManMobile" Type="varchar" MaxLength="50" />
+    <Property Name="BeUserId" Type="nvarchar" MaxLength="4000" />
+    <Property Name="BeUserName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="Name_EN" Type="nvarchar" MaxLength="200" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Payment" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tariff" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Email_LogisticsContact" Type="varchar" MaxLength="100" />
+    <Property Name="PortBilling_InvoiceTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="PortBilling_Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="PortBilling_DutyParagraph" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortBilling_DepositBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortBilling_BankAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="SendLinkManQQ" Type="varchar" MaxLength="30" />
+    <Property Name="SendLinkManSex" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="ProviderAdd_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PriId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsMain" Type="int" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Dept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Job" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="QQ" Type="varchar" MaxLength="50" />
+    <Property Name="Wx" Type="varchar" MaxLength="50" />
+    <Property Name="Msn" Type="varchar" MaxLength="50" />
+    <Property Name="Skype" Type="nchar" MaxLength="10" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="500" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProviderPro_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PriId" Type="int" />
+    <Property Name="ProId" Type="int" />
+  </EntityType>
+  <EntityType Name="Quote_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ChanceTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="CientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientLinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientPhone" Type="varchar" MaxLength="50" />
+    <Property Name="ClinetFax" Type="varchar" MaxLength="50" />
+    <Property Name="ClientEmail" Type="varchar" MaxLength="100" />
+    <Property Name="Currency" Type="varchar" MaxLength="20" />
+    <Property Name="TotMoney" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="UVR" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="TotMoneyRMB" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="LoadPort" Type="nvarchar" MaxLength="50" />
+    <Property Name="AimPort" Type="nvarchar" MaxLength="50" />
+    <Property Name="PriceClause" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModelId" Type="int" />
+    <Property Name="ModelHtml" Type="nvarchar(max)" />
+    <Property Name="Submit" Type="int" />
+    <Property Name="SpResult" Type="int" />
+    <Property Name="SpMsg" Type="nvarchar" MaxLength="200" />
+    <Property Name="SpUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpTime" Type="datetime" />
+    <Property Name="State" Type="int" />
+    <Property Name="StateTime" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="pic" Type="image" />
+    <Property Name="picName" Type="nvarchar" MaxLength="150" />
+    <Property Name="picSize" Type="int" />
+    <Property Name="picType" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="QuoteModel_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModelHtml" Type="nvarchar(max)" />
+    <Property Name="Def" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="varchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QuoteProduct_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuoteId" Type="int" />
+    <Property Name="QuoteNo" Type="varchar" MaxLength="30" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="No" Type="varchar" MaxLength="50" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Num" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="QuoteSum" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="PicName" Type="nvarchar" MaxLength="150" />
+    <Property Name="PicSize" Type="int" />
+    <Property Name="PicType" Type="varchar" MaxLength="100" />
+    <Property Name="Pic" Type="image" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Role_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RolePower_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="FuncCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RoleUser_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Samples_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ChanceTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="CientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientPostCode" Type="varchar" MaxLength="30" />
+    <Property Name="ClientLinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientPhone" Type="varchar" MaxLength="50" />
+    <Property Name="ClinetFax" Type="varchar" MaxLength="50" />
+    <Property Name="ClientEmail" Type="varchar" MaxLength="100" />
+    <Property Name="ClientCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsSf" Type="nvarchar" MaxLength="2" />
+    <Property Name="Payment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="varchar" MaxLength="20" />
+    <Property Name="TotMoney" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="UVR" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="TotMoneyRMB" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Express" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpressMoney" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="RecDate" Type="datetime" />
+    <Property Name="ConNo" Type="varchar" MaxLength="30" />
+    <Property Name="IsQuote" Type="nvarchar" MaxLength="2" />
+    <Property Name="StockPlan" Type="nvarchar" MaxLength="50" />
+    <Property Name="FeedbackDate" Type="datetime" />
+    <Property Name="Feedback" Type="nvarchar" MaxLength="500" />
+    <Property Name="Submit" Type="int" />
+    <Property Name="SpResult" Type="int" />
+    <Property Name="SpMsg" Type="nvarchar" MaxLength="200" />
+    <Property Name="SpUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpTime" Type="datetime" />
+    <Property Name="State" Type="int" />
+    <Property Name="StateTime" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SamplesProduct_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SamplesNo" Type="varchar" MaxLength="30" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="No" Type="varchar" MaxLength="50" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Num" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="QuoteSum" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sell_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ComDate" Type="datetime" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="Currency" Type="varchar" MaxLength="20" />
+    <Property Name="TotMoney" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="UVR" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="TotMoneyRMB" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="ConText" Type="varchar" MaxLength="2000" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="Updater" Type="varchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SellProduct_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SellNo" Type="varchar" MaxLength="30" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="No" Type="varchar" MaxLength="50" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CnName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Spec" Type="varchar" MaxLength="50" />
+    <Property Name="Num" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="QuoteSum" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="SendMailLog_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="SDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SendSample_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="30" />
+    <Property Name="ChanceId" Type="int" />
+    <Property Name="ChanceTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="CientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClientLinkMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientPhone" Type="varchar" MaxLength="50" />
+    <Property Name="ClinetFax" Type="varchar" MaxLength="50" />
+    <Property Name="ClientEmail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ServerConfig_T">
+    <Key>
+      <PropertyRef Name="ParamName" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="30" />
+    <Property Name="ParamName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descript" Type="nvarchar" MaxLength="500" />
+    <Property Name="Setting" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ServerConfigType_T">
+    <Key>
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="Type" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TypeBak" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.ShareFolder_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ShareFolder_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderId" Type="int" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="IsUpload" Type="int" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="IsModify" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SysDictionary_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataText" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue1" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue2" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue3" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue4" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataValue5" Type="nvarchar" MaxLength="500" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <EntityType Name="SysDictionaryClass_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+    <Property Name="UseValue1" Type="bit" />
+    <Property Name="UseValue2" Type="bit" />
+    <Property Name="UseValue3" Type="bit" />
+    <Property Name="UseValue4" Type="bit" />
+    <Property Name="UseValue5" Type="bit" />
+    <Property Name="BigSort" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="ShowFlag" Type="bit" />
+    <Property Name="Bak" Type="nvarchar" MaxLength="300" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <EntityType Name="TempImg_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imgdata" Type="image" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FileSize" Type="int" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.TestPaper_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TestPaper_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Time" Type="nvarchar" MaxLength="30" />
+    <Property Name="PassingGrade" Type="nvarchar" MaxLength="30" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.TestQuestions_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TestQuestions_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KnowledgeId" Type="int" />
+    <Property Name="KnowledgeTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="TestPaperId" Type="int" />
+    <Property Name="Rank" Type="int" />
+  </EntityType>
+  <EntityType Name="TimeZhou_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenoNo" Type="varchar" MaxLength="50" />
+    <Property Name="KeyId" Type="int" />
+    <Property Name="ActionMenoNo" Type="varchar" MaxLength="50" />
+    <Property Name="ActionKeyId" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Html" Type="nvarchar" MaxLength="500" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User_T">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="CodeHead" Type="varchar" MaxLength="10" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="2" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Duty" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="4" />
+    <Property Name="LogErr" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="OnlineTime" Type="datetime" />
+    <Property Name="Guid" Type="varchar" MaxLength="50" />
+    <Property Name="LoginIp" Type="varchar" MaxLength="50" />
+    <Property Name="LoginTime" Type="datetime" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Createtm" Type="datetime" />
+    <Property Name="Updater" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTm" Type="datetime" />
+    <Property Name="Img" Type="image" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="PicName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PicType" Type="varchar" MaxLength="100" />
+    <Property Name="PicSize" Type="int" />
+    <Property Name="PicData" Type="image" />
+  </EntityType>
+  <EntityType Name="UserConfig_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="30" />
+    <Property Name="ParamName" Type="varchar" MaxLength="50" />
+    <Property Name="Setting" Type="nvarchar" MaxLength="500" />
+    <Property Name="Descript" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="UserConfigType_T">
+    <Key>
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="Type" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="TypeBak" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="UserIp_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartIpStr" Type="varchar" MaxLength="50" />
+    <Property Name="startip" Type="float" />
+    <Property Name="EndIpStr" Type="varchar" MaxLength="50" />
+    <Property Name="endip" Type="float" />
+  </EntityType>
+  <EntityType Name="UserPower_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="FuncCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserTime_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="varchar" MaxLength="50" />
+    <Property Name="EndTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.Warning_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Warning_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarningNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descript" Type="nvarchar" MaxLength="300" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Clerk_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Email" Type="int" />
+    <Property Name="Is_SMS" Type="int" />
+    <Property Name="Times" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+    <Property Name="State" Type="int" />
+    <Property Name="Is_Sql" Type="int" />
+    <Property Name="Is_repeat" Type="int" />
+    <Property Name="Time_frame" Type="int" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.WarningClerk_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="WarningClerk_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarningId" Type="int" />
+    <Property Name="Clerk_id" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.WarningCondition_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="WarningCondition_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarningId" Type="int" />
+    <Property Name="ConditionNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sql" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Creater" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTm" Type="nvarchar" MaxLength="50" />
+    <Property Name="TableName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.WarningConfig_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="WarningConfig_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="30" />
+    <Property Name="Warning_type" Type="int" />
+    <Property Name="Value" Type="varchar" MaxLength="30" />
+    <Property Name="Field" Type="varchar" MaxLength="30" />
+    <Property Name="Text" Type="varchar" MaxLength="50" />
+    <Property Name="Text_en" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="30" />
+    <Property Name="Para" Type="nvarchar" MaxLength="500" />
+    <Property Name="TableName" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TCRM.dbo.WarningSqlConfig_T”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="WarningSqlConfig_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Warning_type" Type="int" />
+    <Property Name="Sql_name" Type="varchar" MaxLength="100" />
+    <Property Name="Sql" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="MenuNo" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="TCRMModelStoreContainer">
+    <EntitySet Name="Branch_T" EntityType="Self.Branch_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Calendar_T" EntityType="Self.Calendar_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chance_T" EntityType="Self.Chance_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChancePro_T" EntityType="Self.ChancePro_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChanceSumup_T" EntityType="Self.ChanceSumup_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client_T" EntityType="Self.Client_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientAdd_T" EntityType="Self.ClientAdd_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientAddCopy_T" EntityType="Self.ClientAddCopy_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientBackLog_T" EntityType="Self.ClientBackLog_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientCare_T" EntityType="Self.ClientCare_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientComment_T" EntityType="Self.ClientComment_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientComplain_T" EntityType="Self.ClientComplain_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientCopy_T" EntityType="Self.ClientCopy_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientFollow_T" EntityType="Self.ClientFollow_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientJoinLog_T" EntityType="Self.ClientJoinLog_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientJoinLogMain_T" EntityType="Self.ClientJoinLogMain_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientLimit_T" EntityType="Self.ClientLimit_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientPro_T" EntityType="Self.ClientPro_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientPubLimit_T" EntityType="Self.ClientPubLimit_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientPubRule_T" EntityType="Self.ClientPubRule_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientPubRuleIf1_T" EntityType="Self.ClientPubRuleIf1_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientPubRuleIf2_T" EntityType="Self.ClientPubRuleIf2_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientSale_T" EntityType="Self.ClientSale_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientSalePub_T" EntityType="Self.ClientSalePub_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CodeRule_T" EntityType="Self.CodeRule_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColumnSet_T" EntityType="Self.ColumnSet_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColumnSetMy_T" EntityType="Self.ColumnSetMy_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomFind_T" EntityType="Self.CustomFind_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomsData_T" EntityType="Self.CustomsData_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataCompetitor_T" EntityType="Self.DataCompetitor_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataCompetitorClient_T" EntityType="Self.DataCompetitorClient_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataCompetitorPro_T" EntityType="Self.DataCompetitorPro_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataLiarEmail_T" EntityType="Self.DataLiarEmail_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DateNum_T" EntityType="Self.DateNum_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Delta_T" EntityType="Self.Delta_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dept_T" EntityType="Self.Dept_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dictionary_T" EntityType="Self.Dictionary_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="File_T" EntityType="Self.File_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FwIntMail_T" EntityType="Self.FwIntMail_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FwIntMailSet_T" EntityType="Self.FwIntMailSet_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Group_T" EntityType="Self.Group_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupAdmin_T" EntityType="Self.GroupAdmin_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupUser_T" EntityType="Self.GroupUser_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InquiryPro_T" EntityType="Self.InquiryPro_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log_T" EntityType="Self.Log_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBlack_T" EntityType="Self.MailBlack_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBox_T" EntityType="Self.MailBox_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxRoot_T" EntityType="Self.MailBoxRoot_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxRootComm_T" EntityType="Self.MailBoxRootComm_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxSet_T" EntityType="Self.MailBoxSet_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxShare_T" EntityType="Self.MailBoxShare_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxType_T" EntityType="Self.MailBoxType_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailBoxZn_T" EntityType="Self.MailBoxZn_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailKey_T" EntityType="Self.MailKey_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailLabel_T" EntityType="Self.MailLabel_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailMod_T" EntityType="Self.MailMod_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu_T" EntityType="Self.Menu_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pending_T" EntityType="Self.Pending_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PowerList_T" EntityType="Self.PowerList_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_T" EntityType="Self.Product_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductBatchPrice_T" EntityType="Self.ProductBatchPrice_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductPriceLog_T" EntityType="Self.ProductPriceLog_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductRoot_T" EntityType="Self.ProductRoot_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductRootPower_T" EntityType="Self.ProductRootPower_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provider_T" EntityType="Self.Provider_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProviderAdd_T" EntityType="Self.ProviderAdd_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProviderPro_T" EntityType="Self.ProviderPro_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Quote_T" EntityType="Self.Quote_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuoteModel_T" EntityType="Self.QuoteModel_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuoteProduct_T" EntityType="Self.QuoteProduct_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role_T" EntityType="Self.Role_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RolePower_T" EntityType="Self.RolePower_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleUser_T" EntityType="Self.RoleUser_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Samples_T" EntityType="Self.Samples_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SamplesProduct_T" EntityType="Self.SamplesProduct_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sell_T" EntityType="Self.Sell_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SellProduct_T" EntityType="Self.SellProduct_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SendMailLog_T" EntityType="Self.SendMailLog_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SendSample_T" EntityType="Self.SendSample_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServerConfig_T" EntityType="Self.ServerConfig_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServerConfigType_T" EntityType="Self.ServerConfigType_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysDictionary_T" EntityType="Self.SysDictionary_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysDictionaryClass_T" EntityType="Self.SysDictionaryClass_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TempImg_T" EntityType="Self.TempImg_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TimeZhou_T" EntityType="Self.TimeZhou_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_T" EntityType="Self.User_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserConfig_T" EntityType="Self.UserConfig_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserConfigType_T" EntityType="Self.UserConfigType_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserIp_T" EntityType="Self.UserIp_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserPower_T" EntityType="Self.UserPower_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTime_T" EntityType="Self.UserTime_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Answer_T" EntityType="Self.Answer_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Answer_T].[Id] AS [Id], 
+[Answer_T].[TestQuestionId] AS [TestQuestionId], 
+[Answer_T].[ClientId] AS [ClientId], 
+[Answer_T].[Answer] AS [Answer], 
+[Answer_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[Answer_T] AS [Answer_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DesktopClient_T" EntityType="Self.DesktopClient_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DesktopClient_T].[Id] AS [Id], 
+[DesktopClient_T].[MenuNo] AS [MenuNo], 
+[DesktopClient_T].[ClientId] AS [ClientId], 
+[DesktopClient_T].[CreateTm] AS [CreateTm], 
+[DesktopClient_T].[Rank] AS [Rank], 
+[DesktopClient_T].[IsShow] AS [IsShow]
+FROM [dbo].[DesktopClient_T] AS [DesktopClient_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DesktopOne_T" EntityType="Self.DesktopOne_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DesktopOne_T].[Id] AS [Id], 
+[DesktopOne_T].[MenuNo] AS [MenuNo], 
+[DesktopOne_T].[Name] AS [Name], 
+[DesktopOne_T].[Rank] AS [Rank], 
+[DesktopOne_T].[IsShow] AS [IsShow], 
+[DesktopOne_T].[NumberName] AS [NumberName], 
+[DesktopOne_T].[PercentageName] AS [PercentageName], 
+[DesktopOne_T].[Sql] AS [Sql], 
+[DesktopOne_T].[Creater] AS [Creater], 
+[DesktopOne_T].[CreaterName] AS [CreaterName], 
+[DesktopOne_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[DesktopOne_T] AS [DesktopOne_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DesktopThree_T" EntityType="Self.DesktopThree_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DesktopThree_T].[Id] AS [Id], 
+[DesktopThree_T].[MenuNo] AS [MenuNo], 
+[DesktopThree_T].[Name] AS [Name], 
+[DesktopThree_T].[Rank] AS [Rank], 
+[DesktopThree_T].[IsList] AS [IsList], 
+[DesktopThree_T].[IsShow] AS [IsShow], 
+[DesktopThree_T].[Sql] AS [Sql], 
+[DesktopThree_T].[Creater] AS [Creater], 
+[DesktopThree_T].[CreaterName] AS [CreaterName], 
+[DesktopThree_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[DesktopThree_T] AS [DesktopThree_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DocumentManagement_T" EntityType="Self.DocumentManagement_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DocumentManagement_T].[Id] AS [Id], 
+[DocumentManagement_T].[Folder_id] AS [Folder_id], 
+[DocumentManagement_T].[Keyword] AS [Keyword], 
+[DocumentManagement_T].[ClientId] AS [ClientId], 
+[DocumentManagement_T].[Note] AS [Note], 
+[DocumentManagement_T].[Creater] AS [Creater], 
+[DocumentManagement_T].[CreaterName] AS [CreaterName], 
+[DocumentManagement_T].[CreateTm] AS [CreateTm], 
+[DocumentManagement_T].[Updater] AS [Updater], 
+[DocumentManagement_T].[UpdaterName] AS [UpdaterName], 
+[DocumentManagement_T].[UpdateTm] AS [UpdateTm]
+FROM [dbo].[DocumentManagement_T] AS [DocumentManagement_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Dynamic_T" EntityType="Self.Dynamic_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Dynamic_T].[Id] AS [Id], 
+[Dynamic_T].[Title] AS [Title], 
+[Dynamic_T].[MenuNo] AS [MenuNo], 
+[Dynamic_T].[Item_id] AS [Item_id], 
+[Dynamic_T].[Note] AS [Note], 
+[Dynamic_T].[Creater] AS [Creater], 
+[Dynamic_T].[CreaterName] AS [CreaterName], 
+[Dynamic_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[Dynamic_T] AS [Dynamic_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DynamicLink_T" EntityType="Self.DynamicLink_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DynamicLink_T].[Id] AS [Id], 
+[DynamicLink_T].[DynamicId] AS [DynamicId], 
+[DynamicLink_T].[ClientId] AS [ClientId], 
+[DynamicLink_T].[CreateTm] AS [CreateTm], 
+[DynamicLink_T].[Creater] AS [Creater], 
+[DynamicLink_T].[CreaterName] AS [CreaterName], 
+[DynamicLink_T].[IsClickLike] AS [IsClickLike]
+FROM [dbo].[DynamicLink_T] AS [DynamicLink_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DynamicRecovery_T" EntityType="Self.DynamicRecovery_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DynamicRecovery_T].[Id] AS [Id], 
+[DynamicRecovery_T].[DynamicId] AS [DynamicId], 
+[DynamicRecovery_T].[ClientId] AS [ClientId], 
+[DynamicRecovery_T].[ReplyId] AS [ReplyId], 
+[DynamicRecovery_T].[ReplyClient] AS [ReplyClient], 
+[DynamicRecovery_T].[CreateTm] AS [CreateTm], 
+[DynamicRecovery_T].[Note] AS [Note], 
+[DynamicRecovery_T].[ClickCount] AS [ClickCount]
+FROM [dbo].[DynamicRecovery_T] AS [DynamicRecovery_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Folder_T" EntityType="Self.Folder_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Folder_T].[Id] AS [Id], 
+[Folder_T].[ParentId] AS [ParentId], 
+[Folder_T].[Name] AS [Name], 
+[Folder_T].[Sort] AS [Sort], 
+[Folder_T].[Creater] AS [Creater], 
+[Folder_T].[CreaterName] AS [CreaterName], 
+[Folder_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[Folder_T] AS [Folder_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KnowledgeBase_T" EntityType="Self.KnowledgeBase_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[KnowledgeBase_T].[Id] AS [Id], 
+[KnowledgeBase_T].[Title] AS [Title], 
+[KnowledgeBase_T].[MenuNo] AS [MenuNo], 
+[KnowledgeBase_T].[Item_id] AS [Item_id], 
+[KnowledgeBase_T].[Lable] AS [Lable], 
+[KnowledgeBase_T].[Question] AS [Question], 
+[KnowledgeBase_T].[Answer] AS [Answer], 
+[KnowledgeBase_T].[Score] AS [Score], 
+[KnowledgeBase_T].[Type] AS [Type], 
+[KnowledgeBase_T].[Creater] AS [Creater], 
+[KnowledgeBase_T].[CreaterName] AS [CreaterName], 
+[KnowledgeBase_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[KnowledgeBase_T] AS [KnowledgeBase_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Message_T" EntityType="Self.Message_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Message_T].[Id] AS [Id], 
+[Message_T].[MenuNo] AS [MenuNo], 
+[Message_T].[Item_id] AS [Item_id], 
+[Message_T].[Creater] AS [Creater], 
+[Message_T].[CreaterName] AS [CreaterName], 
+[Message_T].[CreateTm] AS [CreateTm], 
+[Message_T].[Recipient] AS [Recipient], 
+[Message_T].[Title] AS [Title], 
+[Message_T].[Note] AS [Note], 
+[Message_T].[Type] AS [Type], 
+[Message_T].[IsMove] AS [IsMove], 
+[Message_T].[RemenberTime] AS [RemenberTime], 
+[Message_T].[Url] AS [Url]
+FROM [dbo].[Message_T] AS [Message_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MessageClient_T" EntityType="Self.MessageClient_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MessageClient_T].[Id] AS [Id], 
+[MessageClient_T].[ClientId] AS [ClientId], 
+[MessageClient_T].[MessageId] AS [MessageId], 
+[MessageClient_T].[IsRead] AS [IsRead]
+FROM [dbo].[MessageClient_T] AS [MessageClient_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MessageClientNew_T" EntityType="Self.MessageClientNew_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MessageClientNew_T].[Id] AS [Id], 
+[MessageClientNew_T].[ClientId] AS [ClientId], 
+[MessageClientNew_T].[MessageId] AS [MessageId], 
+[MessageClientNew_T].[IsRead] AS [IsRead]
+FROM [dbo].[MessageClientNew_T] AS [MessageClientNew_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MessageNew_T" EntityType="Self.MessageNew_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MessageNew_T].[Id] AS [Id], 
+[MessageNew_T].[MenuNo] AS [MenuNo], 
+[MessageNew_T].[Item_id] AS [Item_id], 
+[MessageNew_T].[Creater] AS [Creater], 
+[MessageNew_T].[CreaterName] AS [CreaterName], 
+[MessageNew_T].[CreateTm] AS [CreateTm], 
+[MessageNew_T].[Recipient] AS [Recipient], 
+[MessageNew_T].[Title] AS [Title], 
+[MessageNew_T].[Note] AS [Note], 
+[MessageNew_T].[Type] AS [Type], 
+[MessageNew_T].[IsMove] AS [IsMove], 
+[MessageNew_T].[RemenberTime] AS [RemenberTime], 
+[MessageNew_T].[Url] AS [Url]
+FROM [dbo].[MessageNew_T] AS [MessageNew_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PendingClerk_T" EntityType="Self.PendingClerk_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[PendingClerk_T].[Id] AS [Id], 
+[PendingClerk_T].[Clerk_id] AS [Clerk_id], 
+[PendingClerk_T].[PendingId] AS [PendingId]
+FROM [dbo].[PendingClerk_T] AS [PendingClerk_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ShareFolder_T" EntityType="Self.ShareFolder_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[ShareFolder_T].[Id] AS [Id], 
+[ShareFolder_T].[FolderId] AS [FolderId], 
+[ShareFolder_T].[ClientId] AS [ClientId], 
+[ShareFolder_T].[CreateTm] AS [CreateTm], 
+[ShareFolder_T].[IsUpload] AS [IsUpload], 
+[ShareFolder_T].[IsDelete] AS [IsDelete], 
+[ShareFolder_T].[IsModify] AS [IsModify]
+FROM [dbo].[ShareFolder_T] AS [ShareFolder_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TestPaper_T" EntityType="Self.TestPaper_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TestPaper_T].[Id] AS [Id], 
+[TestPaper_T].[Title] AS [Title], 
+[TestPaper_T].[Type] AS [Type], 
+[TestPaper_T].[Time] AS [Time], 
+[TestPaper_T].[PassingGrade] AS [PassingGrade], 
+[TestPaper_T].[Count] AS [Count], 
+[TestPaper_T].[Creater] AS [Creater], 
+[TestPaper_T].[CreaterName] AS [CreaterName], 
+[TestPaper_T].[CreateTm] AS [CreateTm]
+FROM [dbo].[TestPaper_T] AS [TestPaper_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TestQuestions_T" EntityType="Self.TestQuestions_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TestQuestions_T].[Id] AS [Id], 
+[TestQuestions_T].[KnowledgeId] AS [KnowledgeId], 
+[TestQuestions_T].[KnowledgeTitle] AS [KnowledgeTitle], 
+[TestQuestions_T].[TestPaperId] AS [TestPaperId], 
+[TestQuestions_T].[Rank] AS [Rank]
+FROM [dbo].[TestQuestions_T] AS [TestQuestions_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Warning_T" EntityType="Self.Warning_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Warning_T].[Id] AS [Id], 
+[Warning_T].[WarningNo] AS [WarningNo], 
+[Warning_T].[Descript] AS [Descript], 
+[Warning_T].[Type] AS [Type], 
+[Warning_T].[Clerk_id] AS [Clerk_id], 
+[Warning_T].[Is_Email] AS [Is_Email], 
+[Warning_T].[Is_SMS] AS [Is_SMS], 
+[Warning_T].[Times] AS [Times], 
+[Warning_T].[Status] AS [Status], 
+[Warning_T].[CreateTm] AS [CreateTm], 
+[Warning_T].[State] AS [State], 
+[Warning_T].[Is_Sql] AS [Is_Sql], 
+[Warning_T].[Is_repeat] AS [Is_repeat], 
+[Warning_T].[Time_frame] AS [Time_frame], 
+[Warning_T].[MenuNo] AS [MenuNo]
+FROM [dbo].[Warning_T] AS [Warning_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WarningClerk_T" EntityType="Self.WarningClerk_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[WarningClerk_T].[Id] AS [Id], 
+[WarningClerk_T].[WarningId] AS [WarningId], 
+[WarningClerk_T].[Clerk_id] AS [Clerk_id]
+FROM [dbo].[WarningClerk_T] AS [WarningClerk_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WarningCondition_T" EntityType="Self.WarningCondition_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[WarningCondition_T].[Id] AS [Id], 
+[WarningCondition_T].[WarningId] AS [WarningId], 
+[WarningCondition_T].[ConditionNo] AS [ConditionNo], 
+[WarningCondition_T].[Sql] AS [Sql], 
+[WarningCondition_T].[Creater] AS [Creater], 
+[WarningCondition_T].[CreaterName] AS [CreaterName], 
+[WarningCondition_T].[CreateTm] AS [CreateTm], 
+[WarningCondition_T].[TableName] AS [TableName]
+FROM [dbo].[WarningCondition_T] AS [WarningCondition_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WarningConfig_T" EntityType="Self.WarningConfig_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[WarningConfig_T].[Id] AS [Id], 
+[WarningConfig_T].[MenuNo] AS [MenuNo], 
+[WarningConfig_T].[Warning_type] AS [Warning_type], 
+[WarningConfig_T].[Value] AS [Value], 
+[WarningConfig_T].[Field] AS [Field], 
+[WarningConfig_T].[Text] AS [Text], 
+[WarningConfig_T].[Text_en] AS [Text_en], 
+[WarningConfig_T].[Type] AS [Type], 
+[WarningConfig_T].[Para] AS [Para], 
+[WarningConfig_T].[TableName] AS [TableName], 
+[WarningConfig_T].[Sort] AS [Sort]
+FROM [dbo].[WarningConfig_T] AS [WarningConfig_T]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WarningSqlConfig_T" EntityType="Self.WarningSqlConfig_T" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[WarningSqlConfig_T].[Id] AS [Id], 
+[WarningSqlConfig_T].[Warning_type] AS [Warning_type], 
+[WarningSqlConfig_T].[Sql_name] AS [Sql_name], 
+[WarningSqlConfig_T].[Sql] AS [Sql], 
+[WarningSqlConfig_T].[Sort] AS [Sort], 
+[WarningSqlConfig_T].[MenuNo] AS [MenuNo]
+FROM [dbo].[WarningSqlConfig_T] AS [WarningSqlConfig_T]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

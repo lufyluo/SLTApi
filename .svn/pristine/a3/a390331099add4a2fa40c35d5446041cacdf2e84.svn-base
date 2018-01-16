@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCRMFILEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DocData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocId" Type="Int32" />
+    <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateTm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Size" Type="Int64" Nullable="false" />
+    <Property Name="MD5" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UpdateTm" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateSize" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CreateTm" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MailBase_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MailBoxId" Type="Int32" />
+    <Property Name="MailData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MailData_T">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CreateTm" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DocFile_T">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Md5" />
+      <PropertyRef Name="Size" />
+      <PropertyRef Name="Createtime" />
+      <PropertyRef Name="Uploadtime" />
+      <PropertyRef Name="NowSize" />
+      <PropertyRef Name="Mode" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Md5" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="Int64" Nullable="false" />
+    <Property Name="Createtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Uploadtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NowSize" Type="Int64" Nullable="false" />
+    <Property Name="Mode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TCRMFILEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DocData_T" EntityType="Self.DocData_T" />
+    <EntitySet Name="FileData_T" EntityType="Self.FileData_T" />
+    <EntitySet Name="MailBase_T" EntityType="Self.MailBase_T" />
+    <EntitySet Name="MailData_T" EntityType="Self.MailData_T" />
+    <EntitySet Name="DocFile_T" EntityType="Self.DocFile_T" />
+    <FunctionImport Name="GetDocFile" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="position" Mode="In" Type="Int32" />
+      <Parameter Name="len" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetMailFile" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="position" Mode="In" Type="Int32" />
+      <Parameter Name="len" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateDocFile">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="data" Mode="In" Type="Binary" />
+      <Parameter Name="position" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateMailFile">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="data" Mode="In" Type="Binary" />
+      <Parameter Name="position" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
