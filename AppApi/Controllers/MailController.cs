@@ -287,17 +287,19 @@ namespace AppApi.Controllers
                         where.And("Box ='SJX'");
                         where.And("RootId is null");
                         break;
-                    case "ALLR": //收件箱              
+                    case "ALLR": //收件箱  
+                        where.And("Box <>'CGX'");
+                        where.And("Box <>'LJX'");
+                        where.And(" Box <>'YSC'");
                         where.And("Box ='SJX'");
-                        where.And("RootId is null");
+                        
                         break;
-                    case "YFS": //已发送        
+                    case "YFS": //已发送   
                         where.And("Box ='YFS'");
-                        where.And("RootId ='z_ALL'");
+                        where.And("RootId is null");
                         break;
                     case "ALLS": //已发送        
                         where.And("Box ='YFS'");
-                        //where.And("RootId is null");
                         break;
                     case "CGX": //草稿箱   
                         where.And("Box ='CGX'");
