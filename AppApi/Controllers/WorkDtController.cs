@@ -134,7 +134,7 @@ namespace AppApi.Controllers
                 }
                 string sql;
                 int uidtext = db.Database.SqlQuery<int>("select UID from user_t where userid='" + GL.UserId + "'").FirstOrDefault();
-                where.And("(isnull(ShareUID1,'') like '%," + uidtext + ",%' or (isnull(ShareUID,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1' or isnull(ShareUID1,'')=''))");
+                where.And("(isnull(ShareUID1,'') like '%," + uidtext + ",%' or (isnull(ShareUID,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1'))");
                 select.Add("[Id],[MenuNo],[KeyId],[TableName],[ShareUID],[TitleHtml],[Bak],[CommCount],[Creater],[CreaterName],[CreateTm],[ShareUID1]");
                 sql = sqlclass.Page(GL.PageIndex, GL.PageMax, select, where, orderby);
                 IEnumerable<Models.WorkDt.Back.workdt> BiM = db.Database.SqlQuery<Models.WorkDt.Back.workdt>(sql);
@@ -177,7 +177,7 @@ namespace AppApi.Controllers
             }
           //  orderby.Desc("keyid");
             int uidtext = db.Database.SqlQuery<int>("select UID from user_t where userid='" + GL.UserId + "'").FirstOrDefault();
-            where.And("(isnull(ShareUID1,'') like '%," + uidtext + ",%' or (isnull(ShareUID,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1' or isnull(ShareUID1,'')=''))");
+            where.And("(isnull(ShareUID1,'') like '%," + uidtext + ",%' or (isnull(ShareUID,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1'))");
             orderby.Desc("Comm_T.CreateTm");
             try
             {
