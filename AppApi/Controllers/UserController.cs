@@ -4,6 +4,8 @@ using AppApi.Models.Result;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -298,6 +300,7 @@ namespace AppApi.Controllers
                 if (user.PicName != null)
                 {
                     BP.back = @"/picimage/" + user.PicName;
+                    PicFileCheck(BP.back.ToString(), user.PicData);
                 }
                 else
                 {
@@ -310,6 +313,40 @@ namespace AppApi.Controllers
             }
             return BP;
         }
+
+        private void PicFileCheck(string file,byte[] fileBytes)
+        {
+            var path = AppDomain.CurrentDomain.BaseDirectory + file;
+            if (!System.IO.File.Exists(path))
+            {
+                CreateImageFromBytes(path, fileBytes);
+            }
+        }
+        /// <summary>
+        /// Convert Byte[] to a picture and Store it in file
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="buffer"></param>
+        /// <returns></returns>
+        private static string CreateImageFromBytes(string fileName, byte[] buffer)
+        {
+            System.IO.FileInfo info = new System.IO.FileInfo(fileName);
+            System.IO.Directory.CreateDirectory(info.Directory.FullName);
+            System.IO.File.WriteAllBytes(fileName, buffer);
+            return fileName;
+        }
+        /// <summary>
+        /// Convert Byte[] to Image
+        /// </summary>
+        /// <param name="buffer"></param>
+        /// <returns></returns>
+        public static Image BytesToImage(byte[] buffer)
+        {
+            MemoryStream ms = new MemoryStream(buffer);
+            Image image = System.Drawing.Image.FromStream(ms);
+            return image;
+        }
+
         [Check]
         [HttpPost]
         public Models.BackParameter updatepw([FromBody]Models.User.Gain.updatepassword GP)

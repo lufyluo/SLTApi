@@ -339,5 +339,36 @@ namespace AppApi.Controllers
             }
 
         }
+        /// <summary>
+        /// 从远程地址下载本机没有的文件再返回
+        /// </summary>
+        /// <param name="C"></param>
+        /// <returns></returns>
+        [Check]
+        [HttpPost]
+        public Models.BackParameter GetFileUri([FromBody]Models.File.Gain.download C)//uri下载文件
+        {
+            Models.File.Gain.filereturn result = new Models.File.Gain.filereturn();
+            try
+            {
+                var file = dbd.Database.SqlQuery<File_T>("SELECT  FileName,FileRoot FROM [dbo].[File_T] where id=" + C.fileid + "").FirstOrDefault();
+                if (file == null)
+                {
+                    result.uri = "无此文件";
+                }
+                else
+                {
+                    result.uri = Config.FileServer + "/" + file.FileRoot + "/" + file.FileName;
+                }
+                BP.back = result;
+               
+            }
+            catch (Exception e)
+            {
+                BP.back = e.Message;
+            }
+            return BP;
+        }
+
     }
 }

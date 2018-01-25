@@ -11,5 +11,6 @@ namespace AppApi.Tools
         
         public static String AndroidSign = ConfigurationManager.AppSettings["AndroidSign"] ?? string.Empty;
         public static String IOSSign = ConfigurationManager.AppSettings["IosSign"] ?? string.Empty;
+        public static String FileServer = ConfigurationManager.AppSettings["Server"] ?? string.Empty;
     }
 }
