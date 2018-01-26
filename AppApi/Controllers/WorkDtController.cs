@@ -31,6 +31,12 @@ namespace AppApi.Controllers
                 where.And("End_date >= '" + G.date + "'");
                 where.And("Start_date <= '" + G.date + "'");
             }
+            int uidtext = db.Database.SqlQuery<int>("select UID from user_t where userid='" + G.UserId + "'").FirstOrDefault();
+            if (uidtext != 0)
+            {
+                where.And("(isnull(creater,'') = '" + G.UserId + "' or (isnull(reminder,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1'))");
+
+            }
             try
             {
                 Models.WorkDt.Back.GetAll BGL = new Models.WorkDt.Back.GetAll();
