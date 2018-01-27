@@ -13,7 +13,7 @@ namespace AppApi.Controllers
 {
     public class WorkDtController : BaseControllers
     {
-        
+
         /// <summary>
         /// 获取待办日程
         /// </summary>
@@ -25,23 +25,22 @@ namespace AppApi.Controllers
         {
             SqlClass.Where where = new SqlClass.Where();
             if (!(G.act == null || G.act == "" || G.act.ToUpper() == "ALL"))
-                where.And("MenuNo='"+G.act+"'");
+                where.And("p.MenuNo='" + G.act + "'");
             if (!(G.date == null || G.date == ""))
             {
-                where.And("End_date >= '" + G.date + "'");
-                where.And("Start_date <= '" + G.date + "'");
+                where.And("P.End_date >= '" + G.date + "'");
+                where.And("P.Start_date <= '" + G.date + "'");
             }
-            int uidtext = db.Database.SqlQuery<int>("select UID from user_t where userid='" + G.UserId + "'").FirstOrDefault();
-            if (uidtext != 0)
-            {
-                where.And("(isnull(creater,'') = '" + G.UserId + "' or (isnull(reminder,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1'))");
-
-            }
+            where.And("pc.Clerk_id ='" + G.UserId + "'");
             try
             {
                 Models.WorkDt.Back.GetAll BGL = new Models.WorkDt.Back.GetAll();
-                IEnumerable<Models.WorkDt.Back.Dt> BiM = db.Database.SqlQuery<Models.WorkDt.Back.Dt>("select * from Pending_T  " + where.ToString() + " ");
-                BGL.count = db.Database.SqlQuery<int>("select count(*) from Pending_T  " + where.ToString() + " ").FirstOrDefault();
+                IEnumerable<Models.WorkDt.Back.Dt> BiM = db.Database.SqlQuery<Models.WorkDt.Back.Dt>(
+                    @"select p.* from [dbo].[PendingClerk_T] pc
+                left join [dbo].[Pending_T] p
+                    on pc.PendingId = p.Id
+                " + where.ToString() + " ");
+                BGL.count = BiM.Count();
                 BGL.getall = BiM;
                 BP.back = BGL;
                 return BP;
@@ -69,14 +68,14 @@ namespace AppApi.Controllers
             }
             if (!(G.upd == null || G.upd == ""))
             {
-                if(G.upd=="true")
+                if (G.upd == "true")
                     update = " isend=1";
                 else
                     update = " isend=0";
             }
             try
             {
-                db.Database.ExecuteSqlCommand("update Pending_T set "+update+" where id="+G.updid+"");
+                db.Database.ExecuteSqlCommand("update Pending_T set " + update + " where id=" + G.updid + "");
                 BP.back = "处理成功";
                 return BP;
             }
@@ -104,7 +103,7 @@ namespace AppApi.Controllers
                 "" + G.Urgency_level + "," + G.Reminder + ",'" + G.UserId + "','" + db.Database.SqlQuery<string>("select username from user_t  where userid ='" + G.UserId + "'").FirstOrDefault() + "'," +
                 "'" + DateTime.Now.ToShortDateString() + "')";
                 db.Database.ExecuteSqlCommand(sqlstr);
-        
+
                 BP.back = "添加成功";
                 return BP;
             }
@@ -155,7 +154,7 @@ namespace AppApi.Controllers
                 BGLS.workdt = commlist;
                 BGLS.count = count;
                 BP.back = BGLS;
-               return BP;
+                return BP;
             }
             catch (Exception ee)
             {
@@ -176,12 +175,12 @@ namespace AppApi.Controllers
             SqlClass.Select select = new SqlClass.Select("Comm_T left join user_t on Comm_T.creater=userid");
             SqlClass.Where where = new SqlClass.Where();
             SqlClass.Order orderby = new SqlClass.Order();
-           // where.And("Comm_T.creater=userid");
+            // where.And("Comm_T.creater=userid");
             if (!(GL.Act == null || GL.Act == "" || GL.Act.ToUpper() == "ALL"))
             {
                 where.And("MenuNo='" + GL.Act + "'");
             }
-          //  orderby.Desc("keyid");
+            //  orderby.Desc("keyid");
             int uidtext = db.Database.SqlQuery<int>("select UID from user_t where userid='" + GL.UserId + "'").FirstOrDefault();
             where.And("(isnull(ShareUID1,'') like '%," + uidtext + ",%' or (isnull(ShareUID,'') like '%," + uidtext + ",%' or isnull(ShareUID1,'')='-1'))");
             orderby.Desc("Comm_T.CreateTm");
@@ -225,7 +224,7 @@ namespace AppApi.Controllers
                 //    if (commlists.Count == GL.PageMax)
                 //        break;
                 //}
-                Models.WorkDt.Back.Getcomm coml= new Models.WorkDt.Back.Getcomm();
+                Models.WorkDt.Back.Getcomm coml = new Models.WorkDt.Back.Getcomm();
                 //coml.count = commlists.Count;
                 //coml.commlists = commlists;
                 coml.commlistss = BiM;
@@ -334,7 +333,7 @@ namespace AppApi.Controllers
             {
                 where.And("MenuNo='" + GL.Act + "'");
             }
-            
+
             try
             {
 
@@ -386,7 +385,7 @@ namespace AppApi.Controllers
         [HttpPost]
         public Models.BackParameter upmsg([FromBody]Models.WorkDt.Gain.Msgup GL)
         {
-            db.Database.ExecuteSqlCommand("update MsgUser_T set IsRead="+GL.ydwd+" where userid='"+GL.UserId+"'");
+            db.Database.ExecuteSqlCommand("update MsgUser_T set IsRead=" + GL.ydwd + " where userid='" + GL.UserId + "'");
             BP.back = "修改成功";
             return BP;
         }
@@ -441,7 +440,7 @@ namespace AppApi.Controllers
         {
             try
             {
-                User_T MBR = db.User_T.Where(MBRW => MBRW.UserId ==G.UserId).FirstOrDefault();
+                User_T MBR = db.User_T.Where(MBRW => MBRW.UserId == G.UserId).FirstOrDefault();
                 Models.WorkDt.Back.GetDayReport BGL = new Models.WorkDt.Back.GetDayReport();
                 string type = "";
                 if (MBR.UserType == 1)
@@ -490,11 +489,11 @@ namespace AppApi.Controllers
                 if (MBR.UserType == 1)
                 {
                     type += "(";
-                    IEnumerable<int> dep = db.Database.SqlQuery<int>("select id from dept_t where BranchId="+MBR.BranchId+"");
+                    IEnumerable<int> dep = db.Database.SqlQuery<int>("select id from dept_t where BranchId=" + MBR.BranchId + "");
                     foreach (int depson in dep)
                     {
-                        if (type != ""&&type!="(") type += " or ";
-                        
+                        if (type != "" && type != "(") type += " or ";
+
                         type += "DeptId=" + depson + "";
 
                     }
@@ -505,9 +504,9 @@ namespace AppApi.Controllers
                 else
                     type = "Creater='" + MBR.UserId + "'";
                 IEnumerable<Models.WorkDt.Back.WorkWeekPort> BiM = db.Database.SqlQuery<Models.WorkDt.Back.WorkWeekPort>("select * from [dbo].[WorkReport_T] where  " + type + "  and type=2 order by CreateTm ");
-                BGL.count = db.Database.SqlQuery<int>("select count(*) from [dbo].[WorkReport_T] where "+ type + "  and type=2").FirstOrDefault();
+                BGL.count = db.Database.SqlQuery<int>("select count(*) from [dbo].[WorkReport_T] where " + type + "  and type=2").FirstOrDefault();
                 BGL.BGL = BiM;
-               BP.back = BGL;
+                BP.back = BGL;
                 return BP;
             }
             catch (Exception ee)
@@ -547,9 +546,9 @@ Create Table #ProductTmpTable(Id int,
 		Name nvarchar(50),
 		ParentId int,
 		Sort int)
-Insert Into #ProductTmpTable Exec  [dbo].[GetProductRoot]'"+GL.UserId+"',1 ";
-                sql = sqlqz+sql;
-                int count = db.Database.SqlQuery<int>(sqlqz+sqlclass[select.Count("count"), where, new SqlClass.Order()]).FirstOrDefault();
+Insert Into #ProductTmpTable Exec  [dbo].[GetProductRoot]'" + GL.UserId + "',1 ";
+                sql = sqlqz + sql;
+                int count = db.Database.SqlQuery<int>(sqlqz + sqlclass[select.Count("count"), where, new SqlClass.Order()]).FirstOrDefault();
                 if (GL.PageIndex < 1)
                 {
                     BP.code = "-1";
@@ -586,7 +585,7 @@ Insert Into #ProductTmpTable Exec  [dbo].[GetProductRoot]'"+GL.UserId+"',1 ";
             try
             {
                 select.Add("*");
-                where.And("state="+GL.state+"");
+                where.And("state=" + GL.state + "");
                 orderby.Desc("No");
                 string sql;
                 sql = sqlclass.Page(GL.PageIndex, GL.PageMax, select, where, orderby);
@@ -601,7 +600,7 @@ Insert Into #ProductTmpTable Exec  [dbo].[GetProductRoot]'"+GL.UserId+"',1 ";
                 IEnumerable<Inquiry_T> BiM = db.Database.SqlQuery<Inquiry_T>(sql);
                 Models.WorkDt.Back.InquiryBack coml = new Models.WorkDt.Back.InquiryBack();
                 coml.count = count;
-                coml.Inq= BiM;
+                coml.Inq = BiM;
                 BP.back = coml;
                 return BP;
             }
@@ -624,11 +623,11 @@ Insert Into #ProductTmpTable Exec  [dbo].[GetProductRoot]'"+GL.UserId+"',1 ";
             {
                 string sql = "select * from [dbo].[SysDictionary_T] where DataType='消息来源'";
                 IEnumerable<SysDictionary_T> BiM = db.Database.SqlQuery<SysDictionary_T>(sql);
-                List<Models.WorkDt.Back.MsgLb> coml = new  List<Models.WorkDt.Back.MsgLb>();
+                List<Models.WorkDt.Back.MsgLb> coml = new List<Models.WorkDt.Back.MsgLb>();
                 //已读未读
                 foreach (SysDictionary_T bimson in BiM)
-                {              
-                    sql = "select count(*) from [dbo].[Msg_T],[dbo].[MsgUser_T] where [dbo].[Msg_T].Id=[dbo].[MsgUser_T].MsgId and MenuNo='"+bimson.DataValue2+"' and isread=1 and userid='"+GL.UserId+"'";
+                {
+                    sql = "select count(*) from [dbo].[Msg_T],[dbo].[MsgUser_T] where [dbo].[Msg_T].Id=[dbo].[MsgUser_T].MsgId and MenuNo='" + bimson.DataValue2 + "' and isread=1 and userid='" + GL.UserId + "'";
                     int yd = db.Database.SqlQuery<int>(sql).FirstOrDefault();
                     sql = "select count(*) from [dbo].[Msg_T],[dbo].[MsgUser_T] where [dbo].[Msg_T].Id=[dbo].[MsgUser_T].MsgId and MenuNo='" + bimson.DataValue2 + "' and isread=0 and userid='" + GL.UserId + "'";
                     int wd = db.Database.SqlQuery<int>(sql).FirstOrDefault();
