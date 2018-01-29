@@ -51,7 +51,7 @@ namespace AppApi.Controllers
             {
                 return true;
             }
-            return false;
+            return true;
         }
         #endregion
 
@@ -103,7 +103,7 @@ namespace AppApi.Controllers
             {
                 return true;
             }
-            return false;
+            return true;
         }
         #endregion  
       

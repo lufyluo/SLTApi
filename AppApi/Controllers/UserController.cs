@@ -29,16 +29,6 @@ namespace AppApi.Controllers
             IEnumerable< Models.User.Back.item.MailLabel> BiM = db.Database.SqlQuery<Models.User.Back.item.MailLabel>(string.Format("select Name=Name + '|' + Class from MailLabel_T where UserId='{0}'",G.UserId));
             BG.maillabel = BiM;
             BP.back = BG;
-            if (!Controllers.huanxin.CheckUser(sj+ '_' + G.UserId))
-            {
-                db.Database.ExecuteSqlCommand("update User_t set  Hxid='" + sj + '_' + G.UserId + "' where userid='" + G.UserId + "'");
-                Controllers.huanxin.RegeditUser(sj+ '_' + G.UserId);
-                BP.code = "新注册用户";
-            }
-            else
-            {
-                BP.code = "已注册用户";
-            }
             stopwatch.Stop();
             TimeSpan timeSpan = stopwatch.Elapsed; //  获取总时间
            // BP.code += timeSpan.TotalMilliseconds.ToString();
@@ -155,14 +145,6 @@ namespace AppApi.Controllers
                 string sj = newsj();
                 foreach (Models.User.Gain.userallmenu son in userallmenu)
                 {
-                    if (son.Hxid == null || son.Hxid == "")
-                    {
-                        if (!Controllers.huanxin.CheckUser(sj + '_' + son.userid))
-                        {
-                            Controllers.huanxin.RegeditUser(sj + '_' + son.userid);
-                        }
-                        db.Database.ExecuteSqlCommand("update User_t set  Hxid='" + sj + '_' + son.userid + "' where userid='" + son.userid + "'");
-                    }
                     usersss.Add(son);
                 }
                 BGL.menufirst = menu;
@@ -187,6 +169,7 @@ namespace AppApi.Controllers
                 {
                     if (!Controllers.huanxin.CheckUser(sj+GP.touserid))
                     {
+                        //todo:可以删除环信注册，目前已屏蔽
                         Controllers.huanxin.RegeditUser(sj+GP.touserid);
                         BP.back = sj + '_' + GP.touserid;
                         db.Database.ExecuteSqlCommand("update User_t set  Hxid='" + sj + '_' + GP.touserid + "' where userid='" + GP.touserid + "'");
@@ -293,6 +276,7 @@ namespace AppApi.Controllers
             }
             try
             {
+                //todo:暂时保留传环信Id
                 if (GP.HXUSERID != null&&GP.HXUSERID!="")
                      user = db.Database.SqlQuery<User_T>("select * from user_t where Hxid='" + GP.HXUSERID + "'").FirstOrDefault();
                 else if (GP.PICUSERID != null&& GP.PICUSERID != "")
@@ -413,6 +397,7 @@ namespace AppApi.Controllers
             string sj = newsj();
             try
             {
+                //todo:可以删除环信注册，目前已屏蔽
                 if (!Controllers.huanxin.CheckUser(sj + '_' + GP.UserId))
                 {
                     Controllers.huanxin.RegeditUser(sj + '_' + GP.UserId);
