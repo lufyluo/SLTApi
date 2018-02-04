@@ -12,16 +12,10 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class product_V
+    public partial class LoginConfig_T
     {
-        public int ProId { get; set; }
-        public string No { get; set; }
-        public string CnName { get; set; }
-        public string EnName { get; set; }
-        public string Spec { get; set; }
-        public string BeUserName { get; set; }
-        public string Currency { get; set; }
-        public Nullable<decimal> CostPrice { get; set; }
-        public Nullable<decimal> SellPrice { get; set; }
+        public string Name { get; set; }
+        public string Value { get; set; }
+        public byte[] FileData { get; set; }
     }
 }

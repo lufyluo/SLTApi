@@ -10,9 +10,12 @@
 namespace AppApi.App_Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class StringToTable_F_Result
+    public partial class Table_1
     {
-        public string ColName { get; set; }
+        public int Id { get; set; }
+        public int Mailid { get; set; }
+        public Nullable<int> UIDLID { get; set; }
     }
 }

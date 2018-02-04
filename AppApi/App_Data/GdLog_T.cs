@@ -12,19 +12,11 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class TimeZhou_V
+    public partial class GdLog_T
     {
-        public string Icon { get; set; }
         public int Id { get; set; }
-        public string MenoNo { get; set; }
-        public Nullable<int> KeyId { get; set; }
-        public string ActionMenoNo { get; set; }
-        public Nullable<int> ActionKeyId { get; set; }
-        public string Title { get; set; }
-        public string Url { get; set; }
-        public string Html { get; set; }
-        public string Creater { get; set; }
-        public string CreaterName { get; set; }
+        public Nullable<int> MailBoxId { get; set; }
+        public Nullable<int> MailId { get; set; }
         public Nullable<System.DateTime> CreateTm { get; set; }
     }
 }

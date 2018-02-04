@@ -51,5 +51,18 @@ namespace AppApi.App_Data
         public string AimPort { get; set; }
         public string Transport { get; set; }
         public string ArkType { get; set; }
+        public Nullable<decimal> Freight { get; set; }
+        public Nullable<System.DateTime> QuotationTime { get; set; }
+        public string Note { get; set; }
+        public string custom1 { get; set; }
+        public string custom2 { get; set; }
+        public string custom3 { get; set; }
+        public string custom4 { get; set; }
+        public string custom5 { get; set; }
+        public string custom6 { get; set; }
+        public string custom7 { get; set; }
+        public string custom8 { get; set; }
+        public string custom9 { get; set; }
+        public string custom10 { get; set; }
     }
 }

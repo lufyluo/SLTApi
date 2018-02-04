@@ -17,7 +17,7 @@ namespace AppApi.App_Data
         public int Id { get; set; }
         public string PurchaseType { get; set; }
         public string No { get; set; }
-        public string State { get; set; }
+        public Nullable<int> State { get; set; }
         public string ProviderId { get; set; }
         public string ProviderName { get; set; }
         public string ProviderAddress { get; set; }
@@ -68,6 +68,7 @@ namespace AppApi.App_Data
         public Nullable<decimal> BoxValue { get; set; }
         public Nullable<decimal> GrossWeight { get; set; }
         public Nullable<decimal> NetWeight { get; set; }
+        public Nullable<decimal> VolumeValue { get; set; }
         public Nullable<decimal> Invoiced { get; set; }
         public Nullable<decimal> NotInvoiced { get; set; }
         public Nullable<decimal> AmountPaid { get; set; }
@@ -93,6 +94,8 @@ namespace AppApi.App_Data
         public Nullable<int> Submit { get; set; }
         public Nullable<int> SpResult { get; set; }
         public Nullable<int> IsCheck { get; set; }
-        public Nullable<decimal> VolumeValue { get; set; }
+        public string ClauseText { get; set; }
+        public Nullable<decimal> ToCountMoney { get; set; }
+        public Nullable<decimal> RMBUVR { get; set; }
     }
 }

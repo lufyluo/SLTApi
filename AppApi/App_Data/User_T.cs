@@ -47,5 +47,6 @@ namespace AppApi.App_Data
         public byte[] PicData { get; set; }
         public string appid { get; set; }
         public string Hxid { get; set; }
+        public string X3UserId { get; set; }
     }
 }

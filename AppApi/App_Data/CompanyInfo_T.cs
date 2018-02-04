@@ -30,5 +30,17 @@ namespace AppApi.App_Data
         public string Updater { get; set; }
         public string UpdaterName { get; set; }
         public Nullable<System.DateTime> UpdateTm { get; set; }
+        public string SealPicName { get; set; }
+        public Nullable<int> SealPicSize { get; set; }
+        public string SealPicType { get; set; }
+        public byte[] SealPic { get; set; }
+        public string LogoPicName { get; set; }
+        public Nullable<int> LogoPicSize { get; set; }
+        public string LogoPicType { get; set; }
+        public byte[] LogoPic { get; set; }
+        public string EnSealPicName { get; set; }
+        public string EnSealPicType { get; set; }
+        public Nullable<int> EnSealPicSize { get; set; }
+        public byte[] EnSealPic { get; set; }
     }
 }

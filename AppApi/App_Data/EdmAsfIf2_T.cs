@@ -10,11 +10,14 @@
 namespace AppApi.App_Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class GetUnderling_F_Result
+    public partial class EdmAsfIf2_T
     {
-        public Nullable<int> UID { get; set; }
-        public string UserId { get; set; }
-        public string UserName { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> AsfId { get; set; }
+        public string ParaName { get; set; }
+        public string Oper { get; set; }
+        public string OperValue { get; set; }
     }
 }

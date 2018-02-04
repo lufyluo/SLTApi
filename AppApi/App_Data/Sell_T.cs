@@ -89,5 +89,19 @@ namespace AppApi.App_Data
         public Nullable<decimal> UnpaidCommission { get; set; }
         public Nullable<decimal> ProfitsRate { get; set; }
         public string ClientName { get; set; }
+        public string ShipmentUserId { get; set; }
+        public string ShipmentUserName { get; set; }
+        public string ClauseText { get; set; }
+        public string ExSaleUserId { get; set; }
+        public string ExSaleUserName { get; set; }
+        public Nullable<decimal> ToMoneyUSD { get; set; }
+        public Nullable<System.DateTime> DepositDate { get; set; }
+        public Nullable<decimal> Deposit { get; set; }
+        public Nullable<System.DateTime> BalanceDate { get; set; }
+        public Nullable<decimal> Balance { get; set; }
+        public Nullable<decimal> Grossweight { get; set; }
+        public Nullable<decimal> Netweight { get; set; }
+        public Nullable<decimal> Allvolume { get; set; }
+        public string AllProfits { get; set; }
     }
 }

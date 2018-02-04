@@ -10,10 +10,13 @@
 namespace AppApi.App_Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class SplitString_F_Result
+    public partial class Application
     {
         public int Id { get; set; }
-        public string Value { get; set; }
+        public string AppId { get; set; }
+        public string Description { get; set; }
+        public Nullable<byte> Available { get; set; }
     }
 }

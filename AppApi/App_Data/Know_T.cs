@@ -17,6 +17,7 @@ namespace AppApi.App_Data
         public int Id { get; set; }
         public string Title { get; set; }
         public Nullable<int> Type { get; set; }
+        public Nullable<int> ClassId { get; set; }
         public string Class { get; set; }
         public string Label { get; set; }
         public string Html { get; set; }
@@ -30,6 +31,5 @@ namespace AppApi.App_Data
         public string Updater { get; set; }
         public string UpdaterName { get; set; }
         public Nullable<System.DateTime> UpdateTm { get; set; }
-        public Nullable<int> ClassId { get; set; }
     }
 }

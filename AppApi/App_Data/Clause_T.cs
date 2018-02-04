@@ -12,16 +12,15 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class EdmGroup_T
+    public partial class Clause_T
     {
-        public int Id { get; set; }
-        public string GroupName { get; set; }
-        public string EmailAddress { get; set; }
-        public string Creater { get; set; }
-        public string CreaterName { get; set; }
-        public Nullable<System.DateTime> CreateTm { get; set; }
-        public string Updater { get; set; }
-        public string UpdaterName { get; set; }
-        public Nullable<System.DateTime> UpdateTm { get; set; }
+        public int ClauseId { get; set; }
+        public Nullable<int> SysDicId { get; set; }
+        public string ClauseClass { get; set; }
+        public string ClauseTitle { get; set; }
+        public string ClauseText { get; set; }
+        public string CreateUserId { get; set; }
+        public string CreateUserName { get; set; }
+        public Nullable<System.DateTime> CreateTime { get; set; }
     }
 }

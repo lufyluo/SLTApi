@@ -10,9 +10,14 @@
 namespace AppApi.App_Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class StringToTableEx_F_Result
+    public partial class EdmAsfIf1_T
     {
-        public string ColName { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> AsfId { get; set; }
+        public string ParaName { get; set; }
+        public string Oper { get; set; }
+        public string OperValue { get; set; }
     }
 }

@@ -181,10 +181,10 @@
     <Compile Include="App_Data\Answer_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\KnowRoot_T.cs">
+    <Compile Include="App_Data\Application.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\SynLog_T.cs">
+    <Compile Include="App_Data\AppPermission.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -195,9 +195,6 @@
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Calendar_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Calendar_V.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ChancePro_T.cs">
@@ -212,9 +209,6 @@
     <Compile Include="App_Data\Chance_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\Chance_V.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\CheckResult_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -222,6 +216,9 @@
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Circle_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Clause_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ClientAddCopy_T.cs">
@@ -236,6 +233,9 @@
     <Compile Include="App_Data\ClientCare_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\ClientClass_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\ClientComment_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -246,9 +246,6 @@
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ClientFollow_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\ClientFollow_V.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ClientJoinLogMain_T.cs">
@@ -267,9 +264,6 @@
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ClientPro_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\clientpro_V.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ClientPubLimit_T.cs">
@@ -311,10 +305,12 @@
     <Compile Include="App_Data\CompanyInfo_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\BaseControllers.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\Filter\AppIdCheck.cs" />
     <Compile Include="Controllers\FolderController.cs" />
     <Compile Include="Controllers\huanxin.cs" />
     <Compile Include="Controllers\MailBoxController.cs" />
@@ -335,6 +331,45 @@
     <Compile Include="Controllers\Filter\Power.cs" />
     <Compile Include="Controllers\Filter\PubLimit.cs" />
     <Compile Include="Controllers\WorkDtController.cs" />
+    <Compile Include="App_Data\DocData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\DocFile_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ErrLog_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileAudLog_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileAud_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileEx_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileLog_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FilePower_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileServer_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileShor_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileTrash_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\FileType_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\CustomFind_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -392,12 +427,6 @@
     <Compile Include="App_Data\DiskTopMy_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\DocData_T.cs">
-      <DependentUpon>TCRMFILE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\DocFile_T.cs">
-      <DependentUpon>TCRMFILE.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\DocFolderShared_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -428,6 +457,15 @@
     <Compile Include="App_Data\EdmAddress_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\EdmAsfIf1_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmAsfIf2_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\EdmAsf_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\EdmGroup_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -440,50 +478,17 @@
     <Compile Include="App_Data\EdmTask_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\ErrLog_T.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\ExcelModelConfig_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\ExcelModel_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\FileAudLog_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileAud_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileData_T.cs">
-      <DependentUpon>TCRMFILE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileEx_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileLog_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FilePower_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileServer_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileShor_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\FileStore_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\FileTrash_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\FileType_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\File_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Folder_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -497,14 +502,35 @@
     <Compile Include="App_Data\FwRuleMail_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\GetBoss_F_Result.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\GetUnderling_F_Result.cs">
+    <Compile Include="App_Data\GdLog_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailAcc_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBase_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailClient_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailData_T.cs">
+      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailInq_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MAILUIDL.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Mail_T.cs">
+      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\GoalSet_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\GroupAdmin_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -518,22 +544,19 @@
     <Compile Include="App_Data\ImportLog_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\InqOneAllInfo_V.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\InquiryPro_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Inquiry_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\Inquiry_V.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\KnowFAQ_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\KnowLabel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\KnowRoot_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\KnowTestFAQResult_T.cs">
@@ -551,14 +574,11 @@
     <Compile Include="App_Data\Know_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\Log_T.cs">
+    <Compile Include="App_Data\LoginConfig_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\MailAcc_T.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\MailBase_T.cs">
-      <DependentUpon>TCRMFILE.tt</DependentUpon>
+    <Compile Include="App_Data\Log_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\MailBlack_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -575,6 +595,12 @@
     <Compile Include="App_Data\MailBoxShare_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\MailBoxTranLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\MailBoxTran_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\MailBoxType_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -584,14 +610,8 @@
     <Compile Include="App_Data\MailBox_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\MailClient_T.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\MailData_T.cs">
-      <DependentUpon>TCRMFILE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\MailInq_T.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    <Compile Include="App_Data\MailDelLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\MailKey_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -620,11 +640,8 @@
     <Compile Include="App_Data\MailText_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\MAILUIDL.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Mail_T.cs">
-      <DependentUpon>TCRMMAIL.tt</DependentUpon>
+    <Compile Include="App_Data\MassLimit_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\Menu_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -758,6 +775,9 @@
     <Compile Include="App_Data\Msg_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\Payment_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\PendingClerk_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -785,39 +805,9 @@
     <Compile Include="App_Data\Product_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\product_V.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="App_Data\ProviderAdd_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\ProviderPro_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Provider_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\QuoteModel_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\QuoteProduct_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Quote_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\RolePower_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\RoleSecurity_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\RoleUser_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Role_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\RootPower_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
@@ -825,71 +815,14 @@
     <Compile Include="App_Data\Root_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\SamplesModel_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SamplesProduct_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Samples_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\Security_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SellProduct_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Sell_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Sell_V.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SendMailLog_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SendSample_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\ServerConfigType_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\ServerConfig_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\ShareFolder_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SplitString_F_Result.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\StockProduct_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\Stock_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\StringToTableEx_F_Result.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\StringToTable_F_Result.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\SynRoot_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\SynTime_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\sysdiagrams.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SysDictionaryClass_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\SysDictionary_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\TagClass_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
@@ -899,21 +832,6 @@
     </Compile>
     <Compile Include="App_Data\Tag_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\TCRM.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TCRM.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\TCRM.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\TCRM.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TCRM.edmx</DependentUpon>
     </Compile>
     <Compile Include="App_Data\TCRMDOC.Context.cs">
       <AutoGen>True</AutoGen>
@@ -960,11 +878,113 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TCRMMAIL.edmx</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\TempImg_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Data\TempPower_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProviderAdd_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ProviderPro_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Provider_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\QuoteModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\QuoteProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Quote_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Receivables_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RolePower_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\RoleUser_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Role_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SamplesModel_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SamplesProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Samples_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SellProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Sell_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SendMailLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SendSample_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ServerConfigType_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ServerConfig_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ShareFolder_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\ShipmentProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Shipment_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\StockProduct_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Stock_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SynLog_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\sysdiagrams.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SysDictionaryClass_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\SysDictionary_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Table_1.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TCRM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\TempImg_T.cs">
+      <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\TestPaper_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -976,9 +996,6 @@
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\TimeZhou_T.cs">
-      <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\TimeZhou_V.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
     <Compile Include="Tools\Back.cs" />
@@ -998,6 +1015,9 @@
     <Compile Include="App_Data\UploadTemp_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\UserRoot_T.cs">
+      <DependentUpon>TCRMDOC.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\UserConfigType_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
@@ -1009,9 +1029,6 @@
     </Compile>
     <Compile Include="App_Data\UserPower_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="App_Data\UserRoot_T.cs">
-      <DependentUpon>TCRMDOC.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Data\UserTime_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
@@ -1048,16 +1065,6 @@
     <Content Include="Global.asax" />
     <Content Include="newapp\android.txt" />
     <Content Include="newapp\ios.txt" />
-    <Content Include="App_Data\TCRM.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TCRM.edmx</DependentUpon>
-      <LastGenOutput>TCRM.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_Data\TCRM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TCRM.edmx</DependentUpon>
-      <LastGenOutput>TCRM.cs</LastGenOutput>
-    </Content>
     <Content Include="App_Data\TCRMDOC.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TCRMDOC.edmx</DependentUpon>
@@ -1088,6 +1095,16 @@
       <DependentUpon>TCRMMAIL.edmx</DependentUpon>
       <LastGenOutput>TCRMMAIL.cs</LastGenOutput>
     </Content>
+    <Content Include="App_Data\TCRM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+      <LastGenOutput>TCRM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Data\TCRM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCRM.edmx</DependentUpon>
+      <LastGenOutput>TCRM.cs</LastGenOutput>
+    </Content>
     <Content Include="Tools\logo-tui.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1107,13 +1124,6 @@
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\iis.pubxml" />
-    <EntityDeploy Include="App_Data\TCRM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TCRM.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="App_Data\TCRM.edmx.diagram">
-      <DependentUpon>TCRM.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="App_Data\TCRMFILE.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TCRMFILE.Designer.cs</LastGenOutput>
@@ -1134,6 +1144,13 @@
     </EntityDeploy>
     <Content Include="App_Data\TCRMMAIL.edmx.diagram">
       <DependentUpon>TCRMMAIL.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="App_Data\TCRM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCRM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Data\TCRM.edmx.diagram">
+      <DependentUpon>TCRM.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <PropertyGroup>

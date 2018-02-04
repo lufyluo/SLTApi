@@ -23,18 +23,26 @@ namespace AppApi.App_Data
         public string CnName { get; set; }
         public string Model { get; set; }
         public string Spec { get; set; }
+        public Nullable<decimal> Freight { get; set; }
         public Nullable<decimal> Num { get; set; }
+        public string Packing { get; set; }
         public string Unit { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
-        public byte[] Pic { get; set; }
+        public Nullable<decimal> SUnitPrice { get; set; }
+        public Nullable<decimal> SCostPrice { get; set; }
+        public Nullable<System.DateTime> ValidDate { get; set; }
+        public string PackUnit { get; set; }
+        public Nullable<decimal> BoxCount { get; set; }
+        public Nullable<decimal> GrossWeight { get; set; }
+        public Nullable<decimal> NetWeight { get; set; }
+        public Nullable<decimal> Volume { get; set; }
+        public Nullable<decimal> AllVolume { get; set; }
         public string Bak { get; set; }
         public string Creater { get; set; }
         public string CreaterName { get; set; }
         public Nullable<System.DateTime> CreateTm { get; set; }
-        public string Packing { get; set; }
-        public Nullable<decimal> Freight { get; set; }
-        public Nullable<decimal> SUnitPrice { get; set; }
-        public Nullable<decimal> SCostPrice { get; set; }
-        public Nullable<System.DateTime> ValidDate { get; set; }
+        public Nullable<int> Nums { get; set; }
+        public string PackBak { get; set; }
+        public Nullable<decimal> QuoteSum { get; set; }
     }
 }

@@ -12,16 +12,10 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class EdmGroup_T
+    public partial class AppPermission
     {
-        public int Id { get; set; }
-        public string GroupName { get; set; }
-        public string EmailAddress { get; set; }
-        public string Creater { get; set; }
-        public string CreaterName { get; set; }
-        public Nullable<System.DateTime> CreateTm { get; set; }
-        public string Updater { get; set; }
-        public string UpdaterName { get; set; }
-        public Nullable<System.DateTime> UpdateTm { get; set; }
+        public string AppId { get; set; }
+        public int UserId { get; set; }
+        public Nullable<byte> Available { get; set; }
     }
 }

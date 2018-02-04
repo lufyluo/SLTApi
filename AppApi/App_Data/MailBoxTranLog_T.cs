@@ -12,21 +12,18 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Calendar_V
+    public partial class MailBoxTranLog_T
     {
-        public string ClientName { get; set; }
         public int Id { get; set; }
-        public Nullable<int> ChanceId { get; set; }
-        public Nullable<int> ClientId { get; set; }
+        public Nullable<int> MailBoxId { get; set; }
+        public string ToUserId { get; set; }
+        public string ToUserName { get; set; }
+        public Nullable<int> ToMailBoxId { get; set; }
+        public string ToMailBoxName { get; set; }
+        public string ToMailBoxEmail { get; set; }
         public Nullable<int> MailId { get; set; }
-        public Nullable<System.DateTime> StartDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
-        public string text { get; set; }
-        public string Creater { get; set; }
-        public string CreaterName { get; set; }
+        public string FromEmail { get; set; }
+        public string Subject { get; set; }
         public Nullable<System.DateTime> CreateTm { get; set; }
-        public string Updater { get; set; }
-        public string UpdaterName { get; set; }
-        public Nullable<System.DateTime> UpdateTm { get; set; }
     }
 }

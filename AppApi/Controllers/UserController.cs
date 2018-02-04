@@ -13,12 +13,14 @@ using System.Web.Http;
 using System.Security.Cryptography;
 using System.IO;
 using System.Text;
+using AppApi.Controllers.Filter;
 
 namespace AppApi.Controllers
 {
     public class UserController:BaseControllers
     {
         [Check]
+        [AppIdCheck]
         [HttpPost]
         public Models.BackParameter Get([FromBody]Models.User.Gain.Get G)
         {
@@ -167,18 +169,7 @@ namespace AppApi.Controllers
                 string sj = newsj();
                 if (GP.touserid != null)
                 {
-                    if (!Controllers.huanxin.CheckUser(sj+GP.touserid))
-                    {
-                        //todo:可以删除环信注册，目前已屏蔽
-                        Controllers.huanxin.RegeditUser(sj+GP.touserid);
-                        BP.back = sj + '_' + GP.touserid;
-                        db.Database.ExecuteSqlCommand("update User_t set  Hxid='" + sj + '_' + GP.touserid + "' where userid='" + GP.touserid + "'");
-
-                    }
-                    else
-                    {
-                        BP.back = sj + '_' + GP.touserid;
-                    }
+                    BP.back = sj + '_' + GP.touserid;
                 }
                 else
                 {
@@ -276,11 +267,7 @@ namespace AppApi.Controllers
             }
             try
             {
-                //todo:暂时保留传环信Id
-                if (GP.HXUSERID != null&&GP.HXUSERID!="")
-                     user = db.Database.SqlQuery<User_T>("select * from user_t where Hxid='" + GP.HXUSERID + "'").FirstOrDefault();
-                else if (GP.PICUSERID != null&& GP.PICUSERID != "")
-                     user = db.Database.SqlQuery<User_T>("select * from user_t where userid='" + GP.PICUSERID + "'").FirstOrDefault();
+                user = db.Database.SqlQuery<User_T>("select * from user_t where userid='" + GP.PICUSERID + "'").FirstOrDefault();
                 if (user.PicName != null)
                 {
                     BP.back = @"/picimage/" + user.PicName;
@@ -391,24 +378,14 @@ namespace AppApi.Controllers
         }
 
         [Check]
+        [AppIdCheck]
         [HttpPost]
         public Models.BackParameter gethx([FromBody]Models.User.Gain.Get GP)
         {
             string sj = newsj();
             try
             {
-                //todo:可以删除环信注册，目前已屏蔽
-                if (!Controllers.huanxin.CheckUser(sj + '_' + GP.UserId))
-                {
-                    Controllers.huanxin.RegeditUser(sj + '_' + GP.UserId);
-                    db.Database.ExecuteSqlCommand("update User_t set  Hxid='" + sj + '_' + GP.UserId + "' where userid='" + GP.UserId + "'");
-                    BP.back = "新注册用户";
-                }
-                else
-                {
-                    BP.back = "已注册用户";
-                }
-
+                BP.back = "已注册用户";
             }
             catch (Exception ee)
             {

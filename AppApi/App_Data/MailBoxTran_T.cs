@@ -10,11 +10,12 @@
 namespace AppApi.App_Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class GetBoss_F_Result
+    public partial class MailBoxTran_T
     {
-        public Nullable<int> UID { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> MailBoxId { get; set; }
         public string UserId { get; set; }
-        public string UserName { get; set; }
     }
 }

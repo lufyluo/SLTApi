@@ -12,9 +12,6 @@ namespace AppApi.App_Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Objects;
-    using System.Data.Objects.DataClasses;
-    using System.Linq;
     
     public partial class TCRMEntities : DbContext
     {
@@ -39,11 +36,13 @@ namespace AppApi.App_Data
         public DbSet<CheckResult_T> CheckResult_T { get; set; }
         public DbSet<Circle_T> Circle_T { get; set; }
         public DbSet<CircleGroup_T> CircleGroup_T { get; set; }
+        public DbSet<Clause_T> Clause_T { get; set; }
         public DbSet<Client_T> Client_T { get; set; }
         public DbSet<ClientAdd_T> ClientAdd_T { get; set; }
         public DbSet<ClientAddCopy_T> ClientAddCopy_T { get; set; }
         public DbSet<ClientBackLog_T> ClientBackLog_T { get; set; }
         public DbSet<ClientCare_T> ClientCare_T { get; set; }
+        public DbSet<ClientClass_T> ClientClass_T { get; set; }
         public DbSet<ClientComment_T> ClientComment_T { get; set; }
         public DbSet<ClientComplain_T> ClientComplain_T { get; set; }
         public DbSet<ClientCopy_T> ClientCopy_T { get; set; }
@@ -84,6 +83,9 @@ namespace AppApi.App_Data
         public DbSet<DiskTopMy_T> DiskTopMy_T { get; set; }
         public DbSet<Doc_T> Doc_T { get; set; }
         public DbSet<EdmAddress_T> EdmAddress_T { get; set; }
+        public DbSet<EdmAsf_T> EdmAsf_T { get; set; }
+        public DbSet<EdmAsfIf1_T> EdmAsfIf1_T { get; set; }
+        public DbSet<EdmAsfIf2_T> EdmAsfIf2_T { get; set; }
         public DbSet<EdmGroup_T> EdmGroup_T { get; set; }
         public DbSet<EdmModel_T> EdmModel_T { get; set; }
         public DbSet<EdmTask_T> EdmTask_T { get; set; }
@@ -94,6 +96,8 @@ namespace AppApi.App_Data
         public DbSet<FwIntMail_T> FwIntMail_T { get; set; }
         public DbSet<FwIntMailSet_T> FwIntMailSet_T { get; set; }
         public DbSet<FwRuleMail_T> FwRuleMail_T { get; set; }
+        public DbSet<GdLog_T> GdLog_T { get; set; }
+        public DbSet<GoalSet_T> GoalSet_T { get; set; }
         public DbSet<Group_T> Group_T { get; set; }
         public DbSet<GroupAdmin_T> GroupAdmin_T { get; set; }
         public DbSet<GroupUser_T> GroupUser_T { get; set; }
@@ -103,19 +107,24 @@ namespace AppApi.App_Data
         public DbSet<Know_T> Know_T { get; set; }
         public DbSet<KnowFAQ_T> KnowFAQ_T { get; set; }
         public DbSet<KnowLabel_T> KnowLabel_T { get; set; }
+        public DbSet<KnowRoot_T> KnowRoot_T { get; set; }
         public DbSet<KnowTest_T> KnowTest_T { get; set; }
         public DbSet<KnowTestFAQ_T> KnowTestFAQ_T { get; set; }
         public DbSet<KnowTestFAQResult_T> KnowTestFAQResult_T { get; set; }
         public DbSet<KnowTestResult_T> KnowTestResult_T { get; set; }
         public DbSet<Log_T> Log_T { get; set; }
+        public DbSet<LoginConfig_T> LoginConfig_T { get; set; }
         public DbSet<MailBlack_T> MailBlack_T { get; set; }
         public DbSet<MailBox_T> MailBox_T { get; set; }
         public DbSet<MailBoxRoot_T> MailBoxRoot_T { get; set; }
         public DbSet<MailBoxRootComm_T> MailBoxRootComm_T { get; set; }
         public DbSet<MailBoxSet_T> MailBoxSet_T { get; set; }
         public DbSet<MailBoxShare_T> MailBoxShare_T { get; set; }
+        public DbSet<MailBoxTran_T> MailBoxTran_T { get; set; }
+        public DbSet<MailBoxTranLog_T> MailBoxTranLog_T { get; set; }
         public DbSet<MailBoxType_T> MailBoxType_T { get; set; }
         public DbSet<MailBoxZn_T> MailBoxZn_T { get; set; }
+        public DbSet<MailDelLog_T> MailDelLog_T { get; set; }
         public DbSet<MailKey_T> MailKey_T { get; set; }
         public DbSet<MailLabel_T> MailLabel_T { get; set; }
         public DbSet<MailLiar_T> MailLiar_T { get; set; }
@@ -125,6 +134,7 @@ namespace AppApi.App_Data
         public DbSet<MailRuleIf_T> MailRuleIf_T { get; set; }
         public DbSet<MailRuleLog_T> MailRuleLog_T { get; set; }
         public DbSet<MailText_T> MailText_T { get; set; }
+        public DbSet<MassLimit_T> MassLimit_T { get; set; }
         public DbSet<Menu_T> Menu_T { get; set; }
         public DbSet<Msg_T> Msg_T { get; set; }
         public DbSet<MsgUser_T> MsgUser_T { get; set; }
@@ -153,11 +163,14 @@ namespace AppApi.App_Data
         public DbSet<SendSample_T> SendSample_T { get; set; }
         public DbSet<ServerConfig_T> ServerConfig_T { get; set; }
         public DbSet<ServerConfigType_T> ServerConfigType_T { get; set; }
+        public DbSet<ShipmentProduct_T> ShipmentProduct_T { get; set; }
         public DbSet<Stock_T> Stock_T { get; set; }
         public DbSet<StockProduct_T> StockProduct_T { get; set; }
+        public DbSet<SynLog_T> SynLog_T { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<SysDictionary_T> SysDictionary_T { get; set; }
         public DbSet<SysDictionaryClass_T> SysDictionaryClass_T { get; set; }
+        public DbSet<Table_1> Table_1 { get; set; }
         public DbSet<TempImg_T> TempImg_T { get; set; }
         public DbSet<Thumb_T> Thumb_T { get; set; }
         public DbSet<TimeZhou_T> TimeZhou_T { get; set; }
@@ -171,6 +184,8 @@ namespace AppApi.App_Data
         public DbSet<WorkReport_T> WorkReport_T { get; set; }
         public DbSet<WorkReportModel_T> WorkReportModel_T { get; set; }
         public DbSet<Answer_T> Answer_T { get; set; }
+        public DbSet<Application> Application { get; set; }
+        public DbSet<AppPermission> AppPermission { get; set; }
         public DbSet<BankInfo_T> BankInfo_T { get; set; }
         public DbSet<ChanceSource_T> ChanceSource_T { get; set; }
         public DbSet<DesktopClient_T> DesktopClient_T { get; set; }
@@ -190,9 +205,12 @@ namespace AppApi.App_Data
         public DbSet<MessageClient_T> MessageClient_T { get; set; }
         public DbSet<MessageClientNew_T> MessageClientNew_T { get; set; }
         public DbSet<MessageNew_T> MessageNew_T { get; set; }
+        public DbSet<Payment_T> Payment_T { get; set; }
         public DbSet<PendingClerk_T> PendingClerk_T { get; set; }
         public DbSet<ProductPrice_T> ProductPrice_T { get; set; }
+        public DbSet<Receivables_T> Receivables_T { get; set; }
         public DbSet<ShareFolder_T> ShareFolder_T { get; set; }
+        public DbSet<Shipment_T> Shipment_T { get; set; }
         public DbSet<TestPaper_T> TestPaper_T { get; set; }
         public DbSet<TestQuestions_T> TestQuestions_T { get; set; }
         public DbSet<Warning_T> Warning_T { get; set; }
@@ -200,179 +218,5 @@ namespace AppApi.App_Data
         public DbSet<WarningCondition_T> WarningCondition_T { get; set; }
         public DbSet<WarningConfig_T> WarningConfig_T { get; set; }
         public DbSet<WarningSqlConfig_T> WarningSqlConfig_T { get; set; }
-        public DbSet<Calendar_V> Calendar_V { get; set; }
-        public DbSet<Chance_V> Chance_V { get; set; }
-        public DbSet<ClientFollow_V> ClientFollow_V { get; set; }
-        public DbSet<clientpro_V> clientpro_V { get; set; }
-        public DbSet<InqOneAllInfo_V> InqOneAllInfo_V { get; set; }
-        public DbSet<Inquiry_V> Inquiry_V { get; set; }
-        public DbSet<product_V> product_V { get; set; }
-        public DbSet<Sell_V> Sell_V { get; set; }
-        public DbSet<TimeZhou_V> TimeZhou_V { get; set; }
-        public DbSet<KnowRoot_T> KnowRoot_T { get; set; }
-        public DbSet<SynLog_T> SynLog_T { get; set; }
-    
-        [EdmFunction("TCRMEntities", "GetBoss_F")]
-        public virtual IQueryable<GetBoss_F_Result> GetBoss_F(string userIdStr, Nullable<int> inme)
-        {
-            var userIdStrParameter = userIdStr != null ?
-                new ObjectParameter("userIdStr", userIdStr) :
-                new ObjectParameter("userIdStr", typeof(string));
-    
-            var inmeParameter = inme.HasValue ?
-                new ObjectParameter("inme", inme) :
-                new ObjectParameter("inme", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetBoss_F_Result>("[TCRMEntities].[GetBoss_F](@userIdStr, @inme)", userIdStrParameter, inmeParameter);
-        }
-    
-        [EdmFunction("TCRMEntities", "GetUnderling_F")]
-        public virtual IQueryable<GetUnderling_F_Result> GetUnderling_F(string userId, Nullable<int> inme)
-        {
-            var userIdParameter = userId != null ?
-                new ObjectParameter("userId", userId) :
-                new ObjectParameter("userId", typeof(string));
-    
-            var inmeParameter = inme.HasValue ?
-                new ObjectParameter("inme", inme) :
-                new ObjectParameter("inme", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetUnderling_F_Result>("[TCRMEntities].[GetUnderling_F](@userId, @inme)", userIdParameter, inmeParameter);
-        }
-    
-        [EdmFunction("TCRMEntities", "SplitString_F")]
-        public virtual IQueryable<SplitString_F_Result> SplitString_F(string input, string separator, Nullable<bool> removeEmptyEntries)
-        {
-            var inputParameter = input != null ?
-                new ObjectParameter("Input", input) :
-                new ObjectParameter("Input", typeof(string));
-    
-            var separatorParameter = separator != null ?
-                new ObjectParameter("Separator", separator) :
-                new ObjectParameter("Separator", typeof(string));
-    
-            var removeEmptyEntriesParameter = removeEmptyEntries.HasValue ?
-                new ObjectParameter("RemoveEmptyEntries", removeEmptyEntries) :
-                new ObjectParameter("RemoveEmptyEntries", typeof(bool));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<SplitString_F_Result>("[TCRMEntities].[SplitString_F](@Input, @Separator, @RemoveEmptyEntries)", inputParameter, separatorParameter, removeEmptyEntriesParameter);
-        }
-    
-        [EdmFunction("TCRMEntities", "StringToTable_F")]
-        public virtual IQueryable<StringToTable_F_Result> StringToTable_F(string str, string split)
-        {
-            var strParameter = str != null ?
-                new ObjectParameter("str", str) :
-                new ObjectParameter("str", typeof(string));
-    
-            var splitParameter = split != null ?
-                new ObjectParameter("split", split) :
-                new ObjectParameter("split", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<StringToTable_F_Result>("[TCRMEntities].[StringToTable_F](@str, @split)", strParameter, splitParameter);
-        }
-    
-        [EdmFunction("TCRMEntities", "StringToTableEx_F")]
-        public virtual IQueryable<StringToTableEx_F_Result> StringToTableEx_F(string str, string split)
-        {
-            var strParameter = str != null ?
-                new ObjectParameter("str", str) :
-                new ObjectParameter("str", typeof(string));
-    
-            var splitParameter = split != null ?
-                new ObjectParameter("split", split) :
-                new ObjectParameter("split", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<StringToTableEx_F_Result>("[TCRMEntities].[StringToTableEx_F](@str, @split)", strParameter, splitParameter);
-        }
-    
-        public virtual int SaveStockPro(Nullable<int> id, Nullable<int> stockId, string stockNo, Nullable<long> productId, string no, string enName, string cnName, string model, string spec, Nullable<decimal> freight, Nullable<decimal> num, string packing, string unit, Nullable<decimal> unitPrice, Nullable<decimal> sUnitPrice, Nullable<decimal> sCostPrice, Nullable<System.DateTime> validDate, string bak, string creater, string createrName, Nullable<System.DateTime> createTm)
-        {
-            var idParameter = id.HasValue ?
-                new ObjectParameter("Id", id) :
-                new ObjectParameter("Id", typeof(int));
-    
-            var stockIdParameter = stockId.HasValue ?
-                new ObjectParameter("StockId", stockId) :
-                new ObjectParameter("StockId", typeof(int));
-    
-            var stockNoParameter = stockNo != null ?
-                new ObjectParameter("StockNo", stockNo) :
-                new ObjectParameter("StockNo", typeof(string));
-    
-            var productIdParameter = productId.HasValue ?
-                new ObjectParameter("ProductId", productId) :
-                new ObjectParameter("ProductId", typeof(long));
-    
-            var noParameter = no != null ?
-                new ObjectParameter("No", no) :
-                new ObjectParameter("No", typeof(string));
-    
-            var enNameParameter = enName != null ?
-                new ObjectParameter("EnName", enName) :
-                new ObjectParameter("EnName", typeof(string));
-    
-            var cnNameParameter = cnName != null ?
-                new ObjectParameter("CnName", cnName) :
-                new ObjectParameter("CnName", typeof(string));
-    
-            var modelParameter = model != null ?
-                new ObjectParameter("Model", model) :
-                new ObjectParameter("Model", typeof(string));
-    
-            var specParameter = spec != null ?
-                new ObjectParameter("Spec", spec) :
-                new ObjectParameter("Spec", typeof(string));
-    
-            var freightParameter = freight.HasValue ?
-                new ObjectParameter("Freight", freight) :
-                new ObjectParameter("Freight", typeof(decimal));
-    
-            var numParameter = num.HasValue ?
-                new ObjectParameter("Num", num) :
-                new ObjectParameter("Num", typeof(decimal));
-    
-            var packingParameter = packing != null ?
-                new ObjectParameter("Packing", packing) :
-                new ObjectParameter("Packing", typeof(string));
-    
-            var unitParameter = unit != null ?
-                new ObjectParameter("Unit", unit) :
-                new ObjectParameter("Unit", typeof(string));
-    
-            var unitPriceParameter = unitPrice.HasValue ?
-                new ObjectParameter("UnitPrice", unitPrice) :
-                new ObjectParameter("UnitPrice", typeof(decimal));
-    
-            var sUnitPriceParameter = sUnitPrice.HasValue ?
-                new ObjectParameter("SUnitPrice", sUnitPrice) :
-                new ObjectParameter("SUnitPrice", typeof(decimal));
-    
-            var sCostPriceParameter = sCostPrice.HasValue ?
-                new ObjectParameter("SCostPrice", sCostPrice) :
-                new ObjectParameter("SCostPrice", typeof(decimal));
-    
-            var validDateParameter = validDate.HasValue ?
-                new ObjectParameter("ValidDate", validDate) :
-                new ObjectParameter("ValidDate", typeof(System.DateTime));
-    
-            var bakParameter = bak != null ?
-                new ObjectParameter("Bak", bak) :
-                new ObjectParameter("Bak", typeof(string));
-    
-            var createrParameter = creater != null ?
-                new ObjectParameter("Creater", creater) :
-                new ObjectParameter("Creater", typeof(string));
-    
-            var createrNameParameter = createrName != null ?
-                new ObjectParameter("CreaterName", createrName) :
-                new ObjectParameter("CreaterName", typeof(string));
-    
-            var createTmParameter = createTm.HasValue ?
-                new ObjectParameter("CreateTm", createTm) :
-                new ObjectParameter("CreateTm", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SaveStockPro", idParameter, stockIdParameter, stockNoParameter, productIdParameter, noParameter, enNameParameter, cnNameParameter, modelParameter, specParameter, freightParameter, numParameter, packingParameter, unitParameter, unitPriceParameter, sUnitPriceParameter, sCostPriceParameter, validDateParameter, bakParameter, createrParameter, createrNameParameter, createTmParameter);
-        }
     }
 }

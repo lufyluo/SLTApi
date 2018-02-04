@@ -19,7 +19,7 @@ namespace AppApi.Controllers
         public int buflen = 102400;
         private const string RelativeRootPath = "file";
         [Check]
-        [Filter.File]
+        [AppApi.Filter.File]
         [HttpPost]
         public Models.BackParameter Download([FromBody]Models.File.Gain.Download D)//下载文件
         {

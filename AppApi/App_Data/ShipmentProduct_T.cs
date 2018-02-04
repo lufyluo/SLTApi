@@ -12,12 +12,12 @@ namespace AppApi.App_Data
     using System;
     using System.Collections.Generic;
     
-    public partial class SellProduct_T
+    public partial class ShipmentProduct_T
     {
         public int Id { get; set; }
-        public Nullable<int> SellId { get; set; }
-        public string SellNo { get; set; }
-        public Nullable<long> ProductId { get; set; }
+        public Nullable<int> ShipmentId { get; set; }
+        public string ShipmentNo { get; set; }
+        public Nullable<int> ProductId { get; set; }
         public string No { get; set; }
         public string EnName { get; set; }
         public string CnName { get; set; }
@@ -26,7 +26,7 @@ namespace AppApi.App_Data
         public Nullable<decimal> Num { get; set; }
         public string Unit { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
-        public Nullable<decimal> SellSum { get; set; }
+        public Nullable<decimal> ShipmentSum { get; set; }
         public string PicName { get; set; }
         public Nullable<int> PicSize { get; set; }
         public string PicType { get; set; }
@@ -50,5 +50,6 @@ namespace AppApi.App_Data
         public Nullable<decimal> SCostPrice { get; set; }
         public Nullable<System.DateTime> ValidDate { get; set; }
         public Nullable<decimal> QuoteSum { get; set; }
+        public Nullable<decimal> ShipmentNum { get; set; }
     }
 }

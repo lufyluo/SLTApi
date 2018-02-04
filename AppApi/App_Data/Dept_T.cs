@@ -32,5 +32,11 @@ namespace AppApi.App_Data
         public Nullable<System.DateTime> Createtm { get; set; }
         public string StockAudUserId { get; set; }
         public string StockAudUserName { get; set; }
+        public string ShipmentAudUserId { get; set; }
+        public string ShipmentAudUserName { get; set; }
+        public string PaymentAudUserId { get; set; }
+        public string PaymentAudUserName { get; set; }
+        public string ReceivablesAudUserId { get; set; }
+        public string ReceivablesAudUserName { get; set; }
     }
 }

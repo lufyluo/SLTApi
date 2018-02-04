@@ -56,5 +56,10 @@ namespace AppApi.App_Data
         public string AutoCc { get; set; }
         public string AutoBcc { get; set; }
         public Nullable<int> IsNewMag { get; set; }
+        public Nullable<byte> Autotran { get; set; }
+        public Nullable<int> LinkMailBoxId { get; set; }
+        public Nullable<byte> RecAutoGd { get; set; }
+        public Nullable<byte> SendAutoGd { get; set; }
+        public Nullable<byte> SendNowGd { get; set; }
     }
 }
