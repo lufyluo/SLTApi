@@ -377,24 +377,6 @@ namespace AppApi.Controllers
                 return db.Database.SqlQuery<string>("select setting from  [dbo].[ServerConfig_T] where Type='HX'").FirstOrDefault();
         }
 
-        [Check]
-        [AppIdCheck]
-        [HttpPost]
-        public Models.BackParameter gethx([FromBody]Models.User.Gain.Get GP)
-        {
-            string sj = newsj();
-            try
-            {
-                BP.back = "已注册用户";
-            }
-            catch (Exception ee)
-            {
-                BP.back = ee.ToString();
-            }
-            BP.back = sj + '_' + GP.UserId;
-            return BP;
-        }
-
         [Check]     
         [HttpPost]
         public Models.BackParameter Getsub([FromBody]Models.GainParameter GP)

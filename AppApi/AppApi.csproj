@@ -63,9 +63,8 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\..\vs引用集\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -658,6 +657,7 @@
     <Compile Include="App_Data\Message_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Log\Logger.cs" />
     <Compile Include="Models\AddHxuser.cs" />
     <Compile Include="Models\BackParameter.cs" />
     <Compile Include="Models\Client\Back\Add.cs" />
@@ -1121,6 +1121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Log4net.config" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\iis.pubxml" />

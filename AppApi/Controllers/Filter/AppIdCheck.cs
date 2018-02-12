@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -7,6 +8,9 @@ using System.Web;
 using System.Web.Http.Controllers;
 using AppApi.App_Data;
 using AppApi.Filter;
+using AppApi.Log;
+using AppApi.Models;
+using AppApi.Tools;
 
 namespace AppApi.Controllers.Filter
 {
@@ -16,23 +20,47 @@ namespace AppApi.Controllers.Filter
 
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
-            String code = "";
-            if (AppPermissionCheck())
+            base.OnActionExecuting(actionContext);
+            LoginLog(GP);
+            String code = AppPermissionCheck();
+            if (code != Tools.BackCode.Success)
             {
-                code = Tools.BackCode.NoPower;
                 BP.back = Tools.BackCode.CodeStr[code];
                 BP.code = code;
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.OK, BP);
                 return;
             }
         }
-        private bool AppPermissionCheck()
+        private string AppPermissionCheck()
         {
             if (string.IsNullOrEmpty(GP.appid))
-                return true;
+                return Tools.BackCode.AppidError;
             var permission = db.Database.SqlQuery<Application>(
-                "select Id,AppId,[Description],[Available] from [dbo].[Application] where Appid='" + GP.appid + "' AND Available =1").FirstOrDefault();
-            return permission == null;
+                "select Id,AppId,[Description],[Available] from [dbo].[Application] where Appid='" + GP.appid + "'").FirstOrDefault();
+            if (permission == null)
+            {
+                SqlClass.Insert In = new SqlClass.Insert("Application");
+                In.Revise("AppId", GP.appid);
+                In.Revise("Available", 1);
+                db.Database.SqlQuery<Decimal>(In.ToString()).FirstOrDefault();
+                return Tools.BackCode.Success;
+            }
+
+            return permission?.Available == 0 ? Tools.BackCode.AppidForbid : Tools.BackCode.Success;
+        }
+
+        private void LoginLog(GainParameter gp)
+        {
+            try
+            {
+                Logger.Log.Info($"登陆账号：{gp.UserId}，appid：{gp.appid}");
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e);
+            }
+           
+            
         }
     }
 }

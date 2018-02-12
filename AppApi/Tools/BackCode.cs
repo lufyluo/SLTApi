@@ -28,6 +28,8 @@ namespace AppApi.Tools
         public static String NoHasDictionary = "0018";//字典不存在
         public static String RecvStopErr = "0019";//邮件接收停止失败
         public static String SubErr = "0020";//该用户不为你的下属
+        public static String AppidError = "0021";//appid错误
+        public static String AppidForbid = "0022";//appid已被禁用
         public static String Err = "9999";//错误
         public static Dictionary<String, String> CodeStr = new Dictionary<string, string>() {
             {"0001","用户不存在" },
@@ -49,7 +51,9 @@ namespace AppApi.Tools
             {"0017","字典已存在" },
             {"0018","字典不存在" },
             {"0019","邮件接收停止失败" },
-            {"0020","该用户不为你的下属" }
+            {"0020","该用户不为你的下属" },
+            {"0021","Appid错误" },
+            {"0022","Appid已被禁用" }
         };
     }
 }

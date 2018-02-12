@@ -1,0 +1,2 @@
+[Header] 2018-02-12 17:48:34,354 [6] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£º
+[Footer] 
