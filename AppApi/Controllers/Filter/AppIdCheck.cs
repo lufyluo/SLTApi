@@ -21,8 +21,9 @@ namespace AppApi.Controllers.Filter
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             base.OnActionExecuting(actionContext);
-            LoginLog(GP);
+            
             String code = AppPermissionCheck();
+            LoginStateLog(GP,code);
             if (code != Tools.BackCode.Success)
             {
                 BP.back = Tools.BackCode.CodeStr[code];
@@ -49,11 +50,16 @@ namespace AppApi.Controllers.Filter
             return permission?.Available == 0 ? Tools.BackCode.AppidForbid : Tools.BackCode.Success;
         }
 
-        private void LoginLog(GainParameter gp)
+        private void LoginStateLog(GainParameter gp,string state)
+        {
+            var logMsg = $"登陆账号：{gp.UserId}，appid：{gp.appid},login result code：{state}";
+            LoginLog(logMsg);
+        }
+        private void LoginLog(string msg)
         {
             try
             {
-                Logger.Log.Info($"登陆账号：{gp.UserId}，appid：{gp.appid}");
+                Logger.Log.Info(msg);
             }
             catch (Exception e)
             {
