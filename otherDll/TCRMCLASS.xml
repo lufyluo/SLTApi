@@ -1,0 +1,2422 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TCRMCLASS</name>
+    </assembly>
+    <members>
+        <member name="M:TCRMCLASS.Check.isSaas(System.Web.HttpRequest)">
+            <summary>
+            判断是否SAAS模式
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.desDecrypt(System.String,System.String)">
+            <summary>
+            采用DES解密字符串
+            </summary>
+            <param name="inputStr">已加密的字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>解密后的明文</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.desEncrypt(System.String,System.String)">
+            <summary>
+            采用DES加密字符串
+            </summary>
+            <param name="inputStr">明文字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>加密串</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsRegYn">
+            <summary>
+            判断软件用户是否合法
+            </summary>
+            <returns>true代表合法用户</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsRegYn(System.Web.UI.Page)">
+            <summary>
+            判断软件用户是否合法(判断路径)
+            </summary>
+            <returns>true代表合法用户</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsRegYn(System.String)">
+            <summary>
+            判断软件用户是否合法(判断路径)
+            </summary>
+            <returns>true代表合法用户</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetRegTable(System.String)">
+            <summary>
+            取注册表的值
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsRoot(System.String,System.String)">
+            <summary>
+            判断目录路径
+            </summary>
+            <param name="strPath"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetRootDir">
+            <summary>
+            取程序的根目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetKValueBySn(System.String)">
+            <summary>
+            根椐SN取键值
+            </summary>
+            <param name="strSn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.InsertHead(System.Web.UI.Page)">
+            <summary>
+            插入Html头
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsLogin(System.Web.UI.Page)">
+            <summary>
+            判断当前用户是否已登录
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetMyEncoder(System.String)">
+            <summary>
+            编码字符
+            </summary>
+            <param name="str">要编码的字符</param>
+            <returns>编码后的字符</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetMyDecode(System.String)">
+            <summary>
+            解码字符
+            </summary>
+            <param name="str">要解码的字符</param>
+            <returns>解码后的字符</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.Logout(System.Web.UI.Page)">
+            <summary>
+            注销用户
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsNumber(System.String)">
+            <summary>
+            判断是否数字
+            </summary>
+            <param name="strNumber">要判断的字符</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsInt(System.String)">
+            <summary>
+            判断是否整数
+            </summary>
+            <param name="strNumber">要判断的字符</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsInt64(System.String)">
+            <summary>
+            判断是否长整数
+            </summary>
+            <param name="strNumber">要判断的字符</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.IsDate(System.String)">
+            <summary>
+            判断是否日期
+            </summary>
+            <param name="strDate">要判断的字符</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:TCRMCLASS.Check.GetTimeByStamp(System.String)">
+            <summary>  
+            时间戳转为C#格式时间  
+            </summary>  
+            <param name="timeStamp">Unix时间戳格式</param>  
+            <returns>C#格式时间</returns>  
+        </member>
+        <member name="M:TCRMCLASS.Check.ConvertTimeStamp(System.DateTime)">
+            <summary>  
+            DateTime时间格式转换为Unix时间戳格式  
+            </summary>  
+            <param name="time"> DateTime时间格式</param>  
+            <returns>Unix时间戳格式</returns>  
+        </member>
+        <member name="M:TCRMCLASS.CommFun.desEncrypt(System.String,System.String)">
+            <summary>
+            采用DES加密字符串
+            </summary>
+            <param name="inputStr">明文字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>加密串</returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.desDecrypt(System.String,System.String)">
+            <summary>
+            采用DES解密字符串
+            </summary>
+            <param name="inputStr">已加密的字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>解密后的明文</returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.showHtml(System.String,System.Web.HttpServerUtility)">
+            <summary>
+            把Text转换成HTML形式显示
+            </summary>
+            <param name="strText">原字符串</param>
+            <param name="httpServer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.replaceSelect(System.String)">
+            <summary>
+            静态函数，用来转换查询条件的字符串
+            </summary>
+            <param name="str">输入的字符串</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.replaceSelectLike(System.String)">
+            <summary>
+            静态函数，用来转换like查询条件的字符串
+            </summary>
+            <param name="str">输入的字符串</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.getInside(System.String,System.String,System.String)">
+            <summary>
+            返回指定分隔符内的字符
+            </summary>
+            <param name="str">原始字符</param>
+            <param name="c1">左分隔符</param>
+            <param name="c2">右分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.alertBox(System.String,System.Web.UI.Page)">
+            <summary>
+            服务器端弹出alert对话框
+            </summary>
+            <param name="strMessage">提示信息,例子："请输入您姓名!"</param>
+            <param name="webPage">Page类</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.alertBox(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            服务器端弹出alert对话框
+            </summary>
+            <param name="strMtlName">获得焦点控件Id值,比如：txt_Name</param>
+            <param name="strMessage">提示信息,例子："请输入您姓名!"</param>
+            <param name="webPage">Page类</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.alertBoxClose(System.String,System.Web.UI.Page)">
+            <summary>
+            服务器端弹出alert对话框并关闭页面
+            </summary>
+            <param name="strMessage">提示信息,例子："请输入您姓名!"</param>
+            <param name="webPage">Page类</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.confirmBox(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            服务器端弹出confirm对话框,该函数有个弊端,必须放到响应事件的最后,目前没有妥善解决方案
+            </summary>
+            <param name="strMessage">提示信息,例子："您是否确认删除!"</param>
+            <param name="bottonId">隐藏Botton按钮Id值,比如：btn_Flow</param>
+            <param name="webPage">Page类</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.confirmBox(System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+             服务器端弹出confirm对话框,询问用户准备转向那些操作，包括“确定”和“取消”时的操作
+            </summary>
+            <param name="strMessage">提示信息，比如："成功增加数据,单击\"确定\"按钮填写流程,单击\"取消\"修改数据"</param>
+            <param name="confirmBottonId">"确定"按钮id值</param>
+            <param name="cancelBottonId">"取消"按钮id值</param>
+            <param name="webPage">Page类</param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.refurbish(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            刷新某框架
+            </summary>
+            <param name="frameId">框架名</param>
+            <param name="strUrl">路径</param>
+            <param name="webPage">Page类</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.SetDropByText(System.String,System.Web.UI.WebControls.DropDownList)">
+            <summary>
+            根据Text选定DropDownList
+            </summary>
+            <param name="strText"></param>
+            <param name="ddl"></param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.SetDropByValue(System.String,System.Web.UI.WebControls.DropDownList)">
+            <summary>
+            根据Value选定DropDownList
+            </summary>
+            <param name="strValue"></param>
+            <param name="ddl"></param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.getNullOrString(System.String)">
+            <summary>
+            如果值为"",则返回DBNull
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.getDateByStr(System.String)">
+            <summary>
+            输出日期格式的字符(yyyy-MM-dd)
+            </summary>
+            <param name="strDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.getDateByStr(System.String,System.String)">
+            <summary>
+            输出日期格式的字符
+            </summary>
+            <param name="strDate"></param>
+            <param name="strFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.updateHtmlImgKeyId(System.String,System.String,System.String)">
+            <summary>
+            更新HTML正文图片的KeyId
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.postData(System.String,System.String)">
+            <summary>
+            post数据，不返回数据
+            </summary>
+            <param name="strUrl"></param>
+            <param name="strData"></param>
+        </member>
+        <member name="M:TCRMCLASS.CommFun.postDataReturn(System.String,System.String)">
+            <summary>
+            post数据，并返回数据
+            </summary>
+            <param name="strUrl"></param>
+            <param name="strData"></param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.#ctor(System.Boolean)">
+            <summary>
+            是否使用定制数据库
+            </summary>
+            <param name="bl">true表示使用定制数据库</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDBConnStr">
+            <summary>
+            生成数据库连接串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getOpenSqlConnection">
+            <summary>
+            返回SqlConnection。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.open">
+            <summary>
+            打开数据库连接。
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.CloseConn">
+            <summary>
+            关闭数据库连接。
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getSqlCommand(System.String)">
+            <summary>
+            返SqlCommand。
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.execSql(System.String)">
+            <summary>
+            执行SQL语句，返回受影响行数。
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getPageDataSet(System.Int32,System.Int32,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            返回分页后的DataSet
+            </summary>
+            <param name="pageSize">每页的记录数</param>
+            <param name="currentPage">当前的页号</param>
+            <param name="sqlText">SQL语句</param>
+            <param name="recordCount">out 返回总记录数</param>
+            <param name="pageCount">out 返回总页数</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDataReaderBySql(System.String)">
+            <summary>
+            返回SqlDataReader，注：用完后一定要调用Close()关闭DataReader。
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDataReaderBySql(System.String,System.Boolean)">
+            <summary>
+            返回SqlDataReader，注：用完后一定要调用Close()关闭DataReader。
+            </summary>
+            <param name="sql"></param>
+            <param name="closeConn">DataReader关闭时是否关闭连接</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDataSetBySql(System.String)">
+            <summary>
+            返回DataSet。
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetDataYn(System.String)">
+            <summary>
+            查询数据是否存在
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>true或false</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetDataYnBySqlCommand(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            查询数据是否存在(SqlCommand)
+            </summary>
+            <param name="sqlCmd">SqlCommand</param>
+            <returns>true或false</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetField(System.String)">
+            <summary>
+            得到第一列的数据
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>ID</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetFieldBySqlCommand(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            得到第一列的数据(SqlCommand)
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>ID</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetMaxID">
+            <summary>
+            得到刚插入的ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.downloadFileComm(System.String,System.String,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            下载存储在数据库中的文件
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="response">Response对象</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.downloadFile(System.String,System.String,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            下载存储在数据库中的文件
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="response">Response对象</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.downloadFileGetUrl(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Web.UI.Page)">
+            <summary>
+            下载存储在数据库中的文件（返回路径）
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="response">Response对象</param>
+            <param name="bl">True表示绝对路径,false表示相对路径</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.downloadFileBuf(System.String,System.String,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            下载存储在数据库中的文件
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="response">Response对象</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.downloadFileBufMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            下载存储在数据库中的文件(多库模式下的邮箱使用)
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="response">Response对象</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.Login(System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            用户验证
+            </summary>
+            <param name="name">用户名</param>
+            <param name="pass">密码</param>
+            <returns>true或false</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.GetUserTime(System.String)">
+            <summary>
+            判断有没有时间限制
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.InsterDate(System.String,System.Web.HttpResponse)">
+            <summary>
+            向数据库插入或更新数据
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="response">Response对象</param>
+            <returns>TRUE表示成功，FALSE表示失败</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.InsterDate(System.String)">
+            <summary>
+            向数据库插入或更新数据
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>TRUE表示成功，FALSE表示失败</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkPower(System.String,System.String)">
+            <summary>
+            判断有没指定权限
+            </summary>
+            <param name="userId"></param>
+            <param name="funcCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkPower(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            判断有没指定权限(直接返回提示信息)
+            </summary>
+            <param name="userId"></param>
+            <param name="funcCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkPowerRange(System.String,System.String)">
+            <summary>
+            判断是否具有strFuncCode中其中一个权限
+            </summary>
+            <param name="userId"></param>
+            <param name="funcCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkPowerRange(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            判断是否具有strFuncCode中其中一个权限(直接返回提示信息)
+            </summary>
+            <param name="userId"></param>
+            <param name="funcCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkMenuPower(System.String,System.String)">
+            <summary>
+            判断有没有菜单的权限(只要拥有菜单其中一个权限就返回true)
+            </summary>
+            <param name="userId"></param>
+            <param name="strMenuNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.checkMenuPower(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            判断有没有菜单的权限(只要拥有菜单其中一个权限就返回true)(直接返回提示信息)
+            </summary>
+            <param name="userId"></param>
+            <param name="strMenuNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDictionaryList(System.String,System.String)">
+            <summary>
+            取数据字典列表
+            </summary>
+            <param name="strClass"></param>
+            <param name="strType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.saveDictionary(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            保存数据字典
+            </summary>
+            <param name="intId"></param>
+            <param name="strClass"></param>
+            <param name="strType"></param>
+            <param name="strText"></param>
+            <param name="strValue"></param>
+            <param name="OrderNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDictionaryInfo(System.Int32)">
+            <summary>
+            取一条数据字典
+            </summary>
+            <param name="intId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.dictionaryOrderSet(System.Int32,System.Boolean)">
+            <summary>
+            调整数据顺序
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="id">要调整的数据字典项id</param>
+            <param name="up">up:上移或下移</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getDictionaryUseValue(System.String,System.String)">
+            <summary>
+            判断数据字典类型是否使用Value
+            </summary>
+            <param name="strClass"></param>
+            <param name="strType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUnderling(System.String,System.Int32)">
+            <summary>
+            取下属员工列表
+            </summary>
+            <param name="userId"></param>
+            <param name="inme">1表示包括自己,0表示不包括自己</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.UserIsUnderling(System.String,System.String)">
+            <summary>
+            判断unUserId是不是userId的下属
+            </summary>
+            <param name="userId"></param>
+            <param name="unUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserIdByUID(System.Int32)">
+            <summary>
+            根据UID取UserId
+            </summary>
+            <param name="UID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserNameByUID(System.Int32)">
+            <summary>
+            根据UID取UserName
+            </summary>
+            <param name="UID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserNameStrByUID(System.String)">
+            <summary>
+            根据UID串取UserName
+            </summary>
+            <param name="UID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserName(System.String)">
+            <summary>
+            根据UserId取UserName
+            </summary>
+            <param name="UID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserNameStr(System.String)">
+            <summary>
+            根据UserId串取UserName
+            </summary>
+            <param name="UID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.BindTypeText(System.String,System.String,System.Web.UI.WebControls.DropDownList,System.Boolean,System.String)">
+            <summary>
+            绑定分类列表（DataText）
+            </summary>
+            <param name="strClass"></param>
+            <param name="strType"></param>
+            <param name="ddl"></param>
+            <param name="showNull"></param>
+            <param name="nullValue"></param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.BindTypeValue(System.String,System.String,System.Web.UI.WebControls.DropDownList,System.Boolean,System.String)">
+            <summary>
+            绑定分类列表（DataValue）
+            </summary>
+            <param name="strClass"></param>
+            <param name="strType"></param>
+            <param name="ddl"></param>
+            <param name="showNull"></param>
+            <param name="nullValue"></param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getServerConfig(System.String)">
+            <summary>
+            取系统参数
+            </summary>
+            <param name="strParamName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUserConfig(System.String,System.String)">
+            <summary>
+            取用户参数
+            </summary>
+            <param name="strParamName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.isAutoCode(System.String)">
+            <summary>
+            判断是否使用自动编号
+            </summary>
+            <param name="menuNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getAutoCode(System.String,System.String,System.String)">
+            <summary>
+            取自动编号
+            </summary>
+            <param name="menuNo">功能模块号</param>
+            <param name="userId">用户名</param>
+            <param name="isupdate">1表示更新编号基础表</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.SaveConLog(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存邮件日志
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.SaveSendMailLog(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存发送日志
+            </summary>
+            <param name="To"></param>
+            <param name="CC"></param>
+            <param name="Bcc"></param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUidByCrm(System.String,System.Int32)">
+            <summary>
+            取邮件所属用户UID
+            </summary>
+            <param name="strEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.getUidByKey(System.String,System.Int32)">
+            <summary>
+            取邮件所属用户（按主题关键字分发）
+            </summary>
+            <param name="strEmail"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:TCRMCLASS.DBClass.updateCEMClient(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:TCRMCLASS.DBClass.updateCEMClientRec(System.String,System.String)">
+            <summary>
+            更新客户的最新收件时间
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.SaveUserConfig(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存个人设置
+            </summary>
+            <param name="strType"></param>
+            <param name="strUserId"></param>
+            <param name="strParamName"></param>
+            <param name="strSetting"></param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.SendMessage(System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            发送通知消息
+            </summary>
+            <param name="MenuNo">关联来源的MenuNo（与数据字典“消息管理”-"消息来源"对应）</param>
+            <param name="KeyId">关联数据ID（如果不关联填0）</param>
+            <param name="ExId">扩展ID（如果没有可以填''）</param>
+            <param name="ExId1">扩展ID1（如果没有可以填''）</param>
+            <param name="Type">消息类别（1成功2消息3警告4错误）</param>
+            <param name="Html">消息内容的html</param>
+            <param name="Creater">创建人userId（填''表示系统发送的信息）</param>
+            <param name="ToUserIdStr">接收人UserId串,多个用“,”号分隔</param>
+            <param name="ShowType">0表示自动判断用户在线时弹出，如果不在线就不弹出，1表示强制弹出，2表示不弹出</param>
+            <param name="AutoClose">1表示自动关闭窗口，0表示不自动关闭窗口</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.DelMailBox(System.String)">
+            <summary>
+            删除邮箱
+            </summary>
+            <param name="mailboxidStr">邮箱ID串（多个用,号分隔）</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.DelMailAcc(System.String)">
+            <summary>
+            删除邮件附件
+            </summary>
+            <param name="fileStr">附件ID串</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.DelMailAccByMailId(System.String)">
+            <summary>
+            删除邮件的附件与原文
+            </summary>
+            <param name="mailidStr">邮件ID串（多个用,号分隔）</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.moveMail(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            移动邮件
+            </summary>
+            <param name="strUID">当前用户UID</param>
+            <param name="idStr">邮件ID串(多个用,号分隔)</param>
+            <param name="ToMailBoxId">目标邮箱ID</param>
+            <param name="Box">目标邮箱夹(SJX,YFS)</param>
+            <param name="moveRootId">目标邮箱目录ID(如果没有目录ID，则填"null")</param>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.CopyMail(System.String,System.String,System.String,System.String,System.String,System.String)">
+             <summary>
+            复制邮件
+             </summary>
+             <param name="userid">复制人userid</param>
+             <param name="idStr">邮件ID串(多个用,号分隔)</param>
+             <param name="ToMailBoxId">目标邮箱ID</param>
+             <param name="Box">目标邮箱夹(SJX,YFS)</param>
+             <param name="RootId">目标邮箱目录ID</param>
+             <param name="Read">复制后是否已读（是或否）</param>
+             <returns>新邮件ID串</returns>
+        </member>
+        <member name="M:TCRMCLASS.DBClass.SendInsideMail(System.String,System.Int32,System.Int32,System.String@,System.String@)">
+            <summary>
+            发送内部邮件
+            </summary>
+            <param name="mailid">邮件ID</param>
+            <param name="isYFS">1表示发送成功后是否把原邮件设成已发箱,0表示不操作</param>
+            <param name="justcheck">1表示只检查接收人有没有业务邮箱,不做真正发送</param>
+            <param name="cnmsg">中文提示信息</param>
+            <param name="enmsg">英文提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.EdmClass.GetFromDomain(System.String@)">
+            <summary>
+            获取发件人域名
+            </summary>
+            <param name="strFromDomain"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.EdmClass.GetMailMaxSize(System.String@)">
+            <summary>
+            获取邮件大小限制
+            </summary>
+            <param name="MAIL_MAXSIZE"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.EdmClass.SubmitTask(System.Int32)">
+            <summary>
+            提交任务
+            </summary>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.EdmClass.GetTaskState(System.Int32)">
+            <summary>
+            获取任务的状态
+            </summary>
+            <param name="ApiReturnId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.EdmClass.SetTask(System.Int32,System.Int32)">
+            <summary>
+            任务暂停、重发、取消 (intType:  1表示暂停，2表示重发，3表示取消
+            </summary>
+            <param name="taskId"></param>
+            <param name="ApiReturnId"></param>
+            <param name="intType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.getFileEx(System.String)">
+            <summary>
+            取文件名"."号后边的字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.copyFile(System.String,System.String,System.String)">
+            <summary>
+            复制文件
+            </summary>
+            <param name="sourceFileclass">原始文件种类(0普通附件，2邮件附件，3文档附件，4文档回收站)</param>
+            <param name="sourceFileId"></param>
+            <param name="destFileclass">可不填，不填表示与原始文件一样，目标文件种类(0普通附件，2邮件附件，3文档附件，4文档回收站)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.delFile(System.String,System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="sourceFileclass">文件种类(0普通附件，1邮件原文，2邮件附件，3文档附件，4文档回收站)</param>
+            <param name="sourceFileId">文件ID，多个要吧用“,”号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.copyEml(System.String,System.String)">
+            <summary>
+            复制邮件原文
+            </summary>
+            <param name="sourceMailId">原始邮件ID</param>
+            <param name="destMailBoxId">目标邮箱ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.moveEml(System.String,System.String,System.Boolean)">
+            <summary>
+            移动邮件原文
+            </summary>
+            <param name="sourceMailId">原始邮件ID</param>
+            <param name="destMailBoxId">目标邮箱ID</param>
+            <param name="isYnDest">是否判断目标邮箱与当前邮箱是否相同(默认true)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.downloadfile(System.String,System.String,System.Web.UI.Page,System.String)">
+            <summary>
+            下载文件（在网页上下载）
+            </summary>
+            <param name="fileclass">文件种类(0普通附件，1邮件原文，2邮件附件，3文档附件，4文档回收站)</param>
+            <param name="fileid">文件ID</param>
+            <param name="page"></param>
+            <param name="doctype">可不填，文档管理模块专用(0表示原文件，1表示缩略图1，2表示缩略图2，3表示flash文件</param>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.GetDownloadUrl(System.String,System.String,System.String)">
+            <summary>
+            下載文件返回物理路徑
+            </summary>
+            <param name="fileclass">文件种类(0普通附件，1邮件原文，2邮件附件，3文档附件，4文档回收站)</param>
+            <param name="fileid">文件ID</param>
+            <param name="doctype">可不填，文档管理模块专用(0表示原文件，1表示缩略图1，2表示缩略图2，3表示flash文件</param>
+            <returns>下载完成文件的物理路径</returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.saveFile(System.String,TCRMCLASS.FileInfoEx,System.String)">
+            <summary>
+            保存文件(通过文件在服务器中的物理路径)
+            </summary>
+            <param name="strfilepath">文件路径</param>
+            <param name="fileinfo">FileInfoEx属性必须有fileclass(0普通附件，2邮件附件，3文档附件),filename文件名,filetype文件Mime类型；
+            其中mailboxid的box是在保存邮件原文时才需要填分别表示邮箱ID与R收件箱或S发件箱</param>
+            <param name="fileDateRoot">表示文件存放在目录日期（一般不需要填）</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.saveFile(System.IO.Stream,TCRMCLASS.FileInfoEx,System.String)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="StreamObject"></param>
+            <param name="fileinfo">FileInfoEx属性必须有fileclass(0普通附件，1邮件原文，2邮件附件，3文档附件),filename文件名,filetype文件Mime类型；
+            其中mailboxid的box是在保存邮件原文时才需要填分别表示邮箱ID与R收件箱或S发件箱</param>
+            <param name="fileDateRoot">表示文件存放在目录日期（一般不需要填）</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.saveAttachmentBody(System.Byte[],System.String@,Aliyun.OSS.ObjectMetadata,System.Int32)">
+            <summary>
+            分段保存附件正文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.delTempFile">
+            <summary>
+            删除临时文件 
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.FileClass.getDbFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            下载存储在数据库中的文件(返回物理路径)
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="dataCol">数据列</param>
+            <param name="idCol">唯一ID列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="FileZip">1表示原始文件是压缩文件</param>
+        </member>
+        <member name="T:TCRMCLASS.Mail.Cexegete">
+            <summary>
+            Cexegete 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strUIDL">
+            <summary>
+            UIDL
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strReceived">
+            <summary>
+            received
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strDate">
+            <summary>
+            Date
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strTo">
+            <summary>
+            To
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strFrom">
+            <summary>
+            from
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_RealFrom">
+            <summary>
+            X-REAL-FROM真实的发件人
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_ReturnPath">
+            <summary>
+            Return-Path 邮件返回路径
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strSubject">
+            <summary>
+            subject
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strReplyTo">
+            <summary>
+            reply-to
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strCC">
+            <summary>
+            CC
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strPriority">
+            <summary>
+            x-msmail-priority
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strMessageText">
+            <summary>
+            文本正文
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strMessageHTML">
+            <summary>
+            HTML正文
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strContentType">
+            <summary>
+            邮件类型
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strBoundry">
+            <summary>
+            分界标志
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strEncoding">
+             <summary>
+            编码方式 
+             </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strCharset_p">
+             <summary>
+            字符集 
+             </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strCharsetText">
+             <summary>
+            邮件内容字符集 
+             </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.Attachments">
+            <summary>
+            附件列表
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_strBoxID">
+            <summary>
+            邮箱ID
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_UID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.m_IsOldClient">
+            <summary>
+            是否旧客户邮件(非空字符表示是旧客户邮件)
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.baseId">
+            <summary>
+            原文ID
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Cexegete.UseMailRule">
+            <summary>
+            是否使用收邮件规则
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.SaveToDB(System.String,System.String)">
+            <summary>
+            把邮件保存到数据库
+            </summary>
+            <param name="ToBoxID">邮箱ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.SaveToDB(System.String,System.String,System.String@)">
+            <summary>
+            把邮件保存到数据库(导入时用)
+            </summary>
+            <param name="ToBoxID">邮箱ID</param>
+            <param name="strMailBox">邮件夹</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.GetChanceId">
+            <summary>
+            提取ChanceId,并替换标记
+            </summary>
+            <param name="strhtml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.GetAreaByIp(System.String)">
+            <summary>
+            取得IP地区
+            </summary>
+            <param name="strIp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.GetRealSizeString(System.String,System.Int32)">
+            <summary>
+            固定字符大小
+            </summary>
+            <param name="str">原字符</param>
+            <param name="le">大小</param>
+            <returns>处理后的字符</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.MailHeadExegete(System.String)">
+            <summary>
+            解释邮件头信息(指定原文)
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.MailHeadExegete">
+            <summary>
+            解释邮件头信息
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToPlain">
+            <summary>
+            保存文本格式邮件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToHtml">
+            <summary>
+            保存HTML格式邮件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToAlternative">
+            <summary>
+            保存任选一格式邮件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToMixed">
+            <summary>
+            保存混合邮件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.EncodingConvert(System.Text.Encoding,System.Text.Encoding,System.Byte[])">
+            <summary>
+            编码转换
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToAttachment">
+            <summary>
+            保存附件型邮件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.ToReport">
+            <summary>
+            保存退回信件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.MailBodyExegete">
+            <summary>
+            解释邮件主体
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.GetEncType(System.String)">
+            <summary>
+            得到编码方式
+            </summary>
+            <param name="strEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.GetMDecodeString(System.String)">
+            <summary>
+            解码分段式信息
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.DecodeCharset(System.String)">
+            <summary>
+            解码头信息
+            </summary>
+            <param name="strEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Cexegete.EncodingCharset(System.String)">
+            <summary>
+            得到密文信息(方便对接换行的密文)
+            </summary>
+            <param name="strEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TCRMCLASS.Mail.POP3">
+            <summary>
+            POP3Client 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.POP3.IsWeOfficeBaseEml">
+            <summary>
+            是否WeOffice原始Eml文件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pop_server"></param>
+            <param name="user_name"></param>
+            <param name="password"></param>
+            <param name="stype"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.Connect">
+            <summary>
+            连接服务器
+            </summary>
+            <param name="pop_server"></param>
+            <returns>服务器响应</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.ConnectSSL">
+            <summary>
+            连接服务器
+            </summary>
+            <param name="pop_server"></param>
+            <returns>服务器响应</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.disconnect">
+            <summary>
+            断开连接
+            </summary>
+            <returns>自定义的结果字符串</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.issue_command(System.String)">
+            <summary>
+            发出命令
+            </summary>
+            <param name="command">命令字符串</param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_single_line_response">
+            <summary>
+            读取一行响应
+            </summary>
+            <returns>成功：服务器响应；失败：异常信息</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetTopMsg(System.Int32,System.Int32)">
+            <summary>
+            读信头
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_multi_line_response">
+            <summary>
+            读取多行响应直至响应结束
+            </summary>
+            <returns>响应的内容</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_mail_resoonseByte">
+            <summary>
+            读邮件全文，保存成文件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_mail_responseByIOEncoding(System.Text.Encoding)">
+            <summary>
+            读取邮件全文(文件IO)
+            </summary>
+            <returns>响应的内容</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveBaseBody(System.String,System.String@)">
+            <summary>
+            分段保存原文(导入时用)
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_mail_response">
+            <summary>
+            读取邮件全文
+            </summary>
+            <returns>响应的内容</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_mail_responseByIO(System.IO.StreamReader,System.Boolean@)">
+            <summary>
+            读取邮件全文(文件IO)
+            </summary>
+            <returns>响应的内容</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveBaseBody(System.Text.StringBuilder@,System.Text.StringBuilder@)">
+            <summary>
+            分段保存原文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveBaseBody(System.Byte[],System.Int32,System.String@)">
+            <summary>
+            分段保存原文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.delTempAcc">
+            <summary>
+            删除收邮件时的临时附件
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveAttachmentBody(System.Text.StringBuilder@,System.Text.StringBuilder@)">
+            <summary>
+            分段保存附件正文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveAttachmentFile(System.Text.StringBuilder@,System.Text.StringBuilder@)">
+            <summary>
+            分段保存附件(文件)
+            </summary>
+            <param name="bufferStr"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveAttachmentOss(System.Text.StringBuilder@,System.Text.StringBuilder@)">
+            <summary>
+            分段保存附件(Oss)
+            </summary>
+            <param name="bufferStr"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.saveAttachmentBodyDb(System.Text.StringBuilder@,System.Text.StringBuilder@)">
+            <summary>
+            分段保存附件(数据库)
+            </summary>
+            <param name="bufferStr"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.isBase64Attachment(System.Int32)">
+            <summary>
+            判断是不是Base64附件
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.was_pop_error(System.String)">
+            <summary>
+            根据服务器响应设置响应状态
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.DELE(System.Int32)">
+            <summary>
+            删除指定邮件
+            </summary>
+            <param name="msg_number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.UIDL(System.Int32)">
+            <summary>
+            读邮件UIDL
+            </summary>
+            <param name="msg_number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.LIST">
+            <summary>
+            列举邮件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.LIST(System.Int32)">
+            <summary>
+            列举指定邮件
+            </summary>
+            <param name="msg_number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.NOOP">
+            <summary>
+            无操作，监测服务器响应
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.PASS">
+            <summary>
+            传送密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.PASS(System.String)">
+            <summary>
+            传送密码
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.QUIT">
+            <summary>
+            传送退出命令
+            </summary>
+            <returns>服务器响应</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.RETR(System.Int32)">
+            <summary>
+            返回邮件的全部文本
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetNewMsg">
+            <summary>
+            得到新邮件的号码
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetNewMsg(System.Boolean)">
+            <summary>
+            得到新邮件的号码(按保留天数备份邮件)
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.ALLUIDL(System.Boolean)">
+            <summary>
+            读所有UIDL
+            </summary>
+            <param name="IsExistUIDL">True表示判断新邮件</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.read_uidl_response(System.Boolean)">
+            <summary>
+            读全部邮件UIDL
+            </summary>
+            <param name="IsExistUIDL">True表示判断新邮件</param>
+            <returns>响应的内容</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.SRETRNEW">
+            <summary>
+            读新邮件
+            </summary>
+            <param name="msg">邮件号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.SRETRNEWBYTE(System.Boolean)">
+            <summary>
+            读新邮件
+            </summary>
+            <param name="msg">邮件号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.SRETR(System.Int32)">
+            <summary>
+            读邮件
+            </summary>
+            <param name="msg">邮件号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.RSET">
+            <summary>
+            撤消所有的dele命令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.STAT">
+            <summary>
+            邮箱统计数据
+            </summary>
+            <returns>服务器响应</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.USER">
+            <summary>
+            传送用户名
+            </summary>
+            <returns>服务器响应 </returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.USER(System.String)">
+            <summary>
+            传送用户名
+            </summary>
+            <param name="user_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetNumberOfNewMessages">
+            <summary>
+            得到邮件数量
+            </summary>
+            <returns>邮件的个数</returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetNewMessages(System.String)">
+            <summary>
+            根据主题得到邮件的内容
+            </summary>
+            <param name="subj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetRawMessage(System.Int32)">
+            <summary>
+            取邮件
+            </summary>
+            <param name="messagenumber">邮件编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetMessageSubject(System.Collections.ArrayList)">
+            <summary>
+            得到主题
+            </summary>
+            <param name="msglines"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetMessageFrom(System.Collections.ArrayList)">
+            <summary>
+            得到From
+            </summary>
+            <param name="msglines"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.POP3.GetMessageBody(System.Collections.ArrayList)">
+            <summary>
+            得到邮件体
+            </summary>
+            <param name="msglines"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TCRMCLASS.Mail.QuotedPrintable">
+            <summary>
+            QuotedPrintable 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.QuotedPrintable.QPEncode(System.String)">
+            <summary>
+            按照QPEncode方法编码
+            </summary>
+            <param name="body">要编码的正文字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.SendWork.SendInsideMail(System.String)">
+            <summary>
+            发送内部抄送邮件
+            </summary>
+            <param name="strMailId"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.SendWork.mySave(System.String)">
+            <summary>
+            保存邮件
+            </summary>
+            <param name="strBox">邮件夹</param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.SendWork.SaveFromRE(System.String,System.String)">
+            <summary>
+            更新复制邮件的处理标识
+            </summary>
+            <param name="FromMailId"></param>
+            <param name="RFMailId"></param>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Charset">
+            <summary> 
+            设定语言代码，默认设定为GB2312，如不需要可设置为"" 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.From">
+            <summary> 
+            发件人地址 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.FromName">
+            <summary> 
+            发件人姓名 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.ReplyTo">
+            <summary> 
+            回复邮件地址 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.RecipientName">
+            <summary> 
+            收件人姓名 
+            </summary>    
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Recipient">
+            <summary> 
+            收件人列表 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.CRecipient">
+            <summary> 
+            抄送人列表 
+            </summary> 
+        </member>
+        <!-- 对于成员“F:TCRMCLASS.Mail.Smtp.BRecipient”忽略有格式错误的 XML 注释 -->
+        <member name="F:TCRMCLASS.Mail.Smtp.mailserver">
+            <summary> 
+            邮件服务器域名 
+            </summary>    
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.mailserverport">
+            <summary> 
+            邮件服务器端口号 
+            </summary>    
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.username">
+            <summary> 
+            SMTP认证时使用的用户名 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.password">
+            <summary> 
+            SMTP认证时使用的密码 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.ESmtp">
+            <summary> 
+            是否需要SMTP验证 
+            </summary>       
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Html">
+            <summary> 
+            是否Html邮件 
+            </summary>       
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Attachments">
+            <summary> 
+            邮件附件列表 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.priority">
+            <summary> 
+            邮件发送优先级，可设置为"High","Normal","Low"或"1","3","5" 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Subject">
+            <summary> 
+            邮件主题 
+            </summary>       
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Body">
+            <summary> 
+            邮件HTML正文 
+            </summary>       
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.plainBody">
+            <summary>
+            邮件简单正文
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.Notification">
+            <summary>
+            true表示请求回复
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.RecipientNum">
+            <summary> 
+            收件人数量 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.recipientmaxnum">
+            <summary> 
+            最多收件人数量 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.errmsg">
+            <summary> 
+            错误消息反馈 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.tc">
+            <summary> 
+            TcpClient对象，用于连接服务器 
+            </summary>    
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.ns">
+            <summary> 
+            NetworkStream对象 
+            </summary>    
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.ErrCodeHT">
+            <summary> 
+            SMTP错误代码哈希表 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.RightCodeHT">
+            <summary> 
+            SMTP正确代码哈希表 
+            </summary> 
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.RRCode">
+            <summary>
+            SMTP错误代码
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.Mail.Smtp.logs">
+            <summary> 
+            服务器交互记录 
+            </summary> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.SMTPCodeAdd">
+            <summary> 
+            SMTP回应代码哈希表 
+            </summary> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Base64Encode(System.String)">
+            <summary> 
+            将字符串编码为Base64字符串 
+            </summary> 
+            <param name="estr">要编码的字符串</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Base64Decode(System.String)">
+            <summary> 
+            将Base64字符串解码为普通字符串 
+            </summary> 
+            <param name="dstr">要解码的字符串</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.GetStream(System.Int32)">
+            <summary> 
+            得到上传附件的文件流 
+            </summary> 
+            <param name="FilePath">附件的绝对路径</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddAttachment(System.String,System.Byte[])">
+            <summary> 
+            添加邮件附件 
+            </summary> 
+            <param name="path">附件绝对路径</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddRecipient(System.String)">
+            <summary> 
+            添加一个收件人 
+            </summary>    
+            <param name="str">收件人地址</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddCRecipient(System.String)">
+            <summary> 
+            添加一个抄送人 
+            </summary>    
+            <param name="str">收件人地址</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddBRecipient(System.String)">
+            <summary> 
+            添加一个暗送人 
+            </summary>    
+            <param name="str">暗送人地址</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddRecipient(System.String[])">
+            <summary> 
+            添加一组收件人（不超过recipientmaxnum个），参数为字符串数组 
+            </summary> 
+            <param name="str">保存有收件人地址的字符串数组（不超过recipientmaxnum个）</param>    
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddCRecipient(System.String[])">
+            <summary> 
+            添加一组抄送人（不超过recipientmaxnum个），参数为字符串数组 
+            </summary> 
+            <param name="str">保存有抄送人地址的字符串数组（不超过recipientmaxnum个）</param>    
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.AddBRecipient(System.String[])">
+            <summary> 
+            添加一组暗送人（不超过recipientmaxnum个），参数为字符串数组 
+            </summary> 
+            <param name="str">保存有暗送人地址的字符串数组（不超过recipientmaxnum个）</param>    
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.SendCommand(System.String)">
+            <summary> 
+            发送SMTP命令 
+            </summary>    
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.RecvResponse">
+            <summary> 
+            接收SMTP服务器回应 
+            </summary> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Dialog(System.String,System.String)">
+            <summary> 
+            与服务器交互，发送一条命令并接收回应。 
+            </summary> 
+            <param name="Command">一个要发送的命令</param> 
+            <param name="errstr">如果错误，要反馈的信息</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Dialog(System.String[],System.String)">
+            <summary> 
+            与服务器交互，发送一组命令并接收回应。 
+            </summary> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.SendEmailQuick">
+            <summary>
+            分段发送邮件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.saveEml">
+            <summary>
+            分段保存原文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.saveBaseBody(System.Byte[],System.Int32,System.String@)">
+            <summary>
+            分段保存原文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.sendAttachmentBody(System.String)">
+            <summary>
+            分段发送附件正文
+            </summary>
+            <param name="szTemp"></param>
+            <param name="temp"></param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.GetOssAcc">
+            <summary>
+            下载OSS附件（為了防止超時，發送前先把文件下載）
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Send">
+            <summary> 
+            发送邮件方法，所有参数均通过属性设置。 
+            </summary> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Send(System.String)">
+            <summary> 
+            发送邮件方法 
+            </summary> 
+            <param name="smtpserver">smtp服务器信息，如"username:passworwww.smtpserver.com:25"，也可去掉部分次要信息，如"www.smtpserver.com"</param> 
+        </member>
+        <member name="M:TCRMCLASS.Mail.Smtp.Send(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary> 
+            发送邮件方法 
+            </summary> 
+            <param name="smtpserver">smtp服务器信息，如"username:passworwww.smtpserver.com:25"，也可去掉部分次要信息，如"www.smtpserver.com"</param> 
+            <param name="from">发件人mail地址</param> 
+            <param name="fromname">发件人姓名</param> 
+            <param name="to">收件人地址</param> 
+            <param name="toname">收件人姓名</param> 
+            <param name="html">是否HTML邮件</param> 
+            <param name="subject">邮件主题</param> 
+            <param name="body">邮件正文</param> 
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.MailDomain">
+            <summary> 
+            邮件服务器域名和验证信息 
+            形如："user:paswww.server.com:25"，也可省略次要信息。如"user:paswww.server.com"或"www.server.com" 
+            </summary>    
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.MailDomainPort">
+            <summary> 
+            邮件服务器端口号 
+            </summary>    
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.MailServerUserName">
+            <summary> 
+            SMTP认证时使用的用户名 
+            </summary> 
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.MailServerPassWord">
+            <summary> 
+            SMTP认证时使用的密码 
+            </summary> 
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.Priority">
+            <summary> 
+            邮件发送优先级，可设置为"High","Normal","Low"或"1","3","5" 
+            </summary> 
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.ErrorMessage">
+            <summary> 
+            错误消息反馈 
+            </summary>       
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.Logs">
+            <summary> 
+            服务器交互记录，如发现本组件不能使用的SMTP服务器，请将出错时的Logs发给我（lion-a@sohu.com），我将尽快查明原因。 
+            </summary> 
+        </member>
+        <member name="P:TCRMCLASS.Mail.Smtp.RecipientMaxNum">
+            <summary> 
+            最多收件人数量 
+            </summary> 
+        </member>
+        <member name="T:TCRMCLASS.Mail.UU">
+            <summary>
+            UU 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.DealString.NoHTML(System.String)">
+              <summary>   
+              去除HTML标记   
+              </summary>   
+              <param   name="NoHTML">包括HTML的源码   </param>   
+              <returns>已经去除后的文字</returns>   
+        </member>
+        <member name="M:TCRMCLASS.DealString.repFileName(System.String)">
+            <summary>
+            过滤非法文件名字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.HtmlShow(System.String,System.Web.HttpServerUtility)">
+            <summary>
+            把纯文件转换成可显示的html
+            </summary>
+            <param name="str"></param>
+            <param name="server"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:TCRMCLASS.DealString.HtmlShowP(System.String,System.Web.HttpServerUtility)”忽略有格式错误的 XML 注释 -->
+        <member name="M:TCRMCLASS.DealString.GetRealSizeString(System.String,System.Int32)">
+            <summary>
+            取指定长度的字符串（从左边开始）
+            </summary>
+            <param name="str">原字符</param>
+            <param name="le">大小</param>
+            <returns>处理后的字符</returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.GetRealSizeStringR(System.String,System.Int32)">
+            <summary>
+            取指定长度的字符串（从右边开始），通常为了保留文件名称的扩展名，过滤上传文件时文件名超过数据库的字段长度
+            </summary>
+            <param name="str">原字符</param>
+            <param name="le">大小</param>
+            <returns>处理后的字符</returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.TanslateString(System.String)">
+            <summary>
+            静态函数，完全转换字符串，主要用来转换大量多行字符串
+            </summary>
+            <param name="str1">输入的字符串</param>
+        </member>
+        <member name="M:TCRMCLASS.DealString.SimpleTanslate(System.String)">
+            <summary>
+            静态函数，用来转换简短的字符串
+            </summary>
+            <param name="str1">输入的字符串</param>
+        </member>
+        <member name="M:TCRMCLASS.DealString.GetInside(System.String,System.String,System.String)">
+            <summary>
+            返回指定分隔符内的字符
+            </summary>
+            <param name="str">原始字符</param>
+            <param name="c1">左分隔符</param>
+            <param name="c2">右分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.GetInsideSingle(System.String,System.String)">
+            <summary>
+            返回指定分隔符内的字符(左右分隔符相同)
+            </summary>
+            <param name="str">原始字符</param>
+            <param name="c1">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.GetChineseYN(System.String)">
+            <summary>
+            是否没有包含中文
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.DealString.HtmlStrippedText(System.String)">
+            <summary>
+            把Html转换成文本
+            </summary>
+            <param name="strhtml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.RecvWork.SetLog(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strMsg">信息</param>
+        </member>
+        <member name="M:TCRMCLASS.Mail.RecvWork.SetLog(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strMsg">信息</param>
+            <param name="strBoxId">邮箱ID</param>
+            <param name="strResult">结果</param>
+        </member>
+        <member name="T:TCRMCLASS.Resource">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.audmsgok">
+            <summary>
+              查找类似 您的邮件已经审批通过！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.language">
+            <summary>
+              查找类似 zh-cn 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Liar_info">
+            <summary>
+              查找类似 “{0}”存在骗子数据库中，不允许发送! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_DateErr">
+            <summary>
+              查找类似 系统出错0x88! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_Err">
+            <summary>
+              查找类似 密码不正确或用户不存在！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_LockMsg">
+            <summary>
+              查找类似 您的用户密码已经连续输入{0}次错误，用户已经被锁定，请联系系统管理员解锁！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_Refuse">
+            <summary>
+              查找类似 您已被拒绝访问，请与管理员联系！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_RefuseIp">
+            <summary>
+              查找类似 您的IP受限，请与管理员联系！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_RegInfo">
+            <summary>
+              查找类似 您的软件未注册，请与供应商联系！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_TimeLimit">
+            <summary>
+              查找类似 当前时间段不允许登录系统，请与管理员联系！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_UserAllow">
+            <summary>
+              查找类似 {0}不是合法用户名！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Login_UserLimit">
+            <summary>
+              查找类似 用户数超出{0}用户限制，请与供应商联系！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_null">
+            <summary>
+              查找类似 邮件记录为空！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo1">
+            <summary>
+              查找类似 等待接收 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo10">
+            <summary>
+              查找类似 共{0}封,还剩{1}封({2}[{3}]) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo11">
+            <summary>
+              查找类似 邮件服务器超时或网络繁忙！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo12">
+            <summary>
+              查找类似 共收到{0}封邮件！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo13">
+            <summary>
+              查找类似 {0}封邮件出错！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo2">
+            <summary>
+              查找类似 手动结束！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo3">
+            <summary>
+              查找类似 开始接收邮箱 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo4">
+            <summary>
+              查找类似 正在接收 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo5">
+            <summary>
+              查找类似 正在连接 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo6">
+            <summary>
+              查找类似 连接邮件服务器失败！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo7">
+            <summary>
+              查找类似 用户名错误或邮件服务器网络繁忙！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo8">
+            <summary>
+              查找类似 密码错误或邮件服务器网络繁忙！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_RecInfo9">
+            <summary>
+              查找类似 邮件服务器网络繁忙！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror1">
+            <summary>
+              查找类似 收件人地址有误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror10">
+            <summary>
+              查找类似 网络连接失败！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror11">
+            <summary>
+              查找类似 SMTP服务器验证失败，请核对用户名和密码！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror12">
+            <summary>
+              查找类似 发件人地址错误，或不能为空！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror13">
+            <summary>
+              查找类似 邮箱地址有误或对方邮箱没响应！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror14">
+            <summary>
+              查找类似 准备传送数据时失败！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror15">
+            <summary>
+              查找类似 发送信件信息时错误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror16">
+            <summary>
+              查找类似 断开连接时错误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror2">
+            <summary>
+              查找类似 抄送人地址有误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror3">
+            <summary>
+              查找类似 暗送人地址有误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror4">
+            <summary>
+              查找类似 回复地址有误！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror5">
+            <summary>
+              查找类似 发送失败！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror6">
+            <summary>
+              查找类似 发送邮件失败，与邮件服务器的连接意外中断！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror7">
+            <summary>
+              查找类似 收件人列表不能为空 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror8">
+            <summary>
+              查找类似 必须指定SMTP服务器 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Mail_senderror9">
+            <summary>
+              查找类似 服务器连接失败！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.mailtitlenull">
+            <summary>
+              查找类似 [无主题] 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Page_Power">
+            <summary>
+              查找类似 您没有足够的权限！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.Resource.Stranger_info">
+            <summary>
+              查找类似 “{0}”是陌生邮件地址，不允许发送! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:TCRMCLASS.TDataSet">
+            <summary>
+            封装DataSet，其操作类似于SqlDataReader
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.TDataSet.toXML">
+            <summary>
+            将DataSet转化成XML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TCRMCLASS.WeResult">
+            <summary>
+            将返回代码和提示信息组合成字符串
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.WeResult.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="retStr">输入结果串Code+char(18)+Msg</param>
+        </member>
+        <member name="P:TCRMCLASS.WeResult.Code">
+            <summary>
+            返回结果代码
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.WeResult.Msg">
+            <summary>
+            返回提示信息
+            </summary>
+        </member>
+        <member name="P:TCRMCLASS.WeResult.RetStr">
+            <summary>
+            返回结果组合串Code+"|"+Msg
+            </summary>
+        </member>
+        <member name="T:TCRMCLASS.ZipClass">
+            <summary>
+            压缩类
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.GetZipByte(System.Byte[],System.Int32)">
+            <summary>
+            返回压缩后的数据（TCRM专用）
+            </summary>
+            <param name="by"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.UnZipFile(System.String,System.String)">
+            <summary>
+            解压文件（TCRM专用）
+            </summary>
+            <param name="fileurl"></param>
+            <returns>解压完成的文件</returns>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipFileDictory(System.String[])">
+            <summary>
+            压缩目录
+            </summary>
+            <param name="args">数组(数组[0]: 要压缩的目录; 数组[1]: 压缩的文件名)</param>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipFileDictory(System.String,System.String,System.String,System.String,System.String,System.String[],System.String,System.Web.UI.Page)">
+            <summary>
+            压缩存储在数据库中的文件
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="args">数组(数组[0]: 要压缩的目录; 数组[1]: 压缩的文件名)</param>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipFileDictory(System.String,System.String,System.String,System.String,System.String,System.String,System.String[],System.String,System.Web.UI.Page)">
+            <summary>
+            压缩存储在数据库中的文件(双库邮箱使用)
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCol1">数据列</param>
+            <param name="strCol2">ContentType列</param>
+            <param name="strCol3">文件名列</param>
+            <param name="strCondition">定位记录的条件</param>
+            <param name="args">数组(数组[0]: 要压缩的目录; 数组[1]: 压缩的文件名)</param>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipMailDictory(System.String[],System.String,System.String)">
+            <summary>
+            压缩邮件原文
+            </summary>
+            <param name="strId">邮件ID串</param>
+            <param name="strToRar">文件名</param>
+            <param name="downloadroot">文件目录</param>
+            <returns>返回文件路径</returns>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipMailAcc(System.String,System.String,System.String)">
+            <summary>
+            压缩邮件附件
+            </summary>
+            <param name="strMailId">邮件ID</param>
+            <param name="strToRar">文件名</param>
+            <param name="downloadroot">文件目录</param>
+            <returns>返回文件路径</returns>
+        </member>
+        <member name="M:TCRMCLASS.ZipClass.ZipFile(System.String,System.String)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="FileToZip">要进行压缩的文件名</param>
+            <param name="ZipedFile">压缩后生成的压缩文件名</param>
+        </member>
+        <member name="T:TCRMCLASS.UnZipClass">
+            <summary>
+             解压类
+            </summary>
+        </member>
+        <member name="M:TCRMCLASS.UnZipClass.UnZip(System.String[])">
+            <summary>
+            解压功能(解压压缩文件到指定目录)
+            </summary>
+            <param name="args">待解压的文件</param>
+            <param name="args">指定解压目标目录</param>
+        </member>
+        <member name="T:TCRMCLASS.FileResult">
+            <summary>
+            文件保存结果类
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.IsSuccess">
+            <summary>
+            是否成功(默认true)
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.ErrMsg">
+            <summary>
+            出错信息
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileDb">
+            <summary>
+            文件数据库名
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileId">
+            <summary>
+            文件ID
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileStoreId">
+            <summary>
+            服务器目录ID
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileRoot">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileKey">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileStore">
+            <summary>
+            DB、ROOT、OSS
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileZip">
+            <summary>
+            文件是否压缩存储（1表示压缩，0表示不压缩）(默认为0）
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FileSize">
+            <summary>
+            没有压缩前的文件大小
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.PreviewPic1">
+            <summary>
+            文档模块专用
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.PreviewPic2">
+            <summary>
+            文档模块专用
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.FlashName">
+            <summary>
+            文档模块专用
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileResult.tempFileToDownload">
+            <summary>
+            临时文件
+            </summary>
+        </member>
+        <member name="T:TCRMCLASS.FileInfoEx">
+            <summary>
+            文件基本信息类
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileInfoEx.fileclass">
+            <summary>
+            0普通附件，1邮件原文，2邮件附件，3文档附件，4文档回收站
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileInfoEx.filename">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileInfoEx.filetype">
+            <summary>
+            文件的mime类型
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileInfoEx.mailboxid">
+            <summary>
+            邮箱ID，邮件原文专用
+            </summary>
+        </member>
+        <member name="F:TCRMCLASS.FileInfoEx.box">
+            <summary>
+            邮箱原文专用，(R或S) R表示收件箱、S表示发件箱
+            </summary>
+        </member>
+    </members>
+</doc>
