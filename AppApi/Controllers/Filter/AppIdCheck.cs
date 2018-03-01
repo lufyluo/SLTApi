@@ -35,7 +35,7 @@ namespace AppApi.Controllers.Filter
         private string AppPermissionCheck()
         {
             if (string.IsNullOrEmpty(GP.appid))
-                return Tools.BackCode.AppidError;
+                return Tools.BackCode.Success;
             var permission = db.Database.SqlQuery<Application>(
                 "select Id,AppId,[Description],[Available] from [dbo].[Application] where Appid='" + GP.appid + "'").FirstOrDefault();
             if (permission == null)
