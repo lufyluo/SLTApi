@@ -20,12 +20,12 @@ namespace AppApi.Controllers
         [HttpPost]
         public Models.BackParameter Get([FromBody]Models.Mail.Gain.Get G)
         {
-
+            
             string UserId = G.UserId;
 
             int MailId = G.MailId;
-
-            Models.Mail.Back.Get BG = dbm.Database.SqlQuery<Models.Mail.Back.Get>("Select top 1 * from Mail_T where id=" + MailId).FirstOrDefault();
+            var bg = SqlHelper<Models.Mail.Back.Get>.GetDataReader("Select top 1 * from Mail_T where id=" + MailId, dbm.Database.Connection.ConnectionString);
+            Models.Mail.Back.Get BG = SqlHelper<Models.Mail.Back.Get>.Map(bg.Tables["Table"].Rows[0]);
 
             IEnumerable<Models.Mail.Back.item.File> BiF = dbm.Database.SqlQuery<Models.Mail.Back.item.File>("Select id=id,name=FileName,size=FileSize from MailAcc_T where DownloadId!='' and DownloadId is not null and mailid=" + MailId);
 

@@ -1011,6 +1011,7 @@
     <Compile Include="Tools\Select.cs" />
     <Compile Include="Tools\Sign.cs" />
     <Compile Include="Tools\SqlClass.cs" />
+    <Compile Include="Tools\SqlHelper.cs" />
     <Compile Include="Tools\Where.cs" />
     <Compile Include="App_Data\UploadTemp_T.cs">
       <DependentUpon>TCRMDOC.tt</DependentUpon>
