@@ -50,11 +50,9 @@ namespace AppApi.Controllers
         [HttpPost]
         public Models.BackParameter Get([FromBody]Models.Client.Gain.Get G)
         {
-            Tools.Where where = new Tools.Where();
-            where.And("id=" + G.ClientId);
-            String username = Tools.Base.GetUserName(G.UserId);// db.User_T.Where(uw => uw.UserId == UserId).Select(us => us.UserName).FirstOrDefault();
-            where.And(String.Format("'{0}' in (select Value from [dbo].[SplitString_F](sale,',',1))", username));
-            Models.Client.Back.Get BGC = db.Database.SqlQuery<Models.Client.Back.Get>("select * from Client_T " + where.ToWhere()).FirstOrDefault();
+            Models.Client.Back.Get BGC = db.Database.SqlQuery<Models.Client.Back.Get>($@"select C.* from Client_T  C
+                INNER JOIN[ClientSale_T] CS
+                on C.Id = CS.ClientId and cs.UserId = '{G.UserId}' and CS.ClientId = {G.ClientId}").FirstOrDefault();
             if (BGC != null)
             {
                 BP.back = BGC;
