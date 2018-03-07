@@ -15,7 +15,7 @@ namespace AppApi.App_Data
     public partial class AppPermission
     {
         public string AppId { get; set; }
-        public int UserId { get; set; }
-        public Nullable<byte> Available { get; set; }
+        public string UserId { get; set; }
+        public byte Available { get; set; }
     }
 }

@@ -17,6 +17,6 @@ namespace AppApi.App_Data
         public int Id { get; set; }
         public string AppId { get; set; }
         public string Description { get; set; }
-        public Nullable<byte> Available { get; set; }
+        public byte Available { get; set; }
     }
 }
