@@ -304,6 +304,7 @@
     <Compile Include="App_Data\CompanyInfo_T.cs">
       <DependentUpon>TCRM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cache\Core\ICacheService.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\BaseControllers.cs" />
     <Compile Include="Controllers\ClientController.cs" />

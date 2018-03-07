@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -17,9 +18,13 @@ namespace AppApi.Controllers.Filter
     public class AppIdCheck : Permissions
     {
         private static TCRMEntities db = new TCRMEntities();
-
+        private static readonly string LoginStrategy = ConfigurationManager.AppSettings["LoginStrategy"] ??"-1";
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
+            if (LoginStrategy == "-1")//允许全部
+            {
+                return;
+            }
             base.OnActionExecuting(actionContext);
             
             String code = AppPermissionCheck();
@@ -42,9 +47,9 @@ namespace AppApi.Controllers.Filter
             {
                 SqlClass.Insert In = new SqlClass.Insert("Application");
                 In.Revise("AppId", GP.appid);
-                In.Revise("Available", 1);
+                In.Revise("Available", 0);
                 db.Database.SqlQuery<Decimal>(In.ToString()).FirstOrDefault();
-                return Tools.BackCode.Success;
+                return LoginStrategy == "-1"?Tools.BackCode.Success: Tools.BackCode.AppidForbid;
             }
 
             return permission?.Available == 0 ? Tools.BackCode.AppidForbid : Tools.BackCode.Success;
