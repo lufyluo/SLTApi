@@ -73,7 +73,7 @@
             <PropertyRef Name="UserId" />
           </Key>
           <Property Name="AppId" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" Nullable="false" />
           <Property Name="Available" Type="tinyint" />
         </EntityType>
         <!--生成过程中发现错误:
@@ -7572,7 +7572,7 @@ FROM [dbo].[WarningSqlConfig_T] AS [WarningSqlConfig_T]</DefiningQuery>
             <PropertyRef Name="UserId" />
           </Key>
           <Property Name="AppId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" />
           <Property Name="Available" Type="Byte" />
         </EntityType>
         <EntityType Name="BankInfo_T">

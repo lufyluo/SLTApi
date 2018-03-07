@@ -104,7 +104,7 @@ namespace AppApi.Controllers.Filter
             In.Revise("AppId", GP.appid);
             In.Revise("UserId", GP.UserId);
             In.Revise("Available", 1);
-            db.Database.SqlQuery<Decimal>(In.ToString()).FirstOrDefault();
+            db.Database.SqlQuery<decimal?>(In.ToString()).FirstOrDefault();
         }
         private void LoginStateLog(GainParameter gp,string state)
         {

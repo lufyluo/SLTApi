@@ -1,2 +1,5 @@
 [Header] 2018-02-12 17:48:34,354 [6] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£º
-[Footer] 
+[Footer] [Header] [Footer] [Header] 2018-03-07 20:09:08,474 [18] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£º2ad6a762154ef10799aa231fa75c1cf3e,login result code£º0000
+2018-03-07 20:09:57,226 [5] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£º2ad6a762154ef10799aa231fa75c1cf3e,login result code£º0000
+[Footer] [Header] 2018-03-07 20:12:25,436 [25] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£ºlufytest,login result code£º0022
+[Footer] [Header] 2018-03-07 20:13:33,887 [15] INFO  LogFileAppender [(null)]  - µÇÂ½ÕËºÅ£ºadmin£¬appid£ºlufytest,login result code£º0000
