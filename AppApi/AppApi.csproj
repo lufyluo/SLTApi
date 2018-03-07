@@ -310,6 +310,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\Filter\AppIdCheck.cs" />
+    <Compile Include="Controllers\Filter\LargeMailFilter.cs" />
     <Compile Include="Controllers\FolderController.cs" />
     <Compile Include="Controllers\huanxin.cs" />
     <Compile Include="Controllers\MailBoxController.cs" />
@@ -1004,7 +1005,9 @@
     <Compile Include="Tools\Config.cs" />
     <Compile Include="Tools\Czexcel.cs" />
     <Compile Include="Tools\file.cs" />
+    <Compile Include="Tools\FileWriter.cs" />
     <Compile Include="Tools\Log.cs" />
+    <Compile Include="Tools\MailConfig.cs" />
     <Compile Include="Tools\newpic.cs" />
     <Compile Include="Tools\OperationList.cs" />
     <Compile Include="Tools\OrderBy.cs" />

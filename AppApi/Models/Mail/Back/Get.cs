@@ -17,6 +17,7 @@ namespace AppApi.Models.Mail
             private string _mailtype;
             private String _MailDate;
             private String _SendDate;
+            public string Url { get; set; }
             public int id
             {
                 get; set;
