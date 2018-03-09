@@ -24,11 +24,16 @@ namespace AppApi.Controllers
             string UserId = G.UserId;
 
             int MailId = G.MailId;
-            var bg = SqlHelper<Models.Mail.Back.Get>.GetDataReader("Select top 1 * from Mail_T where id=" + MailId, dbm.Database.Connection.ConnectionString);
-            Models.Mail.Back.Get BG = SqlHelper<Models.Mail.Back.Get>.Map(bg.Tables["Table"].Rows[0]);
+            var hasEmailContentFile = new MailSizeHandler().MailHtmlFileCheck(MailId);
+            Models.Mail.Back.Get BG = GetEmail(MailId,hasEmailContentFile);
 
             IEnumerable<Models.Mail.Back.item.File> BiF = dbm.Database.SqlQuery<Models.Mail.Back.item.File>("Select id=id,name=FileName,size=FileSize from MailAcc_T where DownloadId!='' and DownloadId is not null and mailid=" + MailId);
-
+            if (hasEmailContentFile)
+            {
+                BG.file = BiF.ToList(); ;
+                BP.back = BG;
+                return BP;
+            }
             //将图片转换为base64让图片直接读取
             //获取图片contectid    
             IEnumerable<MailAcc_T> pic = dbm.MailAcc_T.Where(maw => maw.MailId == MailId && maw.ContentID.Length > 0).ToList();//获取所有pic
@@ -49,11 +54,128 @@ namespace AppApi.Controllers
 
                 }
             }
-            BG.htmlbody = html;
+            
+            var url = new MailSizeHandler().ContentSizeCheck(html,MailId+".html");
+            BG.htmlbody = string.IsNullOrEmpty(url)? html :"";
+            BG.Url = url;
             BG.file = BiF.ToList(); ;
             BP.back = BG;
             return BP;
         }
+        private Models.Mail.Back.Get GetEmail(int id,bool hasLargeEmailContent)
+        {
+            string sql = GetEmailGetSQL(id, hasLargeEmailContent);
+            var bg = SqlHelper<Models.Mail.Back.Get>.GetDataReader(sql,
+                dbm.Database.Connection.ConnectionString);
+            Models.Mail.Back.Get BG = SqlHelper<Models.Mail.Back.Get>.Map(bg.Tables["Table"].Rows[0]);
+            if (hasLargeEmailContent)
+            {
+                BG.Url = MailConfig.Folder + "/" + id + ".html";
+            }
+            return BG;
+        }
+
+        private string GetEmailGetSQL(int id,bool isLargeEmailContent = true)
+        {
+            var sql = "";
+            if (!isLargeEmailContent)
+            {
+                sql = "Select top 1 * from Mail_T where id=" + id;
+                
+            }
+            else
+            {
+                sql = @"Select  [Id]
+                    ,[guid]
+                    ,[MailBoxId]
+                    ,[ReadMode]
+                    ,[UIDL]
+                    ,[Inside]
+                    ,[FromName]
+                    ,[FromEmail]
+                    ,[Subject]
+                    ,[SendDate]
+                    ,[MailType]
+                    ,[itFrom]
+                    ,[itTo]
+                    ,[cc]
+                    ,[bcc]
+                    ,[TextBody]
+                --,[HtmlBody]
+                    ,[ReplyTo]
+                    ,[Read]
+                    ,[ReadUID]
+                    ,[BoxBase]
+                    ,[Box]
+                    ,[RootId]
+                    ,[RecDate]
+                    ,[priority]
+                    ,[RE]
+                    ,[Notification]
+                    ,[notify]
+                    ,[star]
+                    ,[redflag]
+                    ,[UID]
+                    ,[ischeck]
+                    ,[checkmsg]
+                    ,[SPUserId]
+                    ,[SPUserName]
+                    ,[SPTime]
+                    ,[SUID]
+                    ,[IP]
+                    ,[Area]
+                    ,[Bak]
+                    ,[BaseDb]
+                    ,[BaseId]
+                    ,[MailDate]
+                    ,[RevUserId]
+                    ,[RevUserName]
+                    ,[MailSize]
+                    ,[AccCount]
+                    ,[REALFROM]
+                    ,[ReturnPath]
+                    ,[MailLabel]
+                    ,[CreateTime]
+                    ,[ConType]
+                    ,[Type]
+                    ,[RFMailId]
+                    ,[LocalTrack]
+                    ,[RemoteTrack]
+                    ,[IsReceipt]
+                    ,[ModId]
+                    ,[TopTime]
+                    ,[RemindTime]
+                    ,[PfDate]
+                    ,[IsDeal]
+                    ,[CommCount]
+                    ,[CommReadUID]
+                    ,[ChanceId]
+                    ,[OpenTime]
+                    ,[OpenIp]
+                    ,[OpenArea]
+                    ,[OpenNowTime]
+                    ,[OpenCount]
+                    ,[FromUID]
+                    ,[FromBoxId]
+                    ,[FromMailId]
+                    ,[FromRE]
+                    ,[JzMailTm]
+                    ,[JzMailBoxId]
+                    ,[JzBox]
+                    ,[JzRootId]
+                    ,[FileStoreId]
+                    ,[FileKey]
+                    ,[GdClientId]
+                    ,[FileRoot]
+                    ,[FileStore]
+                    ,[FileZip]
+                    ,[SetDeal]
+                    ,[GdClientRootId] from Mail_T where id=" + id;
+            }
+            return sql;
+        }
+
+
         [Check]
         [HttpPost]
         public Models.BackParameter GetClientmail([FromBody]Models.Mail.Gain.Get G)

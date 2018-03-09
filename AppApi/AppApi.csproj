@@ -1008,6 +1008,7 @@
     <Compile Include="Tools\FileWriter.cs" />
     <Compile Include="Tools\Log.cs" />
     <Compile Include="Tools\MailConfig.cs" />
+    <Compile Include="Tools\MailSizeHandler.cs" />
     <Compile Include="Tools\newpic.cs" />
     <Compile Include="Tools\OperationList.cs" />
     <Compile Include="Tools\OrderBy.cs" />
