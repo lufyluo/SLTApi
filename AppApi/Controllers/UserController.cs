@@ -383,35 +383,21 @@ namespace AppApi.Controllers
         {
             try
             {
-                User_T BiM = db.Database.SqlQuery<User_T>("select * from [dbo].[User_T] where  userid='" + GP.UserId + "'").FirstOrDefault();
-                IEnumerable<Models.User.Gain.userallmenu> BiMs;
-                List<Models.User.Gain.userallmenu> BiMjm = new List<Models.User.Gain.userallmenu>();
-                if (BiM.UserType == 1)
+                var sql = $@"select u.* from [dbo].[User_T] u
+left join (SELECT * FROM dbo.GetUnderling_F('{GP.UserId}',1)) gu on u.UserId = gu.UserId";
+                var subs = db.Database.SqlQuery<Models.User.Gain.userallmenu>(sql).ToList();
+                if (!subs.Any())
                 {
-                    BiMs = db.Database.SqlQuery<Models.User.Gain.userallmenu>("select * from [dbo].[User_T] where  BranchId=" + BiM.BranchId + " and userid <>'" + GP.UserId + "'");
-                    
-                     foreach (Models.User.Gain.userallmenu bison in BiMs)
-                     {
-                         bison.Password = Tools.Base.GetmD5jm(bison.Password);
-                         BiMjm.Add(bison);
-                     }
-                     
-                     BP.back = BiMjm;
-                }
-                else if (BiM.UserType == 2)
-                {
-                    BiMs = db.Database.SqlQuery<Models.User.Gain.userallmenu>("select * from [dbo].[User_T] where  DeptId=" + BiM.DeptId + " and userid <>'" + GP.UserId + "'");
-                     BP.back = BiMs;
-                     foreach (Models.User.Gain.userallmenu bison in BiMs)
-                     {
-                         bison.Password = Tools.Base.GetmD5jm(bison.Password);
-                         BiMjm.Add(bison);
-                     }
-                     BP.back = BiMjm;
-                }
-                else
                     BP.back = "你没有下属";
-
+                    return BP;
+                }
+                List<Models.User.Gain.userallmenu> BiMjm = new List<Models.User.Gain.userallmenu>();
+                foreach (Models.User.Gain.userallmenu bison in subs)
+                {
+                    bison.Password = Tools.Base.GetmD5jm(bison.Password);
+                    BiMjm.Add(bison);
+                }
+                BP.back = BiMjm;
             }
             catch (Exception ee)
             {
