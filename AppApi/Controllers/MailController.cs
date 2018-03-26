@@ -9,6 +9,7 @@ using AppApi.Filter;
 using AppApi.Tools;
 using System.Data;
 using System.Configuration;
+using AppApi.Log;
 
 namespace AppApi.Controllers
 {
@@ -60,6 +61,7 @@ namespace AppApi.Controllers
             BG.Url = url;
             BG.file = BiF.ToList(); ;
             BP.back = BG;
+            Logger.Log.Info($"Email id is :{MailId} and returns url is : {url??"empty"}");
             return BP;
         }
         private Models.Mail.Back.Get GetEmail(int id,bool hasLargeEmailContent)
