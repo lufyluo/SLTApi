@@ -1129,6 +1129,8 @@
     <Content Include="Log4net.config" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
     <None Include="Properties\PublishProfiles\iis.pubxml" />
     <EntityDeploy Include="App_Data\TCRMFILE.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -1176,7 +1178,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1299</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -21,12 +21,12 @@ namespace AppApi.Controllers
         [HttpPost]
         public Models.BackParameter Get([FromBody]Models.Mail.Gain.Get G)
         {
-            
+
             string UserId = G.UserId;
 
             int MailId = G.MailId;
             var hasEmailContentFile = new MailSizeHandler().MailHtmlFileCheck(MailId);
-            Models.Mail.Back.Get BG = GetEmail(MailId,hasEmailContentFile);
+            Models.Mail.Back.Get BG = GetEmail(MailId, hasEmailContentFile);
 
             IEnumerable<Models.Mail.Back.item.File> BiF = dbm.Database.SqlQuery<Models.Mail.Back.item.File>("Select id=id,name=FileName,size=FileSize from MailAcc_T where DownloadId!='' and DownloadId is not null and mailid=" + MailId);
             if (hasEmailContentFile)
@@ -44,27 +44,27 @@ namespace AppApi.Controllers
             {
                 TCRMCLASS.FileClass fc = new TCRMCLASS.FileClass();
                 string strtemppath = fc.GetDownloadUrl("2", picson.Id.ToString());
-                byte[] wj = FileBinaryConvertHelper.FiletoBytes(strtemppath);                
+                byte[] wj = FileBinaryConvertHelper.FiletoBytes(strtemppath);
                 FileBinaryConvertHelper.DeleteFile(strtemppath);
                 try
                 {
                     html = html.Replace(String.Format("cid:{0}", picson.ContentID), String.Format("data:image/{0};base64,", Base.imgformat[picson.FileName.Substring(picson.FileName.LastIndexOf(".") + 1).ToLower()]) + Convert.ToBase64String(wj));
                 }
-                catch(Exception ee)
+                catch (Exception ee)
                 {
 
                 }
             }
-            
-            var url = new MailSizeHandler().ContentSizeCheck(html,MailId+".html");
-            BG.htmlbody = string.IsNullOrEmpty(url)? html :"";
+
+            var url = new MailSizeHandler().ContentSizeCheck(html, MailId + ".html");
+            BG.htmlbody = string.IsNullOrEmpty(url) ? html : "";
             BG.Url = url;
             BG.file = BiF.ToList(); ;
             BP.back = BG;
-            Logger.Log.Info($"Email id is :{MailId} and returns url is : {url??"empty"}");
+            Logger.Log.Info($"Email id is :{MailId} and returns url is : {url ?? "empty"}");
             return BP;
         }
-        private Models.Mail.Back.Get GetEmail(int id,bool hasLargeEmailContent)
+        private Models.Mail.Back.Get GetEmail(int id, bool hasLargeEmailContent)
         {
             string sql = GetEmailGetSQL(id, hasLargeEmailContent);
             var bg = SqlHelper<Models.Mail.Back.Get>.GetDataReader(sql,
@@ -77,13 +77,13 @@ namespace AppApi.Controllers
             return BG;
         }
 
-        private string GetEmailGetSQL(int id,bool isLargeEmailContent = true)
+        private string GetEmailGetSQL(int id, bool isLargeEmailContent = true)
         {
             var sql = "";
             if (!isLargeEmailContent)
             {
                 sql = "Select top 1 * from Mail_T where id=" + id;
-                
+
             }
             else
             {
@@ -183,19 +183,19 @@ namespace AppApi.Controllers
         public Models.BackParameter GetClientmail([FromBody]Models.Mail.Gain.Get G)
         {
             Nullable<int> cclientid;
-            if (G.clientid == null||G.clientid==0)
+            if (G.clientid == null || G.clientid == 0)
             {
                 string UserId = G.UserId;
 
                 int MailId = G.MailId;
-                 cclientid = dbm.Database.SqlQuery<Nullable<int>>("select ClientId from mailclient_t where ClientMailId=" + MailId + "").FirstOrDefault();
+                cclientid = dbm.Database.SqlQuery<Nullable<int>>("select ClientId from mailclient_t where ClientMailId=" + MailId + "").FirstOrDefault();
                 if (cclientid == null)
                 {
                     BP.back = "该用户不是客户";
                     return BP;
                 }
             }
-            else  cclientid=G.clientid;
+            else cclientid = G.clientid;
             string sqlstr = "select * from mail_t where id in (select clientmailid from mailclient_t where clientid=" + cclientid + ")";
             IEnumerable<Models.Mail.Back.Get> BG = dbm.Database.SqlQuery<Models.Mail.Back.Get>(sqlstr);
             BP.back = BG;
@@ -208,7 +208,7 @@ namespace AppApi.Controllers
 
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start(); //  开始监视代码
- 
+
             int uid = db.Database.SqlQuery<int>("select uid from  [dbo].[User_T] where userid='" + GL.UserId + "'").FirstOrDefault();
             string UserId = GL.UserId;
             int BoxId = GL.BoxId;
@@ -249,6 +249,7 @@ namespace AppApi.Controllers
                     // ma = db.Mail_T.Where(m => m.MailBoxId == BoxId);//筛选邮件
                 }
             }
+          
             String sql = "";
             string MAIL_SORT = db.Database.SqlQuery<string>("select isnull(Setting,'') from [dbo].UserConfig_T where UserId='" + UserId + "' and ParamName='MAIL_SORT'").FirstOrDefault();
             switch (MAIL_SORT)
@@ -287,7 +288,7 @@ namespace AppApi.Controllers
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                       // where.And("Box <>''");
+                        // where.And("Box <>''");
                         break;
                     case "NB": //内部邮件
                         // ma = ma.Where(mw => mw.Inside == 1 && mw.Box != "LJX" && mw.Box != "" && mw.Box != "YSC" && mw.Box != "CGX");
@@ -295,7 +296,7 @@ namespace AppApi.Controllers
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                     //   where.And("Box <>''");
+                        //   where.And("Box <>''");
                         break;
                     case "XP": //询盘邮件
                         // ma = ma.Where(mw => mw.Inq == 1 && mw.Box != "LJX" && mw.Box != "" && mw.Box != "YSC" && mw.Box != "CGX");
@@ -312,17 +313,17 @@ namespace AppApi.Controllers
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                       // where.And("Box <>''");
+                        // where.And("Box <>''");
                         break;
 
                     case "YTX":
                         //ma = ma.Where(mw => mw.RemindTime != null && mw.Box != "LJX" && mw.Box != "" && mw.Box != "YSC" && mw.Box != "CGX");
                         where.And("Id in (select ExId from " + dbname + ".dbo.Pending_T where Start_date<getdate() and MenuNo='AA')");
-                      //  where.And("RemindTime is null");
+                        //  where.And("RemindTime is null");
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                      //  where.And("Box <>''");
+                        //  where.And("Box <>''");
                         break;
                     case "HQYJ":
                         // ma = ma.Where(mw => mw.redflag == "1" && mw.Box != "LJX" && mw.Box != "" && mw.Box != "YSC" && mw.Box != "CGX");
@@ -330,7 +331,7 @@ namespace AppApi.Controllers
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                       // where.And("Box <>''");
+                        // where.And("Box <>''");
                         break;
                     case "BQYJ":
                         // ma = ma.Where(mw => mw.MailLabel.Contains("maillabel-") && mw.Box != "LJX" && mw.Box != "" && mw.Box != "YSC" && mw.Box != "CGX");
@@ -394,11 +395,11 @@ namespace AppApi.Controllers
                         where.And("SUID = " + uid + "");
                         break;
                     case "DTX":  //待提醒
-                        where.And("Id in (select ExId from "+dbname+".dbo.Pending_T where Start_date>getdate() and MenuNo='AA')");
+                        where.And("Id in (select ExId from " + dbname + ".dbo.Pending_T where Start_date>getdate() and MenuNo='AA')");
                         where.And("Box <>'CGX'");
                         where.And("Box <>'LJX'");
                         where.And("Box <>'YSC'");
-                      //  where.And("Box <>''");
+                        //  where.And("Box <>''");
                         break;
                     case "DFF": //待分发邮件
                         string strMyMailBoxId = db.Database.SqlQuery<string>("select dbo.GetFFMailBoxIdByUserId_F('" + UserId + "')").FirstOrDefault();
@@ -416,7 +417,7 @@ namespace AppApi.Controllers
                         where.And("Box <>'LJX'");
                         where.And(" Box <>'YSC'");
                         where.And("Box ='SJX'");
-                        
+
                         break;
                     case "YFS": //已发送   
                         where.And("Box ='YFS'");
@@ -435,7 +436,7 @@ namespace AppApi.Controllers
                         break;
                     case "CLIENT":
                         select.Addtablejoin(" left join [dbo].[MailClient_T] on id=clientmailid");
-                        where.And("clientid="+GL.clientid+"");
+                        where.And("clientid=" + GL.clientid + "");
                         break;
                     default:
                         if (Act.IndexOf("WJJ") >= 0)
@@ -605,7 +606,6 @@ namespace AppApi.Controllers
             List<string> MailBoxList = db.Database.SqlQuery<string>(sql).ToList();
             Tools.Where where = new Where();
             where.And(C.Where);
-            where.Or($"GdClientId={C.clientid}");
             string o = OrderBy.Desc(C.OrderBy);
             IEnumerable<Models.Mail.Back.item.Mail> BiM = null;
             switch (Operation.ToLower())
@@ -1034,10 +1034,10 @@ namespace AppApi.Controllers
             try
             {
                 Nullable<int> BiM = dbm.Database.SqlQuery<Nullable<int>>("select isdeal from Mail_T where id=" + G.MailId + "", "").FirstOrDefault();
-                 if (BiM==null||BiM==0)
+                if (BiM == null || BiM == 0)
                 {
-                    if(dbm.Database.ExecuteSqlCommand("update Mail_T set isdeal=1  where id=" + G.MailId + "")==1)
-                         BP.back = G.MailId+"  修改成功";
+                    if (dbm.Database.ExecuteSqlCommand("update Mail_T set isdeal=1  where id=" + G.MailId + "") == 1)
+                        BP.back = G.MailId + "  修改成功";
                     else
                         BP.back = G.MailId + "  不存在";
                 }
@@ -1073,7 +1073,7 @@ namespace AppApi.Controllers
                             bimson.Html = bimson.Html.Replace(String.Format("cid:{0}", file.DownloadID), String.Format("data:image/{0};base64,", Base.imgformat[file.FileName.Substring(file.FileName.LastIndexOf(".") + 1).ToLower()]) + Convert.ToBase64String(wj));
                         }
                     }
-                    catch(Exception ee)
+                    catch (Exception ee)
                     {
 
                     }
