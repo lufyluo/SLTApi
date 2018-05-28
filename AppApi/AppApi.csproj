@@ -46,21 +46,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aliyun.OSS">
-      <HintPath>..\..\..\vs引用集\bin\Aliyun.OSS.dll</HintPath>
+      <HintPath>..\otherDll\Aliyun.OSS.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="GetuiServerApiSDK, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\GetuiServerApiSDK.dll</HintPath>
+      <HintPath>..\otherDll\GetuiServerApiSDK.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers, Version=2.4.1.473, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\51613\Desktop\新建文件夹 (2)\Project1\Project1\AppApi\bin\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\otherDll\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\..\..\vs引用集\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\otherDll\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -71,19 +71,19 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NPOI">
-      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.dll</HintPath>
+      <HintPath>..\otherDll\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OOXML">
-      <HintPath>..\..\..\vs引用集\Release\Net40\NPOI.OOXML.dll</HintPath>
+      <HintPath>..\otherDll\NPOI.OOXML.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.OpenXml4Net.dll</HintPath>
+      <HintPath>..\otherDll\NPOI.OpenXml4Net.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>..\..\..\vs引用集\Release\Net20\NPOI.OpenXmlFormats.dll</HintPath>
+      <HintPath>..\otherDll\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="Org.Mentalis.Security">
-      <HintPath>..\..\..\vs引用集\Org.Mentalis.Security.dll</HintPath>
+      <HintPath>..\otherDll\Org.Mentalis.Security.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -151,7 +151,7 @@
     </Reference>
     <Reference Include="TCRMCLASS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\51613\Desktop\TCRMCLASS.dll</HintPath>
+      <HintPath>..\otherDll\TCRMCLASS.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -1176,7 +1176,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1299</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
