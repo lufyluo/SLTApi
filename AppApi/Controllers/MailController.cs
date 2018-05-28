@@ -605,7 +605,7 @@ namespace AppApi.Controllers
             List<string> MailBoxList = db.Database.SqlQuery<string>(sql).ToList();
             Tools.Where where = new Where();
             where.And(C.Where);
-            where.Or($" GdClientId={C.clientid}");
+            where.Or($"GdClientId={C.clientid}");
             string o = OrderBy.Desc(C.OrderBy);
             IEnumerable<Models.Mail.Back.item.Mail> BiM = null;
             switch (Operation.ToLower())
