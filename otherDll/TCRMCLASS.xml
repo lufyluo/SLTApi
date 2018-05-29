@@ -468,6 +468,14 @@
             <param name="pass">密码</param>
             <returns>true或false</returns>
         </member>
+        <member name="M:TCRMCLASS.DBClass.LoginMd5(System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            用户验证
+            </summary>
+            <param name="name">用户名</param>
+            <param name="pass">密码(md5)</param>
+            <returns>true或false</returns>
+        </member>
         <member name="M:TCRMCLASS.DBClass.GetUserTime(System.String)">
             <summary>
             判断有没有时间限制
@@ -1505,6 +1513,11 @@
             </summary>
             <param name="body">要编码的正文字符串</param>
             <returns></returns>
+        </member>
+        <member name="M:TCRMCLASS.Mail.SendWork.PigeonholeMailAuto(System.String)">
+            <summary>
+            归并邮件
+            </summary>
         </member>
         <member name="M:TCRMCLASS.Mail.SendWork.SendInsideMail(System.String)">
             <summary>

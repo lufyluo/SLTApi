@@ -1009,6 +1009,7 @@
     <Compile Include="Tools\Log.cs" />
     <Compile Include="Tools\MailConfig.cs" />
     <Compile Include="Tools\MailSizeHandler.cs" />
+    <Compile Include="Tools\MailTool.cs" />
     <Compile Include="Tools\newpic.cs" />
     <Compile Include="Tools\OperationList.cs" />
     <Compile Include="Tools\OrderBy.cs" />
@@ -1178,7 +1179,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1299</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

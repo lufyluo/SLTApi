@@ -1,5 +1,6 @@
 ﻿using AppApi.App_Data;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,14 +10,17 @@ using AppApi.Filter;
 using AppApi.Tools;
 using System.Data;
 using System.Configuration;
+using System.Data.SqlClient;
 using AppApi.Log;
+using AppApi.Models;
+using TCRMCLASS;
 
 namespace AppApi.Controllers
 {
     public class MailController : BaseControllers
     {
         private static string dbname = System.Web.Configuration.WebConfigurationManager.AppSettings["dbname"];
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Get([FromBody]Models.Mail.Gain.Get G)
@@ -178,7 +182,7 @@ namespace AppApi.Controllers
         }
 
 
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter GetClientmail([FromBody]Models.Mail.Gain.Get G)
         {
@@ -201,14 +205,17 @@ namespace AppApi.Controllers
             BP.back = BG;
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter GetList([FromBody]Models.Mail.Gain.GetList GL)
         {
 
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-            stopwatch.Start(); //  开始监视代码
-
+            stopwatch.Start(); //  开始监视代码      
+            if (GL.Act.ToUpper() == "CLIENT")
+            {
+                return LoadClientEmails(GL.clientid, GL.PageIndex);
+            }
             int uid = db.Database.SqlQuery<int>("select uid from  [dbo].[User_T] where userid='" + GL.UserId + "'").FirstOrDefault();
             string UserId = GL.UserId;
             int BoxId = GL.BoxId;
@@ -436,7 +443,7 @@ namespace AppApi.Controllers
                         break;
                     case "CLIENT":
                         select.Addtablejoin(" left join [dbo].[MailClient_T] on id=clientmailid");
-                        where.And("clientid=" + GL.clientid + "");
+                        where.Or("clientid=" + GL.clientid + "");
                         break;
                     default:
                         if (Act.IndexOf("WJJ") >= 0)
@@ -595,7 +602,37 @@ namespace AppApi.Controllers
                 throw;
             }
         }
-        [Check]
+
+        private BackParameter LoadClientEmails(string glClientid,int PageIndex)
+        {
+            try
+            {
+                MailTool mailTool = new MailTool(db);
+                var sql = mailTool.BuildSQL(glClientid);//数据分页
+                string strSort = " order by TopTime desc,RecDate desc";//排序条件
+
+                IEnumerable<Models.Mail.Back.item.Mail> BiM = dbm.Database.SqlQuery<Models.Mail.Back.item.Mail>($"select * from ({sql}) p {strSort}", "");
+                var count = dbm.Database.SqlQuery<int>("select count(1) from (" +sql + ") s").FirstOrDefault();
+                int unread = dbm.Database.SqlQuery<int>("select count('unread') from (" + sql + ") s where  s.[Read] = '否'").FirstOrDefault();
+                Models.Mail.Back.GetList BGL = new Models.Mail.Back.GetList();
+                BGL.count = count;
+                BGL.index = PageIndex;
+                BGL.unread = unread;
+                BGL.list = BiM;
+                BP.back = BGL;
+                return BP;
+            }
+            catch (Exception e)
+            {
+                BP.code = "xxxx";
+                BP.back = e.ToString();
+                return BP;
+                throw;
+            }
+        }
+
+
+        [AppApi.Filter.Check]
         [Client]
         [HttpPost]
         public Models.BackParameter Client([FromBody]Models.Mail.Gain.Client C, [FromUri]String Operation)
@@ -630,7 +667,7 @@ namespace AppApi.Controllers
             BP.back = BGL;
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Contact]
         [HttpPost]
         public Models.BackParameter Contact([FromBody]Models.Mail.Gain.Contact C, [FromUri]String Operation)
@@ -665,7 +702,7 @@ namespace AppApi.Controllers
             BP.back = BGL;
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Delete([FromBody]Models.Mail.Gain.Delete D)
@@ -674,7 +711,7 @@ namespace AppApi.Controllers
             BP.back = "删除成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail("Id")]
         [FileCreater]
         [HttpPost]
@@ -712,7 +749,7 @@ namespace AppApi.Controllers
             }
 
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter Add([FromBody]Models.Mail.Gain.Add A)
         {
@@ -774,7 +811,7 @@ namespace AppApi.Controllers
             BP.back = new Models.Mail.Back.Add() { id = (int)Id, msg = "新建邮件成功" };
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Star([FromBody]Models.Mail.Gain.Star S)
@@ -783,7 +820,7 @@ namespace AppApi.Controllers
             BP.back = (S.Is ? "标记" : "取消") + "星标成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter RedFlag([FromBody]Models.Mail.Gain.RedFlag RF)
@@ -792,7 +829,7 @@ namespace AppApi.Controllers
             BP.back = (RF.Is ? "标记" : "取消") + "红旗成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Top([FromBody]Models.Mail.Gain.Top T)
@@ -801,7 +838,7 @@ namespace AppApi.Controllers
             BP.back = (T.Is ? "标记" : "取消") + "置顶成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Read([FromBody]Models.Mail.Gain.Read R)
@@ -810,7 +847,7 @@ namespace AppApi.Controllers
             BP.back = (R.Is ? "标记" : "取消") + "已读成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter Move([FromBody]Models.Mail.Gain.Move M)
         {
@@ -818,7 +855,7 @@ namespace AppApi.Controllers
             BP.back = "移动成功";
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [Mail]
         [HttpPost]
         public Models.BackParameter Send([FromBody]Models.Mail.Gain.Send S)
@@ -862,7 +899,7 @@ namespace AppApi.Controllers
             BP.back = BS;
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [MailBox]
         [HttpPost]
         public Models.BackParameter Recv([FromBody]Models.Mail.Gain.Recv R)
@@ -889,7 +926,7 @@ namespace AppApi.Controllers
             BP.back = BR;
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter State([FromBody]Models.Mail.Gain.State S)
         {
@@ -928,7 +965,7 @@ namespace AppApi.Controllers
                 OperationList.Remove(S, S.Key);
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter StopRecv([FromBody]Models.Mail.Gain.StopRecv S)
         {
@@ -951,7 +988,7 @@ namespace AppApi.Controllers
             }
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [FileCreater]
         [HttpPost]
         public Models.BackParameter Addfolder([FromBody]Models.Mail.Gain.floder A)
@@ -1004,7 +1041,7 @@ namespace AppApi.Controllers
                 return BP;
             }
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter getlabel([FromBody]Models.Mail.Gain.setnoet G)
         {
@@ -1026,7 +1063,7 @@ namespace AppApi.Controllers
 
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter ISCL([FromBody]Models.Mail.Gain.Get G)
         {
@@ -1053,7 +1090,7 @@ namespace AppApi.Controllers
 
             return BP;
         }
-        [Check]
+        [AppApi.Filter.Check]
         [HttpPost]
         public Models.BackParameter GetMb([FromBody]Models.Mail.Gain.Get G)
         {
