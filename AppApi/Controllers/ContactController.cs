@@ -29,9 +29,9 @@ namespace AppApi.Controllers
             }
             if (Clientid != 0)
             {
-                if (db.Client_T.Where(cw => cw.Sale.Contains(username) && cw.Id == Clientid).Count() > 0)
+                if (db.Client_T.Any(cw => cw.Id == Clientid))
                 {
-                    if (where == null || where.Length == 0)
+                    if (string.IsNullOrEmpty(where))
                     {
                         BGL = db.Database.SqlQuery<Models.Contact.Back.GetList>(sqlc.Page(PageIndex, PageMax, String.Format("select *,ROW_NUMBER() OVER ( Order by  CreateTm Desc ) AS RowNumber from ClientAdd_T where clientid={0}" + keys, G.ClientId), "", ""));
                     }
