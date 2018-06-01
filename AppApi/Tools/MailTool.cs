@@ -22,8 +22,8 @@ namespace AppApi.Tools
             string strMDB = "[TCRMMAIL]";
             string strSql = "";
             string strSqlGd = "";
+            string strWhere
             string strSqlGd1 = "";
-            string strWhere = ""; //查询条件
             string strMyMailBoxId = "8,11,29,15,22";
             string strClientEmailList = getStrEmailClientSqlCONTAINS(clientid);
             if(strMyMailBoxId != "0") strSqlGd += " and MailBoxId in (" + strMyMailBoxId + ")";

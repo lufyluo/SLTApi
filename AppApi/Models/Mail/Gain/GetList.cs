@@ -15,5 +15,6 @@ namespace AppApi.Models.Mail.Gain
         public String Where { get; set; }
         public string Key { get; set; }
         public string clientid { get; set; }
+        public string ContactEmail { get; set; }
     }
 }

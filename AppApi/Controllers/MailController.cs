@@ -214,7 +214,7 @@ namespace AppApi.Controllers
             stopwatch.Start(); //  开始监视代码      
             if (GL.Act.ToUpper() == "CLIENT")
             {
-                return LoadClientEmails(GL.clientid, GL.PageIndex);
+                return LoadClientEmails(GL.clientid, GL.PageIndex,"");
             }
             int uid = db.Database.SqlQuery<int>("select uid from  [dbo].[User_T] where userid='" + GL.UserId + "'").FirstOrDefault();
             string UserId = GL.UserId;
@@ -256,7 +256,7 @@ namespace AppApi.Controllers
                     // ma = db.Mail_T.Where(m => m.MailBoxId == BoxId);//筛选邮件
                 }
             }
-          
+
             String sql = "";
             string MAIL_SORT = db.Database.SqlQuery<string>("select isnull(Setting,'') from [dbo].UserConfig_T where UserId='" + UserId + "' and ParamName='MAIL_SORT'").FirstOrDefault();
             switch (MAIL_SORT)
@@ -603,7 +603,26 @@ namespace AppApi.Controllers
             }
         }
 
-        private BackParameter LoadClientEmails(string glClientid,int PageIndex)
+        [AppApi.Filter.Check]
+        [HttpPost]
+        public Models.BackParameter GetContactorList([FromBody]Models.Mail.Gain.GetList GL)
+        {
+            try
+            {
+                string where = $"and (itFrom ='{GL.ContactEmail}' OR  CHARINDEX('{GL.ContactEmail}',[itTo])>0) ";
+                return LoadClientEmails(GL.clientid, GL.PageIndex, where);
+
+            }
+            catch (Exception ex)
+            {
+                BP.code = "xxxx";
+                BP.back = ex.ToString();
+                return BP;
+                throw;
+            }
+        }
+
+        private BackParameter LoadClientEmails(string glClientid, int PageIndex,string where)
         {
             try
             {
@@ -611,9 +630,9 @@ namespace AppApi.Controllers
                 var sql = mailTool.BuildSQL(glClientid);//数据分页
                 string strSort = " order by TopTime desc,RecDate desc";//排序条件
 
-                IEnumerable<Models.Mail.Back.item.Mail> BiM = dbm.Database.SqlQuery<Models.Mail.Back.item.Mail>($"select * from ({sql}) p {strSort}", "");
-                var count = dbm.Database.SqlQuery<int>("select count(1) from (" +sql + ") s").FirstOrDefault();
-                int unread = dbm.Database.SqlQuery<int>("select count('unread') from (" + sql + ") s where  s.[Read] = '否'").FirstOrDefault();
+                IEnumerable<Models.Mail.Back.item.Mail> BiM = dbm.Database.SqlQuery<Models.Mail.Back.item.Mail>($"select * from ({sql}) p where 1=1 {where} {strSort}", "");
+                var count = dbm.Database.SqlQuery<int>("select count(1) from (" + sql + $") s where 1=1{where}").FirstOrDefault();
+                int unread = dbm.Database.SqlQuery<int>("select count('unread') from (" + sql + $") s where  s.[Read] = '否' {where}").FirstOrDefault();
                 Models.Mail.Back.GetList BGL = new Models.Mail.Back.GetList();
                 BGL.count = count;
                 BGL.index = PageIndex;
