@@ -216,6 +216,10 @@ namespace AppApi.Controllers
             {
                 return LoadClientEmails(GL.clientid, GL.PageIndex,"");
             }
+            if (GL.Act.ToUpper() == "CONTACT")
+            {
+                return GetContactorList(GL.contactid, GL.PageIndex);
+            }
             int uid = db.Database.SqlQuery<int>("select uid from  [dbo].[User_T] where userid='" + GL.UserId + "'").FirstOrDefault();
             string UserId = GL.UserId;
             int BoxId = GL.BoxId;
@@ -602,15 +606,50 @@ namespace AppApi.Controllers
                 throw;
             }
         }
-
+        /// <summary>
+        /// 获取联系人往来邮件
+        /// </summary>
+        /// <param name="GL"></param>
+        /// <returns></returns>
         [AppApi.Filter.Check]
         [HttpPost]
-        public Models.BackParameter GetContactorList([FromBody]Models.Mail.Gain.GetList GL)
+        private Models.BackParameter GetContactorList(int userid,int PageIndex)
         {
             try
             {
-                string where = $"and (itFrom ='{GL.ContactEmail}' OR  CHARINDEX('{GL.ContactEmail}',[itTo])>0) ";
-                return LoadClientEmails(GL.clientid, GL.PageIndex, where);
+                var emails = GetContactorEmails(userid);
+                Models.Mail.Back.GetList BGL = new Models.Mail.Back.GetList();
+                if (!emails.Any())
+                {
+                    BGL.count = 0;
+                    BGL.index = PageIndex;
+                    BGL.unread = 0;
+                    BGL.list = null;
+                    BP.back = BGL;
+                    return BP;
+                }
+                string where = "";
+                string innerWhere = "";
+                foreach (var email in emails)
+                {
+                    if(string.IsNullOrEmpty(innerWhere))
+                    innerWhere+= $"(FromEmail ='{email}' OR  CHARINDEX('{email}',[itTo])>0) ";
+                    else
+                    {
+                        innerWhere += $"OR (FromEmail ='{email}' OR  CHARINDEX('{email}',[itTo])>0) ";
+                    }
+                }
+                where = string.IsNullOrEmpty(innerWhere) ? "" : $"AND ({innerWhere})";
+                var sql = $"SELECT * FROM dbo.Mail_T where 1=1 {where}";
+                var BiM = dbm.Database.SqlQuery<Models.Mail.Back.item.Mail>(sql).ToList();
+                int unread = BiM.Count(n => !emails.Contains(n.FromEmail));
+               
+                BGL.count = BiM.Count;
+                BGL.index = PageIndex;
+                BGL.unread = unread;
+                BGL.list = BiM;
+                BP.back = BGL;
+                return BP;
 
             }
             catch (Exception ex)
@@ -620,6 +659,11 @@ namespace AppApi.Controllers
                 return BP;
                 throw;
             }
+        }
+
+        private List<string> GetContactorEmails(int glContactId)
+        {
+            return db.Database.SqlQuery<string>($"SELECT email FROM [dbo].[User_T] WHERE UID = '{glContactId}'").ToList();
         }
 
         private BackParameter LoadClientEmails(string glClientid, int PageIndex,string where)

@@ -1183,7 +1183,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1299</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9898</IISUrl>
+          <IISUrl>http://localhost:8989</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>http://120.26.63.189:9898/</CustomServerUrl>

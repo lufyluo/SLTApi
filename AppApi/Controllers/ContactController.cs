@@ -49,7 +49,7 @@ namespace AppApi.Controllers
             }
             else
             {
-                IEnumerable<int> id = db.Client_T.Where(cw => cw.Sale.Contains(username) && (cw.Pub != 1 || cw.Pub == null) && (cw.IsDel != 1 || cw.IsDel == null)).OrderByDescending(co => co.CreateTm).Select(cas => cas.Id);
+                var id = GetClientIdS(UserId);
                 string id_list = string.Join(",", id.ToArray());
                 if (where == null || where.Length == 0)
                 {
@@ -74,6 +74,15 @@ namespace AppApi.Controllers
             BP.back = NBL;
             return BP;
         }
+
+        private IEnumerable<int> GetClientIdS(string userid)
+        {           
+            return db.Database.SqlQuery<int>($@"select C.Id from Client_T  C
+            INNER JOIN[ClientSale_T] CS
+                on C.Id = CS.ClientId and cs.UserId = '{userid}'
+            where(Pub != 1 or Pub is null) and(IsDel != 1 or IsDel is null)");
+        }
+
         public string selectkey(string key,string value)
         {
             string likestr = "";

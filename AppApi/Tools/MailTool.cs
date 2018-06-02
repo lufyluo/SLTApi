@@ -22,7 +22,7 @@ namespace AppApi.Tools
             string strMDB = "[TCRMMAIL]";
             string strSql = "";
             string strSqlGd = "";
-            string strWhere
+            string strWhere = "";
             string strSqlGd1 = "";
             string strMyMailBoxId = "8,11,29,15,22";
             string strClientEmailList = getStrEmailClientSqlCONTAINS(clientid);
