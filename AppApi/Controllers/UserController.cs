@@ -384,7 +384,7 @@ namespace AppApi.Controllers
             try
             {
                 var sql = $@"select u.* from [dbo].[User_T] u
-left join (SELECT * FROM dbo.GetUnderling_F('{GP.UserId}',1)) gu on u.UserId = gu.UserId";
+inner join (SELECT * FROM dbo.GetUnderling_F('{GP.UserId}',1)) gu on u.UserId = gu.UserId";
                 var subs = db.Database.SqlQuery<Models.User.Gain.userallmenu>(sql).ToList();
                 if (!subs.Any())
                 {
