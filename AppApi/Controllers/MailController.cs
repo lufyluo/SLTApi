@@ -640,7 +640,7 @@ namespace AppApi.Controllers
                     }
                 }
                 where = string.IsNullOrEmpty(innerWhere) ? "" : $"AND ({innerWhere})";
-                var sql = $"SELECT * FROM dbo.Mail_T where 1=1 {where}";
+                var sql = $"SELECT * FROM dbo.Mail_T where 1=1 {where} and Box in ('SJX','YFS','')";
                 var BiM = dbm.Database.SqlQuery<Models.Mail.Back.item.Mail>(sql).ToList();
                 int unread = BiM.Count(n => !emails.Contains(n.FromEmail));
                
@@ -663,7 +663,7 @@ namespace AppApi.Controllers
 
         private List<string> GetContactorEmails(int glContactId)
         {
-            return db.Database.SqlQuery<string>($"SELECT email FROM [dbo].[User_T] WHERE UID = '{glContactId}'").ToList();
+            return db.Database.SqlQuery<string>($"SELECT email FROM [dbo].[ClientAdd_T] WHERE id = '{glContactId}'").ToList();
         }
 
         private BackParameter LoadClientEmails(string glClientid, int PageIndex,string where)
